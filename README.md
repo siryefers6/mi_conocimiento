@@ -9,7 +9,7 @@ El repositorio no es un tutorial narrativo. Es un **sistema de referencia** orga
 ## 1. Principios del diseño
 
 * Un ejemplo resuelve **un solo problema**.
-* Un archivo demuestra **un solo uso** de un método.
+* Un archivo demuestra **un solo uso** de una referencia.
 * El README **indexa**, los archivos **explican y ejecutan**.
 * El contexto vive en la **estructura de carpetas**, no en las tablas.
 * Todo el código debe ser **reproducible**.
@@ -21,11 +21,10 @@ El repositorio no es un tutorial narrativo. Es un **sistema de referencia** orga
 El conocimiento se organiza por capas:
 
 1. **Lenguaje** (python, javascript, sql)
-2. **Dominio / librería** (basico, pandas, react)
-3. **Problema técnico** (filtrar filas, agrupar datos)
-4. **Ejemplo ejecutable**
-
-Cada capa reduce ambigüedad y mejora la búsqueda.
+2. **Dominio** (basico, pandas, react)
+3. **Problema técnico** (filtrar filas, imprimir texto)
+4. **Referencia técnica** (función, método, keyword, operador)
+5. **Ejemplo ejecutable**
 
 ---
 
@@ -59,18 +58,28 @@ Reglas:
 Cada `README.md` de dominio contiene una tabla mínima.
 
 ```md
-| Concepto | Método | Uso | Ejemplo |
-|--------|--------|-----|---------|
-| Filtrar filas | `loc` | Filtro por condición | [ver](examples/filtrar_filas__loc.py) |
-| Agrupar datos | `groupby` | Agregación | [ver](examples/agrupar_datos__groupby.py) |
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|--------|-----------|------|-----|---------|
+| Imprimir texto | `print` | función | Salida estándar | [ver](examples/imprimir_texto__print.py) |
+| Condicional | `if` | keyword | Control de flujo | [ver](examples/control_flujo__if.py) |
 ```
 
 Definiciones:
 
 * **Concepto**: problema técnico
-* **Método**: API / keyword (siempre en backticks)
+* **Referencia**: función, método, keyword, operador, clase o módulo (siempre en backticks)
+* **Tipo**: naturaleza de la referencia
 * **Uso**: intención concreta
 * **Ejemplo**: archivo ejecutable
+
+Tipos válidos:
+
+* función
+* método
+* keyword
+* operador
+* clase
+* módulo
 
 ---
 
@@ -79,20 +88,14 @@ Definiciones:
 ### Patrón obligatorio
 
 ```text
-<accion>_<contexto>__<metodo>.py
+<accion>_<contexto>__<referencia>.py
 ```
 
 Ejemplos válidos:
 
-* `filtrar_filas__loc.py`
-* `agrupar_datos__groupby_agg.py`
-* `iterar_listas__for.py`
-
-Beneficios:
-
-* Búsqueda inmediata
-* Escala a cualquier lenguaje
-* Evita nombres ambiguos
+* `imprimir_texto__print.py`
+* `control_flujo__if.py`
+* `agrupar_datos__groupby.py`
 
 ---
 
@@ -103,8 +106,8 @@ Todos los ejemplos deben seguir esta plantilla.
 ```python
 """
 Objetivo: problema concreto que se resuelve
-Método: API / keyword principal
-Dataset: archivo(s) usados
+Referencia: función / keyword / método
+Tipo: funcion | metodo | keyword | operador | clase | modulo
 Nivel: basico | intermedio | avanzado
 """
 
@@ -115,13 +118,19 @@ Nivel: basico | intermedio | avanzado
 # transformación
 
 # resultado
+print(resultado)
+
+"""output
+salida esperada de la ejecución
+"""
 ```
 
 Reglas:
 
-* Comentarios mínimos y técnicos
-* Una sola responsabilidad
-* Resultado visible (`print`, `return`)
+* El bloque `"""output` documenta el **resultado real** del script
+* Mantén el output corto y representativo
+* No simules resultados irreales
+* Una sola responsabilidad por archivo
 
 ---
 
@@ -129,28 +138,34 @@ Reglas:
 
 * Teoría extensa
 * Explicaciones narrativas
-* Múltiples métodos mezclados
+* Múltiples referencias mezcladas
 * Código no ejecutable
 
 ---
 
 ## 8. Regla de diseño clave
 
-> **Un método puede tener múltiples usos, pero cada uso vive en su propio archivo.**
+> **Una referencia puede tener múltiples usos, pero cada uso vive en su propio archivo.**
 
 La tabla tiene múltiples filas.
 Los ejemplos son siempre atómicos.
 
 ---
 
-## 9. Escalabilidad
+## 9. YAML de indexación (opcional)
 
-Este diseño permite:
+Si se usa YAML para indexar ejemplos:
 
-* Añadir nuevos lenguajes
-* Añadir nuevas librerías
-* Búsqueda semántica por problema
-* Migración futura a SQL / Docs / Wiki
+```yaml
+concepto: Imprimir texto
+referencia: print
+tipo: funcion
+uso: Salida estándar
+nivel: basico
+lenguaje: python
+dominio: basico
+ejemplo: examples/imprimir_texto__print.py
+```
 
 ---
 
