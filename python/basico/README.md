@@ -48,6 +48,11 @@ El objetivo es resolver problemas reales con la menor cantidad de conceptos posi
 | Concepto    | Referencia | Tipo    | Uso                   | Ejemplo                                     |
 | ----------- | ---------- | ------- | --------------------- | ------------------------------------------- |
 | Condicional | `if`       | keyword | Decisiones            | [ver](examples/control_flujo__if.py)        |
+| Condicional alternativa | `if / else` | keyword | Rama alternativa | [ver](examples/if_else__if.py) |
+| Múltiples condiciones | `if / elif / else` | keyword | Varias ramas | [ver](examples/if_elif_else__if.py) |
+| Condición compuesta | `if` | keyword | and / or | [ver](examples/if_condicion_compuesta__if.py) |
+| Validación temprana | `if` | keyword | Guard clause | [ver](examples/if_guard_clause__if.py) |
+| Condicional inline | `if` | keyword | Condicional en una sola línea (one-liner) | [ver](examples/if_inline__if.py) |
 | Bucle       | `for`      | keyword | Iterar secuencias     | [ver](examples/iterar_secuencia__for.py)    |
 | Bucle       | `while`    | keyword | Iteración condicional | [ver](examples/bucle_condicional__while.py) |
 
