@@ -64,12 +64,78 @@ El objetivo es resolver problemas reales con la menor cantidad de conceptos posi
 
 ## Estructuras de datos
 
+### Listas
 | Concepto     | Referencia | Tipo   | Uso               | Ejemplo                                          |
 | ------------ | ---------- | ------ | ----------------- | ------------------------------------------------ |
-| Listas       | `append`   | metodo | Agregar elementos | [ver](examples/agregar_elemento__list_append.py) |
-| Tuplas       | `tuple`    | clase  | Datos inmutables  | [ver](examples/crear_tupla__tuple.py)            |
-| Sets         | `add`      | metodo | Elementos únicos  | [ver](examples/agregar_elemento__set_add.py)     |
-| Diccionarios | `get`      | metodo | Acceso seguro     | [ver](examples/acceder_diccionario__dict_get.py) |
+| Agregar elemento        | `append`  | metodo | Agregar al final          | [ver](examples/agregar_elemento__list_append.py)    |
+| Insertar elemento       | `insert`  | metodo | Insertar en posición      | [ver](examples/insertar_elemento__list_insert.py)   |
+| Agregar múltiples       | `extend`  | metodo | Extender lista            | [ver](examples/extender_lista__list_extend.py)      |
+| Eliminar por valor      | `remove`  | metodo | Borrar elemento específico| [ver](examples/eliminar_valor__list_remove.py)      |
+| Eliminar por índice     | `pop`     | metodo | Borrar por posición       | [ver](examples/eliminar_indice__list_pop.py)        |
+| Vaciar lista            | `clear`   | metodo | Eliminar todos los elementos | [ver](examples/vaciar_lista__list_clear.py)     |
+| Buscar índice           | `index`   | metodo | Encontrar posición        | [ver](examples/buscar_indice__list_index.py)       |
+| Contar ocurrencias      | `count`   | metodo | Contar elementos          | [ver](examples/contar_elementos__list_count.py)    |
+| Ordenar lista           | `sort`    | metodo | Ordenar elementos         | [ver](examples/ordenar_lista__list_sort.py)        |
+| Invertir lista          | `reverse` | metodo | Dar vuelta a la lista     | [ver](examples/invertir_lista__list_reverse.py)    |
+| Copiar lista            | `copy`    | metodo | Crear copia superficial   | [ver](examples/copiar_lista__list_copy.py)         |
+
+### Tuplas
+| Concepto     | Referencia | Tipo   | Uso               | Ejemplo                                          |
+| ------------ | ---------- | ------ | ----------------- | ------------------------------------------------ |
+| Crear tupla                | `tuple`   | clase | Construir tupla          | [ver](examples/crear_tupla__tuple.py)               |
+| Contar elementos           | `count`   | metodo| Contar ocurrencias       | [ver](examples/contar_elementos__tuple_count.py)    |
+| Buscar índice de valor     | `index`   | metodo| Encontrar posición       | [ver](examples/buscar_indice__tuple_index.py)       |
+| Longitud                   | `len`     | funcion| Número de elementos      | [ver](examples/longitud__len.py)                    |
+| Suma de elementos          | `sum`     | funcion| Total de elementos numéricos | [ver](examples/suma_elementos__sum.py)         |
+| Valor máximo / mínimo      | `max / min` | funcion| Obtener el mayor o menor | [ver](examples/max_min__tuple.py)                  |
+
+### Sets
+| Concepto     | Referencia | Tipo   | Uso               | Ejemplo                                          |
+| ------------ | ---------- | ------ | ----------------- | ------------------------------------------------ |
+| Agregar elemento              | `add`         | metodo| Añadir un elemento al set            | [ver](examples/agregar_elemento__set_add.py)       |
+| Eliminar elemento (error)     | `remove`      | metodo| Borrar elemento, lanza error si no existe | [ver](examples/eliminar_elemento__set_remove.py) |
+| Eliminar elemento seguro      | `discard`     | metodo| Borrar elemento sin error           | [ver](examples/eliminar_elemento__set_discard.py) |
+| Eliminar elemento arbitrario  | `pop`         | metodo| Extraer y eliminar un elemento      | [ver](examples/eliminar_elemento__set_pop.py)     |
+| Vaciar set                    | `clear`       | metodo| Eliminar todos los elementos        | [ver](examples/vaciar_set__set_clear.py)          |
+| Unión de sets                 | `union`       | metodo| Combinar elementos únicos de dos sets | [ver](examples/union_sets__set_union.py)       |
+| Intersección de sets          | `intersection`| metodo| Elementos comunes entre sets        | [ver](examples/interseccion_sets__set_intersection.py) |
+| Diferencia de sets            | `difference`  | metodo| Elementos de un set que no están en otro | [ver](examples/diferencia_sets__set_difference.py) |
+| Subconjunto                   | `issubset`    | metodo| Verificar si es subconjunto         | [ver](examples/subconjunto__set_issubset.py)      |
+| Superconjunto                 | `issuperset`  | metodo| Verificar si es superconjunto       | [ver](examples/superconjunto__set_issuperset.py)  |
+
+### Diccionarios
+| Concepto     | Referencia | Tipo   | Uso               | Ejemplo                                          |
+| ------------ | ---------- | ------ | ----------------- | ------------------------------------------------ |
+| Acceso seguro                 | `get`          | metodo| Obtener valor sin error si no existe | [ver](examples/acceder_diccionario__dict_get.py)     |
+| Obtener claves                | `keys`         | metodo| Listar todas las claves               | [ver](examples/obtener_claves__dict_keys.py)        |
+| Obtener valores               | `values`       | metodo| Listar todos los valores              | [ver](examples/obtener_valores__dict_values.py)     |
+| Obtener pares clave-valor     | `items`        | metodo| Listar tuplas (clave, valor)         | [ver](examples/obtener_items__dict_items.py)        |
+| Actualizar diccionario        | `update`       | metodo| Agregar o modificar pares             | [ver](examples/actualizar_diccionario__dict_update.py) |
+| Eliminar por clave            | `pop`          | metodo| Borrar y retornar valor               | [ver](examples/eliminar_por_clave__dict_pop.py)     |
+| Eliminar elemento arbitrario  | `popitem`      | metodo| Quitar un par cualquiera              | [ver](examples/eliminar_arbitrario__dict_popitem.py)|
+| Vaciar diccionario            | `clear`        | metodo| Eliminar todos los pares              | [ver](examples/vaciar_diccionario__dict_clear.py)   |
+| Copiar diccionario            | `copy`         | metodo| Copia superficial del diccionario    | [ver](examples/copiar_diccionario__dict_copy.py)    |
+| Obtener valor o asignar       | `setdefault`   | metodo| Obtener valor o asignar si no existe | [ver](examples/setdefault_diccionario__dict_setdefault.py) |
+
+---
+
+## Funciones básicas
+
+| Concepto                | Referencia   | Tipo     | Uso                                   | Ejemplo                                              |
+|-------------------------|-------------|---------|--------------------------------------|-----------------------------------------------------|
+| Longitud                | `len`       | funcion | Obtener número de elementos          | [ver](examples/longitud__len.py)                   |
+| Suma de elementos       | `sum`       | funcion | Sumar valores numéricos              | [ver](examples/suma_elementos__sum.py)            |
+| Valor máximo / mínimo   | `max / min` | funcion | Obtener mayor o menor valor          | [ver](examples/max_min__tuple.py)                  |
+| Valor absoluto          | `abs`       | funcion | Obtener valor absoluto               | [ver](examples/valor_absoluto__abs.py)             |
+| Redondeo                | `round`     | funcion | Redondear un número                  | [ver](examples/redondear__round.py)                |
+| Aplicar función         | `map`       | funcion | Aplicar función a todos los elementos | [ver](examples/aplicar_funcion__map.py)           |
+| Filtrar elementos       | `filter`    | funcion | Filtrar elementos según condición    | [ver](examples/filtrar_elementos__filter.py)       |
+| Combinar secuencias     | `zip`       | funcion | Combinar iterables en tuplas         | [ver](examples/combinar_secuencias__zip.py)       |
+| Iterar con índice       | `enumerate` | funcion | Obtener índice y valor en iteración | [ver](examples/iterar_con_indice__enumerate.py)   |
+| Ordenar secuencia       | `sorted`    | funcion | Devolver lista ordenada              | [ver](examples/ordenar_lista__sorted.py)          |
+| Todos / Alguno          | `all / any` | funcion | Verificar condición en todos o alguno | [ver](examples/verificar_condicion__all_any.py)  |
+| Concatenar strings      | `join`      | metodo  | Unir elementos de una lista en string | [ver](examples/concatenar_strings__join.py)      |
+| Dividir strings         | `split`     | metodo  | Separar una cadena en lista usando un separador | [ver](examples/dividir_strings__split.py) |
 
 ---
 
