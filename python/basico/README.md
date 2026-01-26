@@ -91,6 +91,13 @@ El objetivo es resolver problemas reales con la menor cantidad de conceptos posi
 | Bucle en una línea | `for` | keyword | One-liner para listas o expresiones | [ver](examples/for_inline__for.py) |
 | Bucle       | `while`    | keyword | Iteración condicional | [ver](examples/bucle_condicional__while.py) |
 
+## Control de bucles
+
+| Concepto        | Referencia | Tipo     | Uso                                           | Ejemplo                                             |
+|-----------------|-----------|---------|-----------------------------------------------|----------------------------------------------------|
+| Terminar bucle  | `break`   | keyword | Salir inmediatamente de un bucle             | [ver](examples/bucle_break__break.py)             |
+| Saltar iteración| `continue`| keyword | Omitir la iteración actual y pasar a la siguiente | [ver](examples/bucle_continue__continue.py)       |
+
 ---
 
 ## Estructuras de datos
@@ -178,6 +185,16 @@ El objetivo es resolver problemas reales con la menor cantidad de conceptos posi
 | Definir función | `def`      | keyword  | Reutilizar lógica | [ver](examples/definir_funcion__def.py)        |
 | Parámetros      | argumentos | concepto | Entrada de datos  | [ver](examples/funcion_con_parametros__def.py) |
 | Retorno         | `return`   | keyword  | Devolver valores  | [ver](examples/retornar_valor__return.py)      |
+
+---
+
+## Expresiones y funciones anónimas
+
+| Concepto                | Referencia       | Tipo      | Uso                                      | Ejemplo                                               |
+|-------------------------|----------------|----------|------------------------------------------|------------------------------------------------------|
+| Comprensión de listas    | `[x for x in ...]` | sintaxis | Crear listas de forma concisa            | [ver](examples/list_comprehension__basico.py)      |
+| Función lambda           | `lambda`        | keyword  | Función anónima para operaciones simples | [ver](examples/funcion_lambda__basico.py)          |
+| Comprensión avanzada con cond.   | `[x for x in ... if ...], lambda` | sintaxis/keyword | Listas con condición y transformación inline | [ver](examples/list_comprehension_cond_lambda__basico.py)  |
 
 ---
 
