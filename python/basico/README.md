@@ -31,6 +31,37 @@ El objetivo es resolver problemas reales con la menor cantidad de conceptos posi
 | Ver tipo            | `type`     | funcion  | Inspección de tipo  | [ver](examples/ver_tipo__type.py)               |
 | Conversión de tipos | `int`      | funcion  | Casting explícito   | [ver](examples/convertir_tipo__casting.py)      |
 
+### Enteros (`int`)
+| Concepto         | Referencia | Tipo     | Uso                    | Ejemplo                                         |
+| ---------------- | ---------- | -------- | ---------------------- | ----------------------------------------------- |
+| Asignar variable | `=`        | operador | Asignación de valor    | [ver](examples/asignar_variable__asignacion.py) |
+| Conversión       | `int()`    | funcion  | Convertir a entero     | [ver](examples/convertir_tipo__casting.py)      |
+| Valor absoluto   | `abs()`    | funcion  | Obtener valor absoluto | [ver](examples/valor_absoluto__abs.py)          |
+| Redondeo         | `round()`  | funcion  | Redondear número       | [ver](examples/redondear__round.py)             |
+
+### Flotantes (`float`)
+| Concepto         | Referencia | Tipo     | Uso                    | Ejemplo                                         |
+| ---------------- | ---------- | -------- | ---------------------- | ----------------------------------------------- |
+| Asignar variable | `=`        | operador | Asignación de valor    | [ver](examples/asignar_variable__asignacion.py) |
+| Conversión       | `float()`  | funcion  | Convertir a decimal    | [ver](examples/convertir_tipo__casting.py)      |
+| Valor absoluto   | `abs()`    | funcion  | Obtener valor absoluto | [ver](examples/valor_absoluto__abs.py)          |
+| Redondeo         | `round()`  | funcion  | Redondear número       | [ver](examples/redondear__round.py)             |
+
+### Cadenas (`str`)
+| Concepto         | Referencia | Tipo     | Uso                           | Ejemplo                                         |
+| ---------------- | ---------- | -------- | ----------------------------- | ----------------------------------------------- |
+| Asignar variable | `=`        | operador | Asignación de valor           | [ver](examples/asignar_variable__asignacion.py) |
+| Conversión       | `str()`    | funcion  | Convertir a cadena            | [ver](examples/convertir_tipo__casting.py)      |
+| Limpiar texto    | `strip()`  | metodo   | Quitar espacios inicial/final | [ver](examples/limpiar_string__strip.py)        |
+| Dividir texto    | `split()`  | metodo   | Separar string en lista       | [ver](examples/dividir_strings__split.py)       |
+| Unir texto       | `join()`   | metodo   | Concatenar lista en string    | [ver](examples/concatenar_strings__join.py)     |
+
+### Booleanos (`bool`)
+| Concepto         | Referencia | Tipo     | Uso                  | Ejemplo                                         |
+| ---------------- | ---------- | -------- | -------------------- | ----------------------------------------------- |
+| Asignar variable | `=`        | operador | Asignación de valor  | [ver](examples/asignar_variable__asignacion.py) |
+| Conversión       | `bool()`   | funcion  | Convertir a booleano | [ver](examples/conversion_bool__bool.py)        |
+
 ---
 
 ## Operadores
@@ -155,6 +186,11 @@ El objetivo es resolver problemas reales con la menor cantidad de conceptos posi
 | Concepto       | Referencia   | Tipo    | Uso          | Ejemplo                                      |
 | -------------- | ------------ | ------- | ------------ | -------------------------------------------- |
 | Capturar error | `try/except` | keyword | Evitar crash | [ver](examples/manejar_error__try_except.py) |
+| Capturar error como variable    | `try/except as e`  | keyword | Inspeccionar el error                       | [ver](examples/capturar_error_as__try_except.py)   |
+| Capturar errores específicos    | `except <Error>`   | keyword | Manejar distintos tipos de excepciones     | [ver](examples/capturar_error_especifico__try_except.py) |
+| Try/except con else             | `try/except/else`  | keyword | Ejecutar código si no hay excepción        | [ver](examples/try_except_con_else__try_except.py) |
+| Try/finally                     | `try/finally`      | keyword | Ejecutar siempre un bloque de código       | [ver](examples/try_finally__try_except.py)        |
+| Re-lanzar excepciones           | `raise`            | keyword | Propagar el error a niveles superiores     | [ver](examples/re_lanzar_error__try_except.py)    |
 
 ---
 

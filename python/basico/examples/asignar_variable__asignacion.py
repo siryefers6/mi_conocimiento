@@ -1,24 +1,32 @@
 """
-Objetivo: asignar valores a variables
-Referencia: =
+Objetivo: mostrar la asignación de valores a variables de distintos tipos primitivos
+Referencia: operador =
 Tipo: operador
 Nivel: basico
 """
 
-# imports
-# no aplica
+# Asignación de un entero
+entero = 10
 
-# carga de datos
-edad = 30
-nombre = "Ana"
-activo = True
+# Asignación de un flotante
+decimal = 3.14
 
-# transformación
-# no aplica
+# Asignación de un string
+texto = "Hola mundo"
+
+# Asignación de un booleano
+verdadero = True
+falso = False
 
 # resultado
-print(edad, nombre, activo)
+print("Entero:", entero)
+print("Flotante:", decimal)
+print("String:", texto)
+print("Booleanos:", verdadero, falso)
 
 """output
-30 Ana True
+Entero: 10
+Flotante: 3.14
+String: Hola mundo
+Booleanos: True False
 """
