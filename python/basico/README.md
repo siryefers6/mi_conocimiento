@@ -54,6 +54,10 @@ El objetivo es resolver problemas reales con la menor cantidad de conceptos posi
 | Validación temprana | `if` | keyword | Guard clause | [ver](examples/if_guard_clause__if.py) |
 | Condicional inline | `if` | keyword | Condicional en una sola línea (one-liner) | [ver](examples/if_inline__if.py) |
 | Bucle       | `for`      | keyword | Iterar secuencias     | [ver](examples/iterar_secuencia__for.py)    |
+| Iterar rango | `for` | keyword | Iterar sobre una secuencia numérica con `range()` | [ver](examples/iterar_rango__for.py) |
+| Iterar diccionario | `for` | keyword | Iterar sobre claves y valores de un diccionario | [ver](examples/iterar_diccionario__for.py) |
+| Iterar con índice | `for` | keyword | Iterar con índice usando `enumerate()` | [ver](examples/iterar_con_indice__for.py) |
+| Bucle en una línea | `for` | keyword | One-liner para listas o expresiones | [ver](examples/for_inline__for.py) |
 | Bucle       | `while`    | keyword | Iteración condicional | [ver](examples/bucle_condicional__while.py) |
 
 ---
