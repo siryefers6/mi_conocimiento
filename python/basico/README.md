@@ -136,6 +136,7 @@ El objetivo es resolver problemas reales con la menor cantidad de conceptos posi
 | Todos / Alguno          | `all / any` | funcion | Verificar condición en todos o alguno | [ver](examples/verificar_condicion__all_any.py)  |
 | Concatenar strings      | `join`      | metodo  | Unir elementos de una lista en string | [ver](examples/concatenar_strings__join.py)      |
 | Dividir strings         | `split`     | metodo  | Separar una cadena en lista usando un separador | [ver](examples/dividir_strings__split.py) |
+| Limpiar string          | `strip`     | metodo  | Eliminar espacios u otros caracteres al inicio y final | [ver](examples/limpiar_string__strip.py) |
 
 ---
 
