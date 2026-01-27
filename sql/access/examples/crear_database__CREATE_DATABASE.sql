@@ -1,0 +1,3 @@
+-- Crear base de datos en Microsoft Access
+-- Nota: Access no soporta CREATE DATABASE directamente; se crea desde la interfaz o con DAO/ADO.
+-- Este comando no es ejecutable en Access SQL.

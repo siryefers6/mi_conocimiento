@@ -1,0 +1,3 @@
+-- Crear función en Microsoft Access
+-- Nota: Access no soporta CREATE FUNCTION; usar VBA o consultas.
+-- Este comando no es ejecutable en Access SQL.

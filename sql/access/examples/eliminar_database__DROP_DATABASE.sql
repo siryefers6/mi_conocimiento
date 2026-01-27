@@ -1,0 +1,3 @@
+-- Eliminar base de datos en Microsoft Access
+-- Nota: Access no soporta DROP DATABASE; se elimina desde la interfaz.
+-- Este comando no es ejecutable en Access SQL.

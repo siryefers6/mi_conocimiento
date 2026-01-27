@@ -1,0 +1,3 @@
+-- EXPLAIN en Microsoft Access
+-- Nota: Access no soporta EXPLAIN; usar interfaz para ver plan de ejecución.
+-- Este comando no es ejecutable en Access SQL.

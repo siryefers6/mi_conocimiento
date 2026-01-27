@@ -1,0 +1,3 @@
+-- Función con retorno en Microsoft Access
+-- Nota: No aplicable en SQL de Access.
+-- Este comando no es ejecutable en Access SQL.

@@ -1,0 +1,3 @@
+-- GRANT permisos en Microsoft Access
+-- Nota: Access no soporta GRANT; usar interfaz de usuario.
+-- Este comando no es ejecutable en Access SQL.

@@ -1,0 +1,3 @@
+-- Cambiar tipo de columna en Microsoft Access
+-- Nota: Access no soporta ALTER COLUMN TYPE directamente; recrear la tabla o usar interfaz.
+-- Este comando no es ejecutable en Access SQL.

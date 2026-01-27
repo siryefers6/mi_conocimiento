@@ -1,0 +1,3 @@
+-- Crear procedimiento en Microsoft Access
+-- Nota: Access no soporta CREATE PROCEDURE; usar VBA.
+-- Este comando no es ejecutable en Access SQL.

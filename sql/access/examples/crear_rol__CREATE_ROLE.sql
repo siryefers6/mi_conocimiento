@@ -1,0 +1,3 @@
+-- Crear rol en Microsoft Access
+-- Nota: Access no soporta CREATE ROLE; usar interfaz.
+-- Este comando no es ejecutable en Access SQL.

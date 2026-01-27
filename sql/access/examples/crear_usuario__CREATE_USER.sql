@@ -1,0 +1,3 @@
+-- Crear usuario en Microsoft Access
+-- Nota: Access no soporta CREATE USER; usar interfaz.
+-- Este comando no es ejecutable en Access SQL.

@@ -1,0 +1,3 @@
+-- Punto de control en Microsoft Access
+-- Nota: Access no soporta SAVEPOINT.
+-- Este comando no es ejecutable en Access SQL.

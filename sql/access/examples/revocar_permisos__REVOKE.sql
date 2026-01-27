@@ -1,0 +1,3 @@
+-- REVOKE permisos en Microsoft Access
+-- Nota: Access no soporta REVOKE; usar interfaz de usuario.
+-- Este comando no es ejecutable en Access SQL.
