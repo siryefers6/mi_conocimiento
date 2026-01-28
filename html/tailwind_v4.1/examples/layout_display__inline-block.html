@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Inline-Block - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Display Inline-Block</h1>
+        <p class="text-gray-600 mb-8">Combina comportamiento inline y block, permitiendo tamaño pero en la misma línea</p>
+        
+        <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">Ejemplo</h2>
+            
+            <div>
+                <div class="inline-block bg-blue-500 text-white p-4 rounded mr-4 w-32 text-center">
+                    Box 1
+                </div>
+                <div class="inline-block bg-green-500 text-white p-4 rounded mr-4 w-32 text-center">
+                    Box 2
+                </div>
+                <div class="inline-block bg-red-500 text-white p-4 rounded w-32 text-center">
+                    Box 3
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-2">Código HTML</h2>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="inline-block w-32 bg-blue-500"&gt;
+    Box con tamaño en línea
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

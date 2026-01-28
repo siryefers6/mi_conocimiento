@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Width (Ancho)</h1>
+        <p class="text-gray-600 mb-8">Control del ancho de elementos</p>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Fracciones</h2>
+            <div class="space-y-2">
+                <div class="w-1/4 bg-blue-500 text-white p-3 rounded">w-1/4 (25%)</div>
+                <div class="w-1/3 bg-blue-500 text-white p-3 rounded">w-1/3 (33%)</div>
+                <div class="w-1/2 bg-blue-500 text-white p-3 rounded">w-1/2 (50%)</div>
+                <div class="w-3/4 bg-blue-500 text-white p-3 rounded">w-3/4 (75%)</div>
+                <div class="w-full bg-blue-500 text-white p-3 rounded">w-full (100%)</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Valores Fijos</h2>
+            <div class="space-y-2">
+                <div class="w-32 bg-green-500 text-white p-3 rounded">w-32 (8rem)</div>
+                <div class="w-48 bg-green-500 text-white p-3 rounded">w-48 (12rem)</div>
+                <div class="w-64 bg-green-500 text-white p-3 rounded">w-64 (16rem)</div>
+                <div class="w-96 bg-green-500 text-white p-3 rounded">w-96 (24rem)</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Especiales</h2>
+            <div class="space-y-2">
+                <div class="w-auto bg-red-500 text-white p-3 rounded inline-block">w-auto (automático)</div>
+                <div class="w-full bg-red-500 text-white p-3 rounded mt-2">w-full (100%)</div>
+                <div class="w-screen bg-red-500 text-white p-3 rounded mt-2">w-screen (100vw - ancho ventana)</div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-2">Código HTML</h2>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="w-1/2 bg-blue-500"&gt;
+    Ancho 50%
+&lt;/div&gt;
+
+&lt;div class="w-64 bg-green-500"&gt;
+    Ancho fijo 16rem
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

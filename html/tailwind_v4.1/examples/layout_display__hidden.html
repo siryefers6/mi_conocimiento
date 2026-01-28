@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Hidden - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Display Hidden</h1>
+        <p class="text-gray-600 mb-8">Oculta un elemento del flujo de documentación (display: none)</p>
+        
+        <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">Elemento Visible</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-blue-500 text-white p-4 rounded">
+                    Este elemento es visible
+                </div>
+                <div class="hidden bg-green-500 text-white p-4 rounded">
+                    Este elemento está oculto (no afecta el layout)
+                </div>
+                <div class="bg-red-500 text-white p-4 rounded">
+                    Este elemento es visible nuevamente
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mt-6">
+            <h2 class="text-xl font-semibold mb-4">Oculto en Mobile, Visible en Desktop</h2>
+            
+            <div class="space-y-4">
+                <div class="hidden md:block bg-purple-500 text-white p-4 rounded text-center">
+                    Visible solo en pantallas medianas o mayores
+                </div>
+                <div class="block md:hidden bg-orange-500 text-white p-4 rounded text-center">
+                    Visible solo en pantallas pequeñas (mobile)
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-2">Código HTML</h2>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="hidden bg-green-500"&gt;
+    Elemento oculto
+&lt;/div&gt;
+
+&lt;div class="hidden md:block"&gt;
+    Visible solo en pantallas medianas
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

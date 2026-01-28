@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Offsets - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Position Offsets</h1>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">top-0</h2>
+            <div class="relative bg-gray-100 p-4 rounded h-32">
+                <div class="absolute top-0 left-4 bg-blue-500 text-white px-3 py-1 rounded">top-0</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">right-0</h2>
+            <div class="relative bg-gray-100 p-4 rounded h-32">
+                <div class="absolute top-4 right-0 bg-green-500 text-white px-3 py-1 rounded">right-0</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">bottom-0</h2>
+            <div class="relative bg-gray-100 p-4 rounded h-32">
+                <div class="absolute bottom-0 left-4 bg-red-500 text-white px-3 py-1 rounded">bottom-0</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">left-0</h2>
+            <div class="relative bg-gray-100 p-4 rounded h-32">
+                <div class="absolute top-4 left-0 bg-purple-500 text-white px-3 py-1 rounded">left-0</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">inset-0 (todos los lados)</h2>
+            <div class="relative bg-gray-100 p-4 rounded h-32">
+                <div class="absolute inset-0 bg-orange-500 text-white rounded flex items-center justify-center">
+                    inset-0
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

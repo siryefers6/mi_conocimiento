@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondos y Gradientes - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Fondos y Gradientes</h1>
+        <p class="text-gray-600 mb-8">Control de colores de fondo y gradientes</p>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Fondos Sólidos</h2>
+            <div class="space-y-3">
+                <div class="bg-blue-500 text-white p-6 rounded">
+                    Fondo azul
+                </div>
+                <div class="bg-green-500 text-white p-6 rounded">
+                    Fondo verde
+                </div>
+                <div class="bg-red-500 text-white p-6 rounded">
+                    Fondo rojo
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Gradientes</h2>
+            <div class="space-y-3">
+                <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-6 rounded">
+                    Gradiente de izquierda a derecha
+                </div>
+                <div class="bg-gradient-to-b from-green-400 to-green-700 text-white p-6 rounded">
+                    Gradiente de arriba hacia abajo
+                </div>
+                <div class="bg-gradient-to-br from-yellow-400 via-red-500 to-pink-500 text-white p-6 rounded">
+                    Gradiente diagonal con color intermedio
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Variaciones de Gradiente</h2>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-4 rounded text-center font-semibold">
+                    to-r
+                </div>
+                <div class="bg-gradient-to-l from-blue-500 to-blue-700 text-white p-4 rounded text-center font-semibold">
+                    to-l
+                </div>
+                <div class="bg-gradient-to-b from-blue-500 to-blue-700 text-white p-4 rounded text-center font-semibold">
+                    to-b
+                </div>
+                <div class="bg-gradient-to-t from-blue-500 to-blue-700 text-white p-4 rounded text-center font-semibold">
+                    to-t
+                </div>
+                <div class="bg-gradient-to-br from-blue-500 to-blue-700 text-white p-4 rounded text-center font-semibold">
+                    to-br
+                </div>
+                <div class="bg-gradient-to-tl from-blue-500 to-blue-700 text-white p-4 rounded text-center font-semibold">
+                    to-tl
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-2">Código HTML</h2>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="bg-blue-500"&gt;
+    Fondo sólido
+&lt;/div&gt;
+
+&lt;div class="bg-gradient-to-r from-blue-500 to-purple-600"&gt;
+    Gradiente horizontal
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

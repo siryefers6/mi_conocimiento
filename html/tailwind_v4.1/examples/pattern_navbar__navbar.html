@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar Desktop -->
+    <nav class="bg-blue-600 text-white p-4 mb-8 shadow-lg">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Logo</div>
+            <div class="hidden md:flex gap-6">
+                <a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">Home</a>
+                <a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">Servicios</a>
+                <a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">Acerca de</a>
+                <a href="#" class="hover:bg-blue-700 px-3 py-2 rounded transition">Contacto</a>
+            </div>
+            <button class="bg-blue-800 hover:bg-blue-900 px-4 py-2 rounded transition hidden md:block">
+                Login
+            </button>
+            <button class="md:hidden bg-blue-700 hover:bg-blue-800 px-3 py-2 rounded">
+                ☰
+            </button>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-2">Navbar Component</h1>
+        <p class="text-gray-600 mb-8">Ejemplo de navegación responsiva</p>
+
+        <!-- Variante: Navbar con dropdown -->
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">Navbar con Dropdown</h2>
+            <nav class="bg-gray-800 text-white p-4 rounded">
+                <div class="flex justify-between items-center">
+                    <div class="text-xl font-bold">Brand</div>
+                    <div class="hidden md:flex gap-4">
+                        <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded">Home</a>
+                        <div class="relative group">
+                            <button class="hover:bg-gray-700 px-3 py-2 rounded">
+                                Productos ▼
+                            </button>
+                            <div class="absolute left-0 hidden group-hover:block bg-gray-700 text-white rounded mt-0 shadow-lg z-10">
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-600">Producto 1</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-600">Producto 2</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-600">Producto 3</a>
+                            </div>
+                        </div>
+                        <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded">Blog</a>
+                        <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded">Contacto</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Variante: Navbar transparente -->
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">Navbar Transparente</h2>
+            <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-96 rounded relative">
+                <nav class="bg-white bg-opacity-90 backdrop-blur-sm text-gray-800 p-4 rounded-b flex justify-between items-center">
+                    <div class="text-xl font-bold text-purple-600">Logo</div>
+                    <div class="hidden md:flex gap-4">
+                        <a href="#" class="hover:text-purple-600 transition">Home</a>
+                        <a href="#" class="hover:text-purple-600 transition">Features</a>
+                        <a href="#" class="hover:text-purple-600 transition">Pricing</a>
+                    </div>
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded transition">
+                        Sign Up
+                    </button>
+                </nav>
+                <div class="flex items-center justify-center h-full text-white text-4xl font-bold">
+                    Hero Section
+                </div>
+            </div>
+        </div>
+
+        <!-- Variante: Navbar minimalista -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-2xl font-bold mb-4">Navbar Minimalista</h2>
+            <nav class="border-b border-gray-200 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="font-semibold text-lg">Minimal</div>
+                    <div class="flex gap-8">
+                        <a href="#" class="text-sm hover:text-blue-500 transition">Work</a>
+                        <a href="#" class="text-sm hover:text-blue-500 transition">About</a>
+                        <a href="#" class="text-sm hover:text-blue-500 transition">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto p-8">
+        <div class="bg-gray-100 rounded-lg p-6">
+            <h2 class="text-lg font-semibold mb-2">Código HTML</h2>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;nav class="bg-blue-600 text-white p-4"&gt;
+    &lt;div class="flex justify-between items-center"&gt;
+        &lt;div class="text-2xl font-bold"&gt;Logo&lt;/div&gt;
+        &lt;div class="hidden md:flex gap-6"&gt;
+            &lt;a href="#" class="hover:bg-blue-700 px-3 py-2 rounded"&gt;
+                Home
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

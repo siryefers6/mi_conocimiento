@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones y Transiciones - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Animaciones y Transiciones</h1>
+        <p class="text-gray-600 mb-8">Efectos de movimiento y transiciones suaves</p>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Transiciones Básicas</h2>
+            <div class="space-y-4">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded transition font-medium">
+                    Transición Suave
+                </button>
+                <button class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded transition duration-300 font-medium">
+                    Transición 300ms
+                </button>
+                <button class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded transition duration-700 font-medium">
+                    Transición 700ms
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Transform y Scale</h2>
+            <div class="space-y-4 flex flex-col items-center gap-4">
+                <button class="bg-purple-500 hover:scale-110 text-white px-6 py-3 rounded transition font-medium">
+                    Hover: Scale 110%
+                </button>
+                <button class="bg-purple-500 hover:scale-95 active:scale-95 text-white px-6 py-3 rounded transition font-medium">
+                    Active: Scale 95%
+                </button>
+                <button class="bg-purple-500 hover:rotate-6 text-white px-6 py-3 rounded transition font-medium">
+                    Hover: Rotate 6°
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Animaciones Predefinidas</h2>
+            <div class="space-y-4">
+                <div class="animate-bounce bg-blue-500 text-white p-4 rounded text-center font-semibold">
+                    animate-bounce (Rebote)
+                </div>
+                <div class="animate-pulse bg-green-500 text-white p-4 rounded text-center font-semibold">
+                    animate-pulse (Latido)
+                </div>
+                <div class="animate-spin bg-red-500 text-white p-4 rounded text-center font-semibold">
+                    animate-spin (Giro)
+                </div>
+                <div class="animate-ping bg-yellow-500 text-white p-4 rounded text-center font-semibold">
+                    animate-ping (Ping)
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Hover Effects</h2>
+            <div class="space-y-4">
+                <div class="bg-indigo-100 hover:bg-indigo-200 text-indigo-900 p-4 rounded transition cursor-pointer">
+                    Hover: Cambio de color
+                </div>
+                <div class="bg-orange-100 hover:shadow-lg p-4 rounded transition cursor-pointer shadow-md">
+                    Hover: Aumentar sombra
+                </div>
+                <div class="bg-pink-100 hover:scale-105 hover:shadow-lg p-4 rounded transition cursor-pointer">
+                    Hover: Scale + Sombra
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Focus States</h2>
+            <div class="space-y-3">
+                <input type="text" placeholder="Focus: Outline azul" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="email" placeholder="Focus: Anillo rojo" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-red-500">
+                <button class="w-full bg-gray-300 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 px-4 py-2 rounded transition font-medium">
+                    Botón con Focus Ring
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-2">Código HTML</h2>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;button class="transition duration-300 hover:scale-110"&gt;
+    Botón con animación
+&lt;/button&gt;
+
+&lt;div class="animate-bounce"&gt;
+    Elemento rebotando
+&lt;/div&gt;
+
+&lt;input class="focus:ring-2 focus:ring-blue-500"&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

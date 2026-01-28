@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Margin</h1>
+        <p class="text-gray-600 mb-8">Control del espaciado externo de elementos</p>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Margin Uniforme</h2>
+            <div class="bg-gray-100 p-8 rounded">
+                <div class="bg-blue-500 text-white p-4 rounded m-4">
+                    m-4 (1rem margen)
+                </div>
+                <div class="bg-blue-500 text-white p-4 rounded m-8">
+                    m-8 (2rem margen)
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Margin Horizontal</h2>
+            <div class="space-y-4">
+                <div class="mx-0 bg-green-500 text-white p-4 rounded">
+                    mx-0 (sin margen horizontal)
+                </div>
+                <div class="mx-auto bg-green-500 text-white p-4 rounded w-64 text-center">
+                    mx-auto (centrado)
+                </div>
+                <div class="ml-8 bg-green-500 text-white p-4 rounded w-64">
+                    ml-8 (margen izquierdo)
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Margin Vertical</h2>
+            <div>
+                <div class="bg-red-500 text-white p-4 rounded">
+                    Elemento 1
+                </div>
+                <div class="bg-red-500 text-white p-4 rounded my-4">
+                    my-4 (margen vertical 1rem)
+                </div>
+                <div class="bg-red-500 text-white p-4 rounded">
+                    Elemento 3
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Margen Negativo</h2>
+            <div class="bg-yellow-300 p-4 rounded">
+                <div class="bg-purple-500 text-white p-4 rounded">
+                    Elemento normal
+                </div>
+                <div class="bg-purple-500 text-white p-4 rounded -mt-2">
+                    -mt-2 (margen negativo arriba)
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-2">Código HTML</h2>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="mx-auto"&gt;
+    Centrado con margen automático
+&lt;/div&gt;
+
+&lt;div class="my-4"&gt;
+    Margen vertical 1rem
+&lt;/div&gt;
+
+&lt;div class="-mt-2"&gt;
+    Margen negativo arriba
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

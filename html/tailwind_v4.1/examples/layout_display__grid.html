@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Grid - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Display Grid</h1>
+        <p class="text-gray-600 mb-8">Crea un contenedor grid para distribuir elementos en filas y columnas</p>
+        
+        <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">Grid 3 Columnas</h2>
+            
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-blue-500 text-white p-4 rounded text-center">
+                    Item 1
+                </div>
+                <div class="bg-green-500 text-white p-4 rounded text-center">
+                    Item 2
+                </div>
+                <div class="bg-red-500 text-white p-4 rounded text-center">
+                    Item 3
+                </div>
+                <div class="bg-yellow-500 text-white p-4 rounded text-center">
+                    Item 4
+                </div>
+                <div class="bg-purple-500 text-white p-4 rounded text-center">
+                    Item 5
+                </div>
+                <div class="bg-pink-500 text-white p-4 rounded text-center">
+                    Item 6
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mt-6">
+            <h2 class="text-xl font-semibold mb-4">Grid Responsivo (2-3-4 columnas)</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-indigo-500 text-white p-4 rounded text-center font-semibold">
+                    1
+                </div>
+                <div class="bg-indigo-500 text-white p-4 rounded text-center font-semibold">
+                    2
+                </div>
+                <div class="bg-indigo-500 text-white p-4 rounded text-center font-semibold">
+                    3
+                </div>
+                <div class="bg-indigo-500 text-white p-4 rounded text-center font-semibold">
+                    4
+                </div>
+                <div class="bg-indigo-500 text-white p-4 rounded text-center font-semibold">
+                    5
+                </div>
+                <div class="bg-indigo-500 text-white p-4 rounded text-center font-semibold">
+                    6
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-2">Código HTML</h2>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="grid grid-cols-3 gap-4"&gt;
+    &lt;div class="bg-blue-500"&gt;Item&lt;/div&gt;
+    &lt;div class="bg-green-500"&gt;Item&lt;/div&gt;
+    &lt;div class="bg-red-500"&gt;Item&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Items - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Align Items</h1>
+        <p class="text-gray-600 mb-8">Alinea elementos en el eje transversal (vertical en flexbox horizontal)</p>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">items-start (Inicio)</h2>
+            <div class="flex items-start gap-4 bg-gray-100 p-4 rounded h-32">
+                <div class="bg-blue-500 text-white px-4 py-2 rounded">Corto</div>
+                <div class="bg-green-500 text-white px-4 py-8 rounded">Medio</div>
+                <div class="bg-red-500 text-white px-4 py-16 rounded">Largo</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">items-center (Centro)</h2>
+            <div class="flex items-center gap-4 bg-gray-100 p-4 rounded h-32">
+                <div class="bg-blue-500 text-white px-4 py-2 rounded">Corto</div>
+                <div class="bg-green-500 text-white px-4 py-8 rounded">Medio</div>
+                <div class="bg-red-500 text-white px-4 py-16 rounded">Largo</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">items-end (Fin)</h2>
+            <div class="flex items-end gap-4 bg-gray-100 p-4 rounded h-32">
+                <div class="bg-blue-500 text-white px-4 py-2 rounded">Corto</div>
+                <div class="bg-green-500 text-white px-4 py-8 rounded">Medio</div>
+                <div class="bg-red-500 text-white px-4 py-16 rounded">Largo</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">items-stretch (Estirado)</h2>
+            <div class="flex items-stretch gap-4 bg-gray-100 p-4 rounded h-32">
+                <div class="bg-blue-500 text-white px-4 rounded">Estirado</div>
+                <div class="bg-green-500 text-white px-4 rounded">Estirado</div>
+                <div class="bg-red-500 text-white px-4 rounded">Estirado</div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-2">Código HTML</h2>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="flex items-center h-32"&gt;
+    &lt;div&gt;Elemento 1&lt;/div&gt;
+    &lt;div&gt;Elemento 2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

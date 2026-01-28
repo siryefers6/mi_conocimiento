@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Y Auto - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Overflow - Y Auto</h1>
+        <p class="text-gray-600 mb-8">Scroll vertical automático</p>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <div class="overflow-y-auto h-48 bg-gray-100 border-2 border-gray-300 rounded p-4">
+                <div class="space-y-2">
+                    <p>Párrafo 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Párrafo 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Párrafo 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <p>Párrafo 4: Laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Párrafo 5: Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                    <p>Párrafo 6: Esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>Párrafo 7: Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6">
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="overflow-y-auto h-48"&gt;
+  Contenido largo vertical
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

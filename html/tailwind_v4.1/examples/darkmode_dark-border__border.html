@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Border - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white dark:bg-gray-900 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Borde en Modo Oscuro</h1>
+        <p class="text-gray-600 dark:text-gray-300 mb-8">Colores de borde adaptables</p>
+        
+        <button onclick="document.documentElement.classList.toggle('dark')" class="bg-blue-500 text-white px-6 py-2 rounded mb-6">
+            Toggle Modo Oscuro
+        </button>
+
+        <div class="space-y-4">
+            <div class="border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-4 rounded">
+                <p class="text-gray-900 dark:text-white">Borde gris adaptable</p>
+            </div>
+            <div class="border-2 border-blue-300 dark:border-blue-600 bg-white dark:bg-gray-800 p-4 rounded">
+                <p class="text-gray-900 dark:text-white">Borde azul adaptable</p>
+            </div>
+            <div class="border-2 border-red-300 dark:border-red-600 bg-white dark:bg-gray-800 p-4 rounded">
+                <p class="text-gray-900 dark:text-white">Borde rojo adaptable</p>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-6 mt-6">
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="border-2 border-gray-300 dark:border-gray-600"&gt;
+  Borde adaptable
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

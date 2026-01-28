@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Items Start - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Grid - Items Start (Vertical)</h1>
+        <p class="text-gray-600 mb-8">Alinea items al inicio verticalmente</p>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <div class="grid grid-cols-3 gap-4 h-64 items-start bg-gray-100 p-4 rounded">
+                <div class="bg-blue-500 text-white p-4 rounded">Item 1</div>
+                <div class="bg-green-500 text-white p-4 rounded">Item 2</div>
+                <div class="bg-purple-500 text-white p-4 rounded">Item 3</div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6">
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="grid grid-cols-3 items-start h-64"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

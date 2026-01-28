@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Text - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white dark:bg-gray-900 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Texto en Modo Oscuro</h1>
+        <p class="text-gray-600 dark:text-gray-300 mb-8">Colores de texto adaptables</p>
+        
+        <button onclick="document.documentElement.classList.toggle('dark')" class="bg-blue-500 text-white px-6 py-2 rounded mb-6">
+            Toggle Modo Oscuro
+        </button>
+
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 mb-6 space-y-4">
+            <p class="text-gray-900 dark:text-white">Texto principal (gray-900 en claro, white en oscuro)</p>
+            <p class="text-gray-600 dark:text-gray-400">Texto secundario (gray-600 en claro, gray-400 en oscuro)</p>
+            <p class="text-gray-500 dark:text-gray-500">Texto terciario (gray-500 en ambos)</p>
+            <p class="text-red-600 dark:text-red-400">Texto rojo adaptado</p>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-6">
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;p class="text-gray-900 dark:text-white"&gt;
+  Texto adaptable
+&lt;/p&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

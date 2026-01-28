@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Animation - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Animation - Bounce</h1>
+        <p class="text-gray-600 mb-8">Rebote repetido</p>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6 flex gap-8">
+            <div class="w-20 h-20 bg-red-500 rounded animate-bounce"></div>
+            <div class="w-20 h-20 bg-yellow-500 rounded animate-bounce" style="animation-delay: 0.1s"></div>
+            <div class="w-20 h-20 bg-green-500 rounded animate-bounce" style="animation-delay: 0.2s"></div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6">
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="animate-bounce"&gt;
+  Animación de rebote
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items End, Stretch, Baseline - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Items - Más Opciones</h1>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">items-end</h2>
+            <div class="flex items-end gap-4 bg-gray-100 p-4 rounded h-32">
+                <div class="bg-blue-500 text-white px-4 py-2 rounded">A</div>
+                <div class="bg-blue-500 text-white px-4 py-8 rounded">B</div>
+                <div class="bg-blue-500 text-white px-4 py-16 rounded">C</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">items-stretch</h2>
+            <div class="flex items-stretch gap-4 bg-gray-100 p-4 rounded h-32">
+                <div class="bg-green-500 text-white px-4 rounded flex items-center">Estirado</div>
+                <div class="bg-green-500 text-white px-4 rounded flex items-center">Estirado</div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">items-baseline</h2>
+            <div class="flex items-baseline gap-4 bg-gray-100 p-4 rounded h-32">
+                <div class="bg-red-500 text-white text-lg px-4 py-2 rounded">Normal</div>
+                <div class="bg-red-500 text-white text-sm px-4 py-2 rounded">Pequeño</div>
+                <div class="bg-red-500 text-white text-2xl px-4 py-2 rounded">Grande</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
+    <div class="max-w-4xl mx-auto p-8">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-3xl font-bold">Dark Mode</h1>
+            <button onclick="toggleDarkMode()" class="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600">
+                Toggle Dark
+            </button>
+        </div>
+        
+        <p class="text-gray-600 dark:text-gray-400 mb-8">
+            Diseño con soporte para modo oscuro
+        </p>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+                Tarjeta con Dark Mode
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400">
+                El texto y fondo se adaptan automáticamente según el modo oscuro esté activo
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded-lg p-6">
+                <h3 class="font-bold text-blue-900 dark:text-blue-100 mb-2">
+                    Elemento Azul
+                </h3>
+                <p class="text-blue-700 dark:text-blue-200">
+                    Los colores se adaptan al modo oscuro
+                </p>
+            </div>
+
+            <div class="bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 rounded-lg p-6">
+                <h3 class="font-bold text-green-900 dark:text-green-100 mb-2">
+                    Elemento Verde
+                </h3>
+                <p class="text-green-700 dark:text-green-200">
+                    Cada color tiene variante oscura
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-red-100 dark:bg-red-900 border border-red-300 dark:border-red-700 rounded-lg p-6 mb-6">
+            <h3 class="font-bold text-red-900 dark:text-red-100 mb-2">
+                Sombras en Dark Mode
+            </h3>
+            <p class="text-red-700 dark:text-red-200">
+                Las sombras también se adaptan para mejor contraste en modo oscuro
+            </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">Ejemplos de Estados</h2>
+            <div class="space-y-3">
+                <button class="w-full bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white px-4 py-2 rounded font-medium">
+                    Botón Primario
+                </button>
+                <button class="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white px-4 py-2 rounded font-medium hover:bg-gray-50 dark:hover:bg-gray-600">
+                    Botón Secundario
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-2 text-gray-900 dark:text-white">Código HTML</h2>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="bg-white dark:bg-gray-800"&gt;
+    &lt;p class="text-gray-900 dark:text-white"&gt;
+        Texto adaptado a dark mode
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        // Cargar preferencia guardada
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</body>
+</html>

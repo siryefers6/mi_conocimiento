@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Responsive Design</h1>
+        <p class="text-gray-600 mb-8">Diseño responsivo con breakpoints de Tailwind</p>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Grid Responsivo</h2>
+            <p class="text-sm text-gray-600 mb-4">1 columna en móvil, 2 en tablet, 3 en desktop</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-blue-500 text-white p-6 rounded text-center font-semibold">
+                    Card 1
+                </div>
+                <div class="bg-blue-500 text-white p-6 rounded text-center font-semibold">
+                    Card 2
+                </div>
+                <div class="bg-blue-500 text-white p-6 rounded text-center font-semibold">
+                    Card 3
+                </div>
+                <div class="bg-blue-500 text-white p-6 rounded text-center font-semibold">
+                    Card 4
+                </div>
+                <div class="bg-blue-500 text-white p-6 rounded text-center font-semibold">
+                    Card 5
+                </div>
+                <div class="bg-blue-500 text-white p-6 rounded text-center font-semibold">
+                    Card 6
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Flexbox Responsivo</h2>
+            <p class="text-sm text-gray-600 mb-4">Dirección vertical en móvil, horizontal en desktop</p>
+            <div class="flex flex-col lg:flex-row gap-4">
+                <div class="flex-1 bg-green-500 text-white p-6 rounded text-center">
+                    Lado izquierdo
+                </div>
+                <div class="flex-1 bg-green-600 text-white p-6 rounded text-center">
+                    Centro
+                </div>
+                <div class="flex-1 bg-green-700 text-white p-6 rounded text-center">
+                    Lado derecho
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Visibilidad Responsiva</h2>
+            <div class="space-y-3">
+                <div class="hidden md:block bg-purple-500 text-white p-4 rounded">
+                    Visible solo en md+ (tablet y desktop)
+                </div>
+                <div class="block md:hidden bg-orange-500 text-white p-4 rounded">
+                    Visible solo en mobile
+                </div>
+                <div class="hidden lg:block bg-indigo-500 text-white p-4 rounded">
+                    Visible solo en lg+ (desktop grande)
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Tamaño de Texto Responsivo</h2>
+            <div class="space-y-3">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold">
+                    Encabezado que crece en pantallas grandes
+                </h1>
+                <p class="text-sm md:text-base lg:text-lg">
+                    Párrafo que ajusta el tamaño según el breakpoint
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-2">Breakpoints Disponibles</h2>
+            <div class="grid grid-cols-2 gap-2 text-sm">
+                <div><span class="font-semibold">sm:</span> 640px</div>
+                <div><span class="font-semibold">md:</span> 768px</div>
+                <div><span class="font-semibold">lg:</span> 1024px</div>
+                <div><span class="font-semibold">xl:</span> 1280px</div>
+                <div><span class="font-semibold">2xl:</span> 1536px</div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-2">Código HTML</h2>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"&gt;
+    &lt;!-- 1 columna en mobile, 2 en tablet, 3 en desktop --&gt;
+&lt;/div&gt;
+
+&lt;div class="hidden md:block"&gt;
+    Visible solo en tablet y desktop
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>

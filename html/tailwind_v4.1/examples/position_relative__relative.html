@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Posicionamiento</h1>
+        <p class="text-gray-600 mb-8">Control de posicionamiento de elementos</p>
+        
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Relative</h2>
+            <div class="relative bg-gray-200 p-8 rounded">
+                <div class="bg-blue-500 text-white p-4 rounded">
+                    Posición relativa (relative)
+                </div>
+                <div class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded text-sm">
+                    Absoluto
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Absolute</h2>
+            <div class="relative bg-gradient-to-r from-green-200 to-blue-200 h-64 rounded p-4">
+                <div class="absolute top-4 left-4 bg-green-500 text-white p-3 rounded">
+                    top-4 left-4
+                </div>
+                <div class="absolute bottom-4 right-4 bg-blue-500 text-white p-3 rounded">
+                    bottom-4 right-4
+                </div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-yellow-500 text-white p-3 rounded">
+                    Centrado
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Fixed</h2>
+            <p class="text-gray-600 mb-3">
+                El siguiente elemento está fixed (inténtalo haciendo scroll en la página original)
+            </p>
+            <div class="fixed bottom-8 right-8 bg-purple-500 text-white px-6 py-3 rounded-full shadow-lg">
+                Fixed Button
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Sticky</h2>
+            <div class="h-96 border-4 border-gray-300 overflow-y-auto rounded">
+                <div class="sticky top-0 bg-indigo-500 text-white p-4 rounded-t font-bold">
+                    Sticky Header
+                </div>
+                <div class="space-y-2 p-4">
+                    <p>Elemento 1</p>
+                    <p>Elemento 2</p>
+                    <p>Elemento 3</p>
+                    <p>Elemento 4</p>
+                    <p>Elemento 5</p>
+                    <p>Elemento 6</p>
+                    <p>Elemento 7</p>
+                    <p>Elemento 8</p>
+                    <p>Elemento 9</p>
+                    <p>Elemento 10</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Z-Index</h2>
+            <div class="relative h-40">
+                <div class="absolute top-0 left-0 w-32 h-32 bg-red-400 z-30 rounded flex items-center justify-center text-white font-bold">
+                    z-30
+                </div>
+                <div class="absolute top-6 left-16 w-32 h-32 bg-yellow-400 z-20 rounded flex items-center justify-center text-white font-bold">
+                    z-20
+                </div>
+                <div class="absolute top-12 left-32 w-32 h-32 bg-green-400 z-10 rounded flex items-center justify-center text-white font-bold">
+                    z-10
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg p-6 mt-6">
+            <h2 class="text-lg font-semibold mb-2">Código HTML</h2>
+            <pre class="bg-gray-900 text-green-400 p-4 rounded overflow-x-auto"><code>&lt;div class="relative"&gt;
+    &lt;div class="absolute top-4 right-4"&gt;
+        Posicionado
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="fixed bottom-8 right-8"&gt;
+    Siempre visible
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</body>
+</html>
