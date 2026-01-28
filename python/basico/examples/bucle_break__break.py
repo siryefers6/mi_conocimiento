@@ -1,21 +1,31 @@
-"""
-Objetivo: terminar un bucle inmediatamente cuando se cumple una condición
+﻿"""
+Objetivo: Salir del bucle inmediatamente
 Referencia: break
 Tipo: keyword
 Nivel: basico
 """
 
-# carga de datos
-numeros = [1, 2, 3, 4, 5]
-
-# transformación: detener bucle cuando se encuentra un número mayor que 3
-for n in numeros:
-    if n > 3:
+# break en for
+for i in range(10):
+    if i == 3:
         break
-    print(n)
+    print(i)
+
+print("---")
+
+# break en while
+contador = 0
+while True:
+    if contador == 2:
+        break
+    print(contador)
+    contador += 1
 
 """output
+0
 1
 2
-3
+---
+0
+1
 """

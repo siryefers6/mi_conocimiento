@@ -1,229 +1,280 @@
-# Python Básico
+# Python Básico - Guía Completa
 
-Conjunto de ejemplos ejecutables que cubren el **80/20** del lenguaje Python.
-
-El objetivo es resolver problemas reales con la menor cantidad de conceptos posibles.
+Referencia rápida de conceptos fundamentales, funciones y operadores de Python con ejemplos ejecutables.
 
 ---
 
-## Estructura
+## Output y Entrada
 
-* Este README **indexa** el conocimiento.
-* Cada ejemplo vive en `examples/`.
-* Cada archivo resuelve **un solo problema**.
-
----
-
-## Entrada y salida
-
-| Concepto       | Referencia | Tipo    | Uso                 | Ejemplo                                  |
-| -------------- | ---------- | ------- | ------------------- | ---------------------------------------- |
-| Imprimir texto | `print`    | funcion | Salida estándar     | [ver](examples/imprimir_texto__print.py) |
-| Leer entrada   | `input`    | funcion | Entrada del usuario | [ver](examples/leer_entrada__input.py)   |
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Imprimir texto | `print()` | función | Salida estándar | [ver](examples/output_texto__print.py) |
+| Imprimir múltiples valores | `print()` | función | Múltiples argumentos | [ver](examples/output_multiples__print.py) |
+| Entrada del usuario | `input()` | función | Leer desde teclado | [ver](examples/entrada_usuario__input.py) |
+| Entrada con tipo | `int(input())` | función | Convertir entrada | [ver](examples/entrada_convertir__int.py) |
 
 ---
 
-## Variables y tipos
+## Variables y Asignación
 
-| Concepto            | Referencia | Tipo     | Uso                 | Ejemplo                                         |
-| ------------------- | ---------- | -------- | ------------------- | ----------------------------------------------- |
-| Asignar variable    | `=`        | operador | Asignación de valor | [ver](examples/asignar_variable__asignacion.py) |
-| Ver tipo            | `type`     | funcion  | Inspección de tipo  | [ver](examples/ver_tipo__type.py)               |
-| Conversión de tipos | `int`      | funcion  | Casting explícito   | [ver](examples/convertir_tipo__casting.py)      |
-
-### Enteros (`int`)
-| Concepto         | Referencia | Tipo     | Uso                    | Ejemplo                                         |
-| ---------------- | ---------- | -------- | ---------------------- | ----------------------------------------------- |
-| Asignar variable | `=`        | operador | Asignación de valor    | [ver](examples/asignar_variable__asignacion.py) |
-| Conversión       | `int()`    | funcion  | Convertir a entero     | [ver](examples/convertir_tipo__casting.py)      |
-| Valor absoluto   | `abs()`    | funcion  | Obtener valor absoluto | [ver](examples/valor_absoluto__abs.py)          |
-| Redondeo         | `round()`  | funcion  | Redondear número       | [ver](examples/redondear__round.py)             |
-
-### Flotantes (`float`)
-| Concepto         | Referencia | Tipo     | Uso                    | Ejemplo                                         |
-| ---------------- | ---------- | -------- | ---------------------- | ----------------------------------------------- |
-| Asignar variable | `=`        | operador | Asignación de valor    | [ver](examples/asignar_variable__asignacion.py) |
-| Conversión       | `float()`  | funcion  | Convertir a decimal    | [ver](examples/convertir_tipo__casting.py)      |
-| Valor absoluto   | `abs()`    | funcion  | Obtener valor absoluto | [ver](examples/valor_absoluto__abs.py)          |
-| Redondeo         | `round()`  | funcion  | Redondear número       | [ver](examples/redondear__round.py)             |
-
-### Cadenas (`str`)
-| Concepto         | Referencia | Tipo     | Uso                           | Ejemplo                                         |
-| ---------------- | ---------- | -------- | ----------------------------- | ----------------------------------------------- |
-| Asignar variable | `=`        | operador | Asignación de valor           | [ver](examples/asignar_variable__asignacion.py) |
-| Conversión       | `str()`    | funcion  | Convertir a cadena            | [ver](examples/convertir_tipo__casting.py)      |
-| Limpiar texto    | `strip()`  | metodo   | Quitar espacios inicial/final | [ver](examples/limpiar_string__strip.py)        |
-| Dividir texto    | `split()`  | metodo   | Separar string en lista       | [ver](examples/dividir_strings__split.py)       |
-| Unir texto       | `join()`   | metodo   | Concatenar lista en string    | [ver](examples/concatenar_strings__join.py)     |
-
-### Booleanos (`bool`)
-| Concepto         | Referencia | Tipo     | Uso                  | Ejemplo                                         |
-| ---------------- | ---------- | -------- | -------------------- | ----------------------------------------------- |
-| Asignar variable | `=`        | operador | Asignación de valor  | [ver](examples/asignar_variable__asignacion.py) |
-| Conversión       | `bool()`   | funcion  | Convertir a booleano | [ver](examples/conversion_bool__bool.py)        |
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Asignar variable | `=` | operador | Crear variable | [ver](examples/variable_asignar__asignacion.py) |
+| Múltiple asignación | `=` | operador | Asignar varios valores | [ver](examples/variable_multiple__asignacion.py) |
+| Cambiar valor | `=` | operador | Modificar variable | [ver](examples/variable_modificar__asignacion.py) |
+| Incrementar variable | `+=` | operador | Sumar y asignar | [ver](examples/variable_incrementar__operador.py) |
 
 ---
 
-## Operadores
+## Tipos de Datos Básicos
 
-| Concepto    | Referencia   | Tipo     | Uso                   | Ejemplo                                           |
-| ----------- | ------------ | -------- | --------------------- | ------------------------------------------------- |
-| Aritméticos | `+ - * / % **`    | operador | Operaciones numéricas | [ver](examples/operadores_aritmeticos__basico.py) |
-| Comparación | `== != > <`  | operador | Comparar valores      | [ver](examples/operadores_comparacion__basico.py) |
-| Lógicos     | `and or not` | keyword  | Expresiones booleanas | [ver](examples/operadores_logicos__basico.py)     |
-
----
-
-## Control de flujo
-
-| Concepto    | Referencia | Tipo    | Uso                   | Ejemplo                                     |
-| ----------- | ---------- | ------- | --------------------- | ------------------------------------------- |
-| Condicional | `if`       | keyword | Decisiones            | [ver](examples/control_flujo__if.py)        |
-| Condicional alternativa | `if / else` | keyword | Rama alternativa | [ver](examples/if_else__if.py) |
-| Múltiples condiciones | `if / elif / else` | keyword | Varias ramas | [ver](examples/if_elif_else__if.py) |
-| Condición compuesta | `if` | keyword | and / or | [ver](examples/if_condicion_compuesta__if.py) |
-| Validación temprana | `if` | keyword | Guard clause | [ver](examples/if_guard_clause__if.py) |
-| Condicional inline | `if` | keyword | Condicional en una sola línea (one-liner) | [ver](examples/if_inline__if.py) |
-| Bucle       | `for`      | keyword | Iterar secuencias     | [ver](examples/iterar_secuencia__for.py)    |
-| Iterar rango | `for` | keyword | Iterar sobre una secuencia numérica con `range()` | [ver](examples/iterar_rango__for.py) |
-| Iterar diccionario | `for` | keyword | Iterar sobre claves y valores de un diccionario | [ver](examples/iterar_diccionario__for.py) |
-| Iterar con índice | `for` | keyword | Iterar con índice usando `enumerate()` | [ver](examples/iterar_con_indice__for.py) |
-| Bucle en una línea | `for` | keyword | One-liner para listas o expresiones | [ver](examples/for_inline__for.py) |
-| Bucle       | `while`    | keyword | Iteración condicional | [ver](examples/bucle_condicional__while.py) |
-
-## Control de bucles
-
-| Concepto        | Referencia | Tipo     | Uso                                           | Ejemplo                                             |
-|-----------------|-----------|---------|-----------------------------------------------|----------------------------------------------------|
-| Terminar bucle  | `break`   | keyword | Salir inmediatamente de un bucle             | [ver](examples/bucle_break__break.py)             |
-| Saltar iteración| `continue`| keyword | Omitir la iteración actual y pasar a la siguiente | [ver](examples/bucle_continue__continue.py)       |
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Entero (int) | `int` | tipo | Números sin decimales | [ver](examples/tipo_entero__int.py) |
+| Decimal (float) | `float` | tipo | Números con decimales | [ver](examples/tipo_decimal__float.py) |
+| Texto (str) | `str` | tipo | Cadenas de caracteres | [ver](examples/tipo_texto__str.py) |
+| Booleano (bool) | `bool` | tipo | Verdadero o falso | [ver](examples/tipo_booleano__bool.py) |
+| Tipo de variable | `type()` | función | Identificar el tipo | [ver](examples/tipo_identificar__type.py) |
+| Convertir a entero | `int()` | función | Conversión a int | [ver](examples/tipo_convertir__int.py) |
+| Convertir a decimal | `float()` | función | Conversión a float | [ver](examples/tipo_convertir__float.py) |
+| Convertir a texto | `str()` | función | Conversión a string | [ver](examples/tipo_convertir__str.py) |
 
 ---
 
-## Estructuras de datos
+## Operadores Aritméticos
 
-### Listas
-| Concepto     | Referencia | Tipo   | Uso               | Ejemplo                                          |
-| ------------ | ---------- | ------ | ----------------- | ------------------------------------------------ |
-| Agregar elemento        | `append`  | metodo | Agregar al final          | [ver](examples/agregar_elemento__list_append.py)    |
-| Insertar elemento       | `insert`  | metodo | Insertar en posición      | [ver](examples/insertar_elemento__list_insert.py)   |
-| Agregar múltiples       | `extend`  | metodo | Extender lista            | [ver](examples/extender_lista__list_extend.py)      |
-| Eliminar por valor      | `remove`  | metodo | Borrar elemento específico| [ver](examples/eliminar_valor__list_remove.py)      |
-| Eliminar por índice     | `pop`     | metodo | Borrar por posición       | [ver](examples/eliminar_indice__list_pop.py)        |
-| Vaciar lista            | `clear`   | metodo | Eliminar todos los elementos | [ver](examples/vaciar_lista__list_clear.py)     |
-| Buscar índice           | `index`   | metodo | Encontrar posición        | [ver](examples/buscar_indice__list_index.py)       |
-| Contar ocurrencias      | `count`   | metodo | Contar elementos          | [ver](examples/contar_elementos__list_count.py)    |
-| Ordenar lista           | `sort`    | metodo | Ordenar elementos         | [ver](examples/ordenar_lista__list_sort.py)        |
-| Invertir lista          | `reverse` | metodo | Dar vuelta a la lista     | [ver](examples/invertir_lista__list_reverse.py)    |
-| Copiar lista            | `copy`    | metodo | Crear copia superficial   | [ver](examples/copiar_lista__list_copy.py)         |
-
-### Tuplas
-| Concepto     | Referencia | Tipo   | Uso               | Ejemplo                                          |
-| ------------ | ---------- | ------ | ----------------- | ------------------------------------------------ |
-| Crear tupla                | `tuple`   | clase | Construir tupla          | [ver](examples/crear_tupla__tuple.py)               |
-| Contar elementos           | `count`   | metodo| Contar ocurrencias       | [ver](examples/contar_elementos__tuple_count.py)    |
-| Buscar índice de valor     | `index`   | metodo| Encontrar posición       | [ver](examples/buscar_indice__tuple_index.py)       |
-| Longitud                   | `len`     | funcion| Número de elementos      | [ver](examples/longitud__len.py)                    |
-| Suma de elementos          | `sum`     | funcion| Total de elementos numéricos | [ver](examples/suma_elementos__sum.py)         |
-| Valor máximo / mínimo      | `max / min` | funcion| Obtener el mayor o menor | [ver](examples/max_min__tuple.py)                  |
-
-### Sets
-| Concepto     | Referencia | Tipo   | Uso               | Ejemplo                                          |
-| ------------ | ---------- | ------ | ----------------- | ------------------------------------------------ |
-| Agregar elemento              | `add`         | metodo| Añadir un elemento al set            | [ver](examples/agregar_elemento__set_add.py)       |
-| Eliminar elemento (error)     | `remove`      | metodo| Borrar elemento, lanza error si no existe | [ver](examples/eliminar_elemento__set_remove.py) |
-| Eliminar elemento seguro      | `discard`     | metodo| Borrar elemento sin error           | [ver](examples/eliminar_elemento__set_discard.py) |
-| Eliminar elemento arbitrario  | `pop`         | metodo| Extraer y eliminar un elemento      | [ver](examples/eliminar_elemento__set_pop.py)     |
-| Vaciar set                    | `clear`       | metodo| Eliminar todos los elementos        | [ver](examples/vaciar_set__set_clear.py)          |
-| Unión de sets                 | `union`       | metodo| Combinar elementos únicos de dos sets | [ver](examples/union_sets__set_union.py)       |
-| Intersección de sets          | `intersection`| metodo| Elementos comunes entre sets        | [ver](examples/interseccion_sets__set_intersection.py) |
-| Diferencia de sets            | `difference`  | metodo| Elementos de un set que no están en otro | [ver](examples/diferencia_sets__set_difference.py) |
-| Subconjunto                   | `issubset`    | metodo| Verificar si es subconjunto         | [ver](examples/subconjunto__set_issubset.py)      |
-| Superconjunto                 | `issuperset`  | metodo| Verificar si es superconjunto       | [ver](examples/superconjunto__set_issuperset.py)  |
-
-### Diccionarios
-| Concepto     | Referencia | Tipo   | Uso               | Ejemplo                                          |
-| ------------ | ---------- | ------ | ----------------- | ------------------------------------------------ |
-| Acceso seguro                 | `get`          | metodo| Obtener valor sin error si no existe | [ver](examples/acceder_diccionario__dict_get.py)     |
-| Obtener claves                | `keys`         | metodo| Listar todas las claves               | [ver](examples/obtener_claves__dict_keys.py)        |
-| Obtener valores               | `values`       | metodo| Listar todos los valores              | [ver](examples/obtener_valores__dict_values.py)     |
-| Obtener pares clave-valor     | `items`        | metodo| Listar tuplas (clave, valor)         | [ver](examples/obtener_items__dict_items.py)        |
-| Actualizar diccionario        | `update`       | metodo| Agregar o modificar pares             | [ver](examples/actualizar_diccionario__dict_update.py) |
-| Eliminar por clave            | `pop`          | metodo| Borrar y retornar valor               | [ver](examples/eliminar_por_clave__dict_pop.py)     |
-| Eliminar elemento arbitrario  | `popitem`      | metodo| Quitar un par cualquiera              | [ver](examples/eliminar_arbitrario__dict_popitem.py)|
-| Vaciar diccionario            | `clear`        | metodo| Eliminar todos los pares              | [ver](examples/vaciar_diccionario__dict_clear.py)   |
-| Copiar diccionario            | `copy`         | metodo| Copia superficial del diccionario    | [ver](examples/copiar_diccionario__dict_copy.py)    |
-| Obtener valor o asignar       | `setdefault`   | metodo| Obtener valor o asignar si no existe | [ver](examples/setdefault_diccionario__dict_setdefault.py) |
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Suma | `+` | operador | Adición | [ver](examples/operador_suma__suma.py) |
+| Resta | `-` | operador | Sustracción | [ver](examples/operador_resta__resta.py) |
+| Multiplicación | `*` | operador | Multiplicación | [ver](examples/operador_multiplicacion__mult.py) |
+| División | `/` | operador | División con decimales | [ver](examples/operador_division__div.py) |
+| División entera | `//` | operador | División sin decimales | [ver](examples/operador_division_entera__floordiv.py) |
+| Módulo | `%` | operador | Resto de división | [ver](examples/operador_modulo__mod.py) |
+| Potencia | `**` | operador | Elevar a potencia | [ver](examples/operador_potencia__pow.py) |
 
 ---
 
-## Funciones básicas
+## Operadores de Comparación
 
-| Concepto                | Referencia   | Tipo     | Uso                                   | Ejemplo                                              |
-|-------------------------|-------------|---------|--------------------------------------|-----------------------------------------------------|
-| Longitud                | `len`       | funcion | Obtener número de elementos          | [ver](examples/longitud__len.py)                   |
-| Suma de elementos       | `sum`       | funcion | Sumar valores numéricos              | [ver](examples/suma_elementos__sum.py)            |
-| Valor máximo / mínimo   | `max / min` | funcion | Obtener mayor o menor valor          | [ver](examples/max_min__tuple.py)                  |
-| Valor absoluto          | `abs`       | funcion | Obtener valor absoluto               | [ver](examples/valor_absoluto__abs.py)             |
-| Redondeo                | `round`     | funcion | Redondear un número                  | [ver](examples/redondear__round.py)                |
-| Aplicar función         | `map`       | funcion | Aplicar función a todos los elementos | [ver](examples/aplicar_funcion__map.py)           |
-| Filtrar elementos       | `filter`    | funcion | Filtrar elementos según condición    | [ver](examples/filtrar_elementos__filter.py)       |
-| Combinar secuencias     | `zip`       | funcion | Combinar iterables en tuplas         | [ver](examples/combinar_secuencias__zip.py)       |
-| Iterar con índice       | `enumerate` | funcion | Obtener índice y valor en iteración | [ver](examples/iterar_con_indice__enumerate.py)   |
-| Ordenar secuencia       | `sorted`    | funcion | Devolver lista ordenada              | [ver](examples/ordenar_lista__sorted.py)          |
-| Todos / Alguno          | `all / any` | funcion | Verificar condición en todos o alguno | [ver](examples/verificar_condicion__all_any.py)  |
-| Concatenar strings      | `join`      | metodo  | Unir elementos de una lista en string | [ver](examples/concatenar_strings__join.py)      |
-| Dividir strings         | `split`     | metodo  | Separar una cadena en lista usando un separador | [ver](examples/dividir_strings__split.py) |
-| Limpiar string          | `strip`     | metodo  | Eliminar espacios u otros caracteres al inicio y final | [ver](examples/limpiar_string__strip.py) |
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Igual que | `==` | operador | Igualdad | [ver](examples/comparacion_igual__eq.py) |
+| No igual que | `!=` | operador | Desigualdad | [ver](examples/comparacion_no_igual__ne.py) |
+| Mayor que | `>` | operador | Mayor a | [ver](examples/comparacion_mayor__gt.py) |
+| Menor que | `<` | operador | Menor a | [ver](examples/comparacion_menor__lt.py) |
+| Mayor o igual | `>=` | operador | Mayor o igual | [ver](examples/comparacion_mayor_igual__ge.py) |
+| Menor o igual | `<=` | operador | Menor o igual | [ver](examples/comparacion_menor_igual__le.py) |
+
+---
+
+## Operadores Lógicos
+
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Y (AND) | `and` | operador | Ambas condiciones | [ver](examples/logico_and__and.py) |
+| O (OR) | `or` | operador | Cualquier condición | [ver](examples/logico_or__or.py) |
+| NO (NOT) | `not` | operador | Invertir lógica | [ver](examples/logico_not__not.py) |
+
+---
+
+## Strings (Cadenas de Texto)
+
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Crear string | `""` o `''` | literal | Texto entre comillas | [ver](examples/string_crear__comillas.py) |
+| Concatenación | `+` | operador | Unir strings | [ver](examples/string_concatenar__suma.py) |
+| Repetición | `*` | operador | Repetir string | [ver](examples/string_repetir__mult.py) |
+| Largo del string | `len()` | función | Número de caracteres | [ver](examples/string_largo__len.py) |
+| Mayúsculas | `upper()` | método | Convertir a mayúsculas | [ver](examples/string_mayusculas__upper.py) |
+| Minúsculas | `lower()` | método | Convertir a minúsculas | [ver](examples/string_minusculas__lower.py) |
+| Primera letra capital | `capitalize()` | método | Capitalizar | [ver](examples/string_capitalizar__capitalize.py) |
+| Reemplazar texto | `replace()` | método | Sustituir contenido | [ver](examples/string_reemplazar__replace.py) |
+| Dividir string | `split()` | método | Partir en lista | [ver](examples/string_dividir__split.py) |
+| Unir lista en string | `join()` | método | Concatenar lista | [ver](examples/string_unir__join.py) |
+| Buscar posición | `find()` | método | Localizar substring | [ver](examples/string_posicion__find.py) |
+| Verificar contenido | `in` | operador | Comprobar substring | [ver](examples/string_contiene__in.py) |
+| Indización | `[]` | operador | Acceder a carácter | [ver](examples/string_indizar__indexacion.py) |
+| Slicing | `[:]` | operador | Obtener porción | [ver](examples/string_slice__slicing.py) |
+| F-strings | `f""` | literal | Formato interpolado | [ver](examples/string_fstring__fstring.py) |
+
+---
+
+## Listas
+
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Crear lista | `[]` | literal | Lista vacía | [ver](examples/lista_crear__brackets.py) |
+| Crear con valores | `[]` | literal | Lista con elementos | [ver](examples/lista_elementos__brackets.py) |
+| Acceder elemento | `[]` | operador | Obtener por índice | [ver](examples/lista_acceder__indexacion.py) |
+| Modificar elemento | `[]` | operador | Cambiar valor en índice | [ver](examples/lista_modificar__asignacion.py) |
+| Largo de lista | `len()` | función | Número de elementos | [ver](examples/lista_largo__len.py) |
+| Agregar elemento | `append()` | método | Añadir al final | [ver](examples/lista_agregar__append.py) |
+| Insertar en posición | `insert()` | método | Insertar en índice | [ver](examples/lista_insertar__insert.py) |
+| Eliminar por índice | `pop()` | método | Sacar y remover | [ver](examples/lista_eliminar__pop.py) |
+| Eliminar por valor | `remove()` | método | Remover primer match | [ver](examples/lista_remover__remove.py) |
+| Limpiar lista | `clear()` | método | Vaciar lista | [ver](examples/lista_limpiar__clear.py) |
+| Contar elemento | `count()` | método | Número de ocurrencias | [ver](examples/lista_contar__count.py) |
+| Encontrar índice | `index()` | método | Posición de elemento | [ver](examples/lista_indice__index.py) |
+| Ordenar lista | `sort()` | método | Orden ascendente | [ver](examples/lista_ordenar__sort.py) |
+| Invertir lista | `reverse()` | método | Orden inverso | [ver](examples/lista_invertir__reverse.py) |
+| Copiar lista | `copy()` | método | Copia superficial | [ver](examples/lista_copiar__copy.py) |
+| Slicing | `[:]` | operador | Obtener porción | [ver](examples/lista_slice__slicing.py) |
+| Verificar elemento | `in` | operador | Elemento existe | [ver](examples/lista_contiene__in.py) |
+
+---
+
+## Diccionarios
+
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Crear diccionario | `{}` | literal | Dict vacío | [ver](examples/dict_crear__braces.py) |
+| Con pares clave-valor | `{}` | literal | Dict con datos | [ver](examples/dict_pares__braces.py) |
+| Acceder valor | `[]` | operador | Obtener por clave | [ver](examples/dict_acceder__indexacion.py) |
+| Acceder con get | `get()` | método | Acceso seguro | [ver](examples/dict_get__get.py) |
+| Asignar valor | `[]` | operador | Crear/cambiar clave | [ver](examples/dict_asignar__indexacion.py) |
+| Eliminar clave | `pop()` | método | Remover y devolver | [ver](examples/dict_eliminar__pop.py) |
+| Limpiar dict | `clear()` | método | Vaciar diccionario | [ver](examples/dict_limpiar__clear.py) |
+| Obtener claves | `keys()` | método | Lista de claves | [ver](examples/dict_claves__keys.py) |
+| Obtener valores | `values()` | método | Lista de valores | [ver](examples/dict_valores__values.py) |
+| Obtener pares | `items()` | método | Lista de tuplas | [ver](examples/dict_items__items.py) |
+| Verificar clave | `in` | operador | Clave existe | [ver](examples/dict_contiene__in.py) |
+| Número elementos | `len()` | función | Cantidad de pares | [ver](examples/dict_largo__len.py) |
+
+---
+
+## Tuplas
+
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Crear tupla | `()` | literal | Tupla vacía | [ver](examples/tupla_crear__parentesis.py) |
+| Con elementos | `()` | literal | Tupla con datos | [ver](examples/tupla_elementos__parentesis.py) |
+| Tupla de un elemento | `()` | literal | Un elemento + coma | [ver](examples/tupla_un_elemento__parentesis.py) |
+| Acceder elemento | `[]` | operador | Obtener por índice | [ver](examples/tupla_acceder__indexacion.py) |
+| Largo de tupla | `len()` | función | Número de elementos | [ver](examples/tupla_largo__len.py) |
+| Contar ocurrencias | `count()` | método | Repeticiones de valor | [ver](examples/tupla_contar__count.py) |
+| Encontrar índice | `index()` | método | Posición de elemento | [ver](examples/tupla_indice__index.py) |
+| Slicing | `[:]` | operador | Obtener porción | [ver](examples/tupla_slice__slicing.py) |
+| Verificar elemento | `in` | operador | Elemento existe | [ver](examples/tupla_contiene__in.py) |
+
+---
+
+## Control de Flujo - Condicionales
+
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Si (if) | `if` | keyword | Ejecutar si es verdadero | [ver](examples/condicional_if__if.py) |
+| Si no (else) | `else` | keyword | Alternativa a if | [ver](examples/condicional_else__else.py) |
+| Si no si (elif) | `elif` | keyword | Múltiples condiciones | [ver](examples/condicional_elif__elif.py) |
+| Condicional ternario | `if-else` | expresión | Una línea | [ver](examples/condicional_ternario__ternario.py) |
+
+---
+
+## Control de Flujo - Bucles
+
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Bucle for | `for` | keyword | Iterar sobre secuencia | [ver](examples/bucle_for__for.py) |
+| For con range | `range()` | función | Generar números | [ver](examples/bucle_range__range.py) |
+| For con enumerate | `enumerate()` | función | Índice y valor | [ver](examples/bucle_enumerate__enumerate.py) |
+| For con zip | `zip()` | función | Iterar múltiples listas | [ver](examples/bucle_zip__zip.py) |
+| Bucle while | `while` | keyword | Iterar mientras condición | [ver](examples/bucle_while__while.py) |
+| Romper bucle | `break` | keyword | Salir del bucle | [ver](examples/bucle_break__break.py) |
+| Saltar iteración | `continue` | keyword | Siguiente iteración | [ver](examples/bucle_continue__continue.py) |
+| Else en bucle | `else` | keyword | Después del bucle | [ver](examples/bucle_else__else.py) |
 
 ---
 
 ## Funciones
 
-| Concepto        | Referencia | Tipo     | Uso               | Ejemplo                                        |
-| --------------- | ---------- | -------- | ----------------- | ---------------------------------------------- |
-| Definir función | `def`      | keyword  | Reutilizar lógica | [ver](examples/definir_funcion__def.py)        |
-| Parámetros      | argumentos | concepto | Entrada de datos  | [ver](examples/funcion_con_parametros__def.py) |
-| Retorno         | `return`   | keyword  | Devolver valores  | [ver](examples/retornar_valor__return.py)      |
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Definir función | `def` | keyword | Crear función | [ver](examples/funcion_definir__def.py) |
+| Retornar valor | `return` | keyword | Devolver resultado | [ver](examples/funcion_retornar__return.py) |
+| Múltiples retornos | `return` | keyword | Tupla de valores | [ver](examples/funcion_multiples_retornos__return.py) |
+| Parámetro por defecto | `=` | operador | Valor inicial | [ver](examples/funcion_defecto__defecto.py) |
+| Args variable | `*args` | parámetro | Argumentos variables | [ver](examples/funcion_args__args.py) |
+| Kwargs variable | `**kwargs` | parámetro | Argumentos nombrados | [ver](examples/funcion_kwargs__kwargs.py) |
+| Docstring | `"""` | literal | Documentación función | [ver](examples/funcion_docstring__docstring.py) |
 
 ---
 
-## Expresiones y funciones anónimas
+## Iteración - Comprensiones
 
-| Concepto                | Referencia       | Tipo      | Uso                                      | Ejemplo                                               |
-|-------------------------|----------------|----------|------------------------------------------|------------------------------------------------------|
-| Comprensión de listas    | `[x for x in ...]` | sintaxis | Crear listas de forma concisa            | [ver](examples/list_comprehension__basico.py)      |
-| Función lambda           | `lambda`        | keyword  | Función anónima para operaciones simples | [ver](examples/funcion_lambda__basico.py)          |
-| Comprensión avanzada con cond.   | `[x for x in ... if ...], lambda` | sintaxis/keyword | Listas con condición y transformación inline | [ver](examples/list_comprehension_cond_lambda__basico.py)  |
-
----
-
-## Manejo de errores
-
-| Concepto       | Referencia   | Tipo    | Uso          | Ejemplo                                      |
-| -------------- | ------------ | ------- | ------------ | -------------------------------------------- |
-| Capturar error | `try/except` | keyword | Evitar crash | [ver](examples/manejar_error__try_except.py) |
-| Capturar error como variable    | `try/except as e`  | keyword | Inspeccionar el error                       | [ver](examples/capturar_error_as__try_except.py)   |
-| Capturar errores específicos    | `except <Error>`   | keyword | Manejar distintos tipos de excepciones     | [ver](examples/capturar_error_especifico__try_except.py) |
-| Try/except con else             | `try/except/else`  | keyword | Ejecutar código si no hay excepción        | [ver](examples/try_except_con_else__try_except.py) |
-| Try/finally                     | `try/finally`      | keyword | Ejecutar siempre un bloque de código       | [ver](examples/try_finally__try_except.py)        |
-| Re-lanzar excepciones           | `raise`            | keyword | Propagar el error a niveles superiores     | [ver](examples/re_lanzar_error__try_except.py)    |
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| List comprehension | `[x for x in]` | expresión | Crear lista concisa | [ver](examples/iteracion_list_comp__listcomp.py) |
+| List comp con condición | `[x for x if]` | expresión | Filtrar mientras crea | [ver](examples/iteracion_list_comp_filtro__listcomp.py) |
+| Dict comprehension | `{k:v for}` | expresión | Crear dict conciso | [ver](examples/iteracion_dict_comp__dictcomp.py) |
+| Set comprehension | `{x for x in}` | expresión | Crear set conciso | [ver](examples/iteracion_set_comp__setcomp.py) |
 
 ---
 
-## Estilo y utilidades
+## Conjuntos (Sets)
 
-| Concepto          | Referencia | Tipo       | Uso                        | Ejemplo                                          |
-| ----------------- | ---------- | ---------- | -------------------------- | ------------------------------------------------ |
-| Comentarios       | `#`        | operador   | Documentar código          | [ver](examples/comentar_codigo__comentarios.py)  |
-| Docstrings        | `""" """`  | sintaxis   | Documentar funciones       | [ver](examples/documentar_funcion__docstring.py) |
-| Convención Google | docstring  | convencion | Estandarizar documentación | [ver](examples/docstring_google__estilo.py)      |
-| Ayuda integrada   | `help`     | funcion    | Consultar documentación    | [ver](examples/usar_help__help.py)               |
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Crear set | `{}` o `set()` | literal/función | Conjunto vacío | [ver](examples/set_crear__set.py) |
+| Set con elementos | `{}` | literal | Conjunto de valores | [ver](examples/set_elementos__braces.py) |
+| Agregar elemento | `add()` | método | Añadir al set | [ver](examples/set_agregar__add.py) |
+| Eliminar elemento | `remove()` | método | Remover elemento | [ver](examples/set_eliminar__remove.py) |
+| Largo del set | `len()` | función | Número de elementos | [ver](examples/set_largo__len.py) |
+| Verificar elemento | `in` | operador | Elemento existe | [ver](examples/set_contiene__in.py) |
+| Unión | `union()` | método | Todos los elementos | [ver](examples/set_union__union.py) |
+| Intersección | `intersection()` | método | Elementos comunes | [ver](examples/set_interseccion__intersection.py) |
+| Diferencia | `difference()` | método | Elementos únicos | [ver](examples/set_diferencia__difference.py) |
 
 ---
 
-## Regla final
+## Funciones Integradas Importantes
 
-Si un ejemplo no se entiende en **30 segundos**, debe simplificarse.
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Rango de números | `range()` | función | Generar secuencia | [ver](examples/builtin_range__range.py) |
+| Máximo valor | `max()` | función | Encontrar mayor | [ver](examples/builtin_max__max.py) |
+| Mínimo valor | `min()` | función | Encontrar menor | [ver](examples/builtin_min__min.py) |
+| Suma | `sum()` | función | Total de números | [ver](examples/builtin_sum__sum.py) |
+| Largo | `len()` | función | Tamaño de secuencia | [ver](examples/builtin_len__len.py) |
+| Redondear | `round()` | función | Aproximar número | [ver](examples/builtin_round__round.py) |
+| Valor absoluto | `abs()` | función | Número sin signo | [ver](examples/builtin_abs__abs.py) |
+| Todos verdaderos | `all()` | función | AND de secuencia | [ver](examples/builtin_all__all.py) |
+| Alguno verdadero | `any()` | función | OR de secuencia | [ver](examples/builtin_any__any.py) |
+| Ordenar | `sorted()` | función | Listar ordenada | [ver](examples/builtin_sorted__sorted.py) |
+| Invertir | `reversed()` | función | Iterar invertido | [ver](examples/builtin_reversed__reversed.py) |
+| Aplicar función | `map()` | función | Transformar elementos | [ver](examples/builtin_map__map.py) |
+| Filtrar | `filter()` | función | Seleccionar elementos | [ver](examples/builtin_filter__filter.py) |
+| Enumerar | `enumerate()` | función | Índice y valor | [ver](examples/builtin_enumerate__enumerate.py) |
 
-Este módulo cumple la regla **80/20** y sirve como base para cualquier librería o framework.
+---
+
+## Manejo de Archivos
+
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Abrir archivo | `open()` | función | Crear objeto archivo | [ver](examples/archivo_abrir__open.py) |
+| Leer todo | `read()` | método | Contenido completo | [ver](examples/archivo_leer__read.py) |
+| Leer líneas | `readlines()` | método | Lista de líneas | [ver](examples/archivo_lineas__readlines.py) |
+| Leer una línea | `readline()` | método | Siguiente línea | [ver](examples/archivo_readline__readline.py) |
+| Escribir | `write()` | método | Escribir contenido | [ver](examples/archivo_escribir__write.py) |
+| Cerrar archivo | `close()` | método | Liberar recurso | [ver](examples/archivo_cerrar__close.py) |
+| With (context manager) | `with` | keyword | Manejo automático | [ver](examples/archivo_with__with.py) |
+
+---
+
+## Excepciones
+
+| Concepto | Referencia | Tipo | Uso | Ejemplo |
+|----------|-----------|------|-----|---------|
+| Capturar excepción | `try-except` | keyword | Manejar errores | [ver](examples/excepcion_try__try.py) |
+| Excepto específica | `except` | keyword | Capturar tipo error | [ver](examples/excepcion_except__except.py) |
+| Código limpieza | `finally` | keyword | Después de error o no | [ver](examples/excepcion_finally__finally.py) |
+| Lanzar excepción | `raise` | keyword | Generar error | [ver](examples/excepcion_raise__raise.py) |
+
+---
+
+## Notas Importantes
+
+- Un archivo = un concepto
+- Todo código debe ser reproducible
+- Mantén ejemplos simples y claros
+- El output documenta el resultado esperado

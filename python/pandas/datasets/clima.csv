@@ -1,0 +1,11 @@
+fecha,ciudad,temperatura_max,temperatura_min,humedad,precipitacion
+2024-01-01,Madrid,12.5,8.0,65,0.0
+2024-01-02,Madrid,14.0,9.5,58,0.0
+2024-01-03,Madrid,10.5,6.0,72,5.2
+2024-01-04,Barcelona,15.2,10.5,55,0.0
+2024-01-05,Barcelona,13.0,9.0,68,12.5
+2024-01-06,Barcelona,14.5,9.5,60,2.1
+2024-01-07,Valencia,16.0,11.0,50,0.0
+2024-01-08,Valencia,14.5,10.0,62,8.3
+2024-01-09,Valencia,13.0,8.5,70,15.0
+2024-01-10,Madrid,11.0,7.0,75,22.5

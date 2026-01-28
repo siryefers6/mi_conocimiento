@@ -1,0 +1,11 @@
+id,nombre,apellido,edad,email,departamento,salario,fecha_ingreso
+1,Juan,García,28,juan.garcia@example.com,Ventas,45000,2021-03-15
+2,María,López,34,maria.lopez@example.com,IT,65000,2019-07-22
+3,Carlos,Martínez,45,carlos.martinez@example.com,Finanzas,75000,2018-01-10
+4,Ana,Rodríguez,29,ana.rodriguez@example.com,IT,62000,2022-05-18
+5,Pedro,Sánchez,51,pedro.sanchez@example.com,Dirección,95000,2015-11-01
+6,Laura,Fernández,32,laura.fernandez@example.com,Ventas,52000,2020-09-30
+7,Miguel,García,27,miguel.garcia@example.com,IT,58000,2023-01-12
+8,Isabel,López,38,isabel.lopez@example.com,Recursos Humanos,48000,2019-04-05
+9,Francisco,Ruiz,55,francisco.ruiz@example.com,Finanzas,82000,2016-08-20
+10,Elena,Díaz,31,elena.diaz@example.com,Ventas,50000,2021-12-08
