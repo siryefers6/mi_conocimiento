@@ -1,5 +1,8 @@
--- MIN en Microsoft Access
--- Obtiene el salario más bajo de todos los empleados
+"""
+Objetivo: Encontrar el valor mínimo en una columna
+Referencia: MIN
+Tipo: agregacion
+Nivel: basico
+"""
 
 SELECT MIN(Salario) AS SalarioMinimo FROM Empleados;
-

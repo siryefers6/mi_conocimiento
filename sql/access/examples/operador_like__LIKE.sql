@@ -1,7 +1,10 @@
--- Operador LIKE en Microsoft Access
--- Busca empleados cuyo nombre comienza con 'M'
+"""
+Objetivo: Buscar patrones de texto
+Referencia: LIKE
+Tipo: operador
+Nivel: basico
+"""
 
 SELECT ID, Nombre, Departamento_ID, Salario 
 FROM Empleados 
 WHERE Nombre LIKE 'M*';
-

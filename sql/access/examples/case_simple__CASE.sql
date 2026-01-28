@@ -1,5 +1,9 @@
--- CASE simple en Microsoft Access
--- Clasifica empleados según su salario
+"""
+Objetivo: Clasificar datos con condiciones lógicas
+Referencia: CASE
+Tipo: funcion
+Nivel: intermedio
+"""
 
 SELECT Nombre, Salario,
   CASE 
@@ -8,4 +12,3 @@ SELECT Nombre, Salario,
     ELSE 'Salario Bajo'
   END AS Categoria_Salario
 FROM Empleados;
-

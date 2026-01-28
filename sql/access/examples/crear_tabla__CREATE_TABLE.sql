@@ -1,6 +1,9 @@
--- Crear tabla en Microsoft Access
--- Nota: Access usa tipos como INTEGER, TEXT, CURRENCY, DATE, etc.
--- Este ejemplo crea la tabla Empleados del dataset
+"""
+Objetivo: Definir la estructura de una nueva tabla
+Referencia: CREATE_TABLE
+Tipo: ddl
+Nivel: basico
+"""
 
 CREATE TABLE Empleados (
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -10,4 +13,3 @@ CREATE TABLE Empleados (
     Fecha_Contratacion DATE,
     FOREIGN KEY (Departamento_ID) REFERENCES Departamentos(ID)
 );
-

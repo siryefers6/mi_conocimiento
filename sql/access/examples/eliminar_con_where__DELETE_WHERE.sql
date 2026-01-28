@@ -1,5 +1,8 @@
--- Eliminar con WHERE en Microsoft Access
--- Elimina proyectos completados de la tabla Proyectos
+"""
+Objetivo: Eliminar registros que cumplan condiciones
+Referencia: DELETE_WHERE
+Tipo: dml
+Nivel: basico
+"""
 
 DELETE FROM Proyectos WHERE Estado = 'Completado';
-

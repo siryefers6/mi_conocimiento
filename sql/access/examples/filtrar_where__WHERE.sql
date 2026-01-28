@@ -1,7 +1,10 @@
--- Filtrar con WHERE en Microsoft Access
--- Obtiene empleados con salario mayor a 3700
+"""
+Objetivo: Filtrar registros según condiciones específicas
+Referencia: WHERE
+Tipo: select
+Nivel: basico
+"""
 
 SELECT ID, Nombre, Departamento_ID, Salario 
 FROM Empleados 
 WHERE Salario > 3700;
-

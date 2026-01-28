@@ -1,5 +1,9 @@
--- CASE búsqueda en Microsoft Access
--- Clasifica proyectos según su estado
+"""
+Objetivo: Asignar valores basado en múltiples condiciones
+Referencia: CASE_WHEN
+Tipo: funcion
+Nivel: intermedio
+"""
 
 SELECT Nombre, Presupuesto, Estado,
   CASE Estado
@@ -9,4 +13,3 @@ SELECT Nombre, Presupuesto, Estado,
     ELSE 'Desconocido'
   END AS Clasificacion
 FROM Proyectos;
-
