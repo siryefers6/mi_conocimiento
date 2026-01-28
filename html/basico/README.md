@@ -148,8 +148,8 @@ Referencia rápida de elementos, atributos y conceptos fundamentales de HTML5 co
 |----------|-----------|------|-----|---------|
 | Formulario | `<form>` | elemento | Contenedor de controles | [ver](examples/formulario_form__form.html) |
 | Etiqueta | `<label>` | elemento | Etiqueta de control | [ver](examples/formulario_label__label.html) |
-| Campo de entrada | `<input>` | elemento | Controles de usuario | [ver](examples/formulario_input__input.html) |
-| Atributo name | `name=""` | atributo | Nombre del campo | [ver](examples/formulario_input__input.html) |
+| Campo de entrada | `<input>` | elemento | Controles de usuario | [ver](examples/formulario_input_text__text.html) |
+| Atributo name | `name=""` | atributo | Nombre del campo | [ver](examples/formulario_input_text__text.html) |
 | Atributo id | `id=""` | atributo | Identificador único | [ver](examples/formulario_label__label.html) |
 | Asociar label a input | `for=""` | atributo | Vincula label con input | [ver](examples/formulario_label__label.html) |
 
