@@ -1,38 +1,25 @@
 """
-Objetivo: cambiar el tipo de datos de columnas
+Objetivo: cambiar el tipo de datos de una columna
 Referencia: astype
 Tipo: metodo
-Nivel: basico
+Nivel: intermedio
 Dataset: ventas.csv
 """
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# normalización previa
-df["precio"] = df["precio"].replace({"500 USD": 500})
-df["precio"] = pd.to_numeric(df["precio"], errors="coerce")
+# Convertir descuento a entero (para porcentaje)
+df["descuento_porcentaje"] = (df["descuento"] * 100).astype("int")
 
-# cambio de tipo
-df["producto_id"] = df["producto_id"].astype(int)
-df["precio"] = df["precio"].astype(float)
-df["ventas"] = df["ventas"].fillna(0).astype(int)
-
-# resultado
-print(df.dtypes)
+print(df[["producto", "descuento", "descuento_porcentaje"]].head())
 
 """output
-fecha           object
-producto_id      int64
-producto        object
-categoria       object
-precio         float64
-stock          float64
-ventas           int64
-canal           object
-descuento      float64
-cliente_id      object
-dtype: object
+            producto  descuento  descuento_porcentaje
+0       Laptop ASUS       0.10                    10
+1     Mouse Logitech       0.00                     0
+2    Teclado Mecánico       0.05                     5
+3       Monitor LG 24       0.15                    15
+4    Escritorio Gamer       0.20                    20
 """

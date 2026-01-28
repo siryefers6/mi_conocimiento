@@ -1,26 +1,29 @@
 """
-Objetivo: seleccionar filas y columnas usando etiquetas
+Objetivo: seleccionar filas y columnas por etiqueta
 Referencia: loc
 Tipo: metodo
-Nivel: basico
+Nivel: intermedio
 Dataset: ventas.csv
 """
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# selección por etiquetas
-seleccion = df.loc[0:3, ["producto", "categoria", "ventas"]]
+# Seleccionar fila 0, columna producto
+valor = df.loc[0, "producto"]
+print(f"Fila 0, Producto: {valor}")
 
-# resultado
-print(seleccion)
+# Seleccionar filas 0-2, columnas específicas
+resultado = df.loc[0:2, ["producto", "precio"]]
+print()
+print(resultado)
 
 """output
-  producto   categoria  ventas
-0   Laptop  tecnologia     5.0
-1    Mouse  tecnologia    20.0
-2  Teclado  tecnologia    15.0
-3    Silla     oficina     2.0
+Fila 0, Producto: Laptop ASUS
+
+           producto    precio
+0       Laptop ASUS   1200.00
+1     Mouse Logitech     25.99
+2    Teclado Mecánico     85.50
 """

@@ -1,5 +1,5 @@
 """
-Objetivo: contar valores no nulos por columna
+Objetivo: contar valores no nulos en cada columna
 Referencia: count
 Tipo: metodo
 Nivel: basico
@@ -8,25 +8,20 @@ Dataset: ventas.csv
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# transformación: conteo de valores no nulos
-conteo = df.count()
+resultado = df.count()
 
-# resultado
-print(conteo)
+print(resultado)
 
 """output
-fecha          10
-producto_id    10
-producto       10
-categoria      10
-precio         10
-stock           9
-ventas          9
-canal          10
-descuento       8
-cliente_id      9
+fecha         20
+producto_id   20
+producto      20
+categoria     20
+precio        20
+stock         20
+descuento     20
+cliente_id    20
 dtype: int64
 """

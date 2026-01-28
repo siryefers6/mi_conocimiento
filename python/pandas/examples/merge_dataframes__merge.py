@@ -1,32 +1,26 @@
 """
-Objetivo: Combinar dos DataFrames usando una columna clave
+Objetivo: unir dos DataFrames por una columna común
 Referencia: merge
-Tipo: metodo
+Tipo: funcion
 Nivel: intermedio
+Dataset: ventas.csv, clientes.csv
 """
 
 import pandas as pd
 
-# Carga de datos
-df1 = pd.read_csv("datasets/ventas.csv").head(5)  # Primeros 5 registros
-df2 = pd.read_csv("datasets/ventas.csv")[['producto_id', 'cliente_id']].tail(5)  # Últimos 5 registros
+ventas = pd.read_csv("datasets/ventas.csv")
+clientes = pd.read_csv("datasets/clientes.csv")
 
-# Limpieza: convertir precio a float
-df1['precio'] = df1['precio'].replace(r'[\$, USD]', '', regex=True).astype(float)
-df1['ventas'] = df1['ventas'].fillna(0)
-df2['cliente_id'] = df2['cliente_id'].fillna('Desconocido')
+# Unir ventas con información del cliente
+resultado = pd.merge(ventas, clientes, on="cliente_id", how="left")
 
-# Merge (left join) por columna 'producto_id'
-df_merge = df1.merge(df2, on='producto_id', how='left', suffixes=('_df1','_df2'))
-
-# Resultado
-print(df_merge[['producto_id', 'producto', 'cliente_id_df1', 'cliente_id_df2']])
+print(resultado[["producto", "cliente_id", "nombre", "ciudad"]].head())
 
 """output
-   producto_id    producto cliente_id_df1 cliente_id_df2
-0          101      Laptop           C001            NaN
-1          102       Mouse           C002            NaN
-2          103     Teclado           C003            NaN
-3          104       Silla            NaN            NaN
-4          105  Escritorio           C005            NaN
+            producto cliente_id      nombre       ciudad
+0       Laptop ASIS      001      Juan Pérez    Madrid
+1     Mouse Logitech      002   María García  Barcelona
+2    Teclado Mecánico      003    Carlos López     Valencia
+3       Monitor LG 24      004  Ana Rodríguez     Sevilla
+4    Escritorio Gamer      005  Pedro Martínez      Bilbao
 """

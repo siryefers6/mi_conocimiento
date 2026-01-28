@@ -1,31 +1,37 @@
 """
-Objetivo: Convertir una columna de texto a tipo datetime
+Objetivo: convertir columna a tipo datetime
 Referencia: to_datetime
 Tipo: funcion
-Nivel: básico
+Nivel: intermedio
+Dataset: ventas.csv
 """
 
 import pandas as pd
 
-# Carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# Transformación: convertir la columna 'fecha' a datetime
-df['fecha'] = pd.to_datetime(df['fecha'], format='%Y-%m-%d', errors='coerce')
+# Convertir columna fecha a datetime
+df["fecha"] = pd.to_datetime(df["fecha"])
 
-# Resultado
-print(df[['fecha', 'producto', 'precio']])
+print(df.dtypes)
+print()
+print(df[["fecha", "producto"]].head())
 
 """output
-       fecha    producto   precio
-0 2024-01-01      Laptop     1200
-1 2024-01-02       Mouse       25
-2 2024-01-03     Teclado       45
-3 2024-01-04       Silla      300
-4 2024-01-05  Escritorio      450
-5 2024-01-06     Monitor  500 USD
-6 2024-01-07   Impresora      250
-7 2024-01-08  Cable HDMI       15
-8 2024-01-09      Webcam       85
-9 2024-01-10      Router      120
+fecha             datetime64[ns]
+producto_id               int64
+producto                 object
+categoria                object
+precio                 float64
+stock                   int64
+descuento              float64
+cliente_id              object
+dtype: object
+
+       fecha           producto
+0 2024-01-01      Laptop ASUS
+1 2024-01-02  Mouse Logitech
+2 2024-01-03 Teclado Mecánico
+3 2024-01-04    Monitor LG 24
+4 2024-01-05 Escritorio Gamer
 """

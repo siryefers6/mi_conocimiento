@@ -1,6 +1,6 @@
 """
-Objetivo: contar valores nulos por columna
-Referencia: isna().sum()
+Objetivo: contar el total de valores nulos
+Referencia: isna, sum
 Tipo: metodo
 Nivel: basico
 Dataset: ventas.csv
@@ -8,25 +8,16 @@ Dataset: ventas.csv
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# conteo de valores nulos por columna
-conteo_nulos = df.isna().sum()
+# Total de nulos en el DataFrame
+total_nulos = df.isna().sum().sum()
+print(f"Total de valores nulos: {total_nulos}")
 
-# resultado
-print(conteo_nulos)
+porcentaje = (total_nulos / (len(df) * len(df.columns))) * 100
+print(f"Porcentaje: {porcentaje:.2f}%")
 
 """output
-fecha          0
-producto_id    0
-producto       0
-categoria      0
-precio         0
-stock          1
-ventas         1
-canal          0
-descuento      2
-cliente_id     1
-dtype: int64
+Total de valores nulos: 0
+Porcentaje: 0.00%
 """

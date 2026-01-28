@@ -1,5 +1,5 @@
 """
-Objetivo: analizar la frecuencia de valores en una columna categórica
+Objetivo: contar la frecuencia de valores en una columna
 Referencia: value_counts
 Tipo: metodo
 Nivel: basico
@@ -8,18 +8,16 @@ Dataset: ventas.csv
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# transformación: frecuencia por canal
-frecuencia = df["canal"].value_counts()
+resultado = df["categoria"].value_counts()
 
-# resultado
-print(frecuencia)
+print(resultado)
 
 """output
-canal
-online    6
-tienda    4
-Name: count, dtype: int64
+Accesorios     10
+Electrónica     4
+Muebles         3
+Equipos         2
+Name: categoria, dtype: int64
 """

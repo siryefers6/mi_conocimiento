@@ -1,5 +1,5 @@
 """
-Objetivo: reemplazar valores específicos en un DataFrame
+Objetivo: reemplazar valores en una columna
 Referencia: replace
 Tipo: metodo
 Nivel: basico
@@ -8,31 +8,19 @@ Dataset: ventas.csv
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# reemplazar valores mal formateados en la columna precio
-df["precio"] = df["precio"].replace({
-    "500 USD": 500,
-    "1200": 1200
-})
+# Reemplazar valor 0 con "Sin descuento"
+resultado = df.copy()
+resultado["descuento"] = resultado["descuento"].replace(0.0, "Sin descuento")
 
-# convertir a numérico cuando sea posible
-df["precio"] = pd.to_numeric(df["precio"], errors="coerce")
-
-# resultado
-print(df[["producto", "precio"]])
+print(resultado[["producto", "descuento"]].head())
 
 """output
-     producto  precio
-0      Laptop    1200
-1       Mouse      25
-2     Teclado      45
-3       Silla     300
-4  Escritorio     450
-5     Monitor     500
-6   Impresora     250
-7  Cable HDMI      15
-8      Webcam      85
-9      Router     120
+            producto            descuento
+0       Laptop ASIS             0.1
+1     Mouse Logitech    Sin descuento
+2    Teclado Mecánico             0.05
+3       Monitor LG 24             0.15
+4    Escritorio Gamer             0.2
 """

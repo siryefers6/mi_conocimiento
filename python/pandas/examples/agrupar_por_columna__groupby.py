@@ -1,24 +1,24 @@
 """
-Objetivo: Agrupar datos por una columna para análisis agregado
+Objetivo: agrupar datos por una columna
 Referencia: groupby
 Tipo: metodo
 Nivel: intermedio
+Dataset: ventas.csv
 """
 
 import pandas as pd
 
-# Carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# Transformación: agrupar por categoría y sumar ventas
-df_ventas_categoria = df.groupby('categoria')['ventas'].sum().reset_index()
+# Agrupar por categoría y sumar precio
+resultado = df.groupby("categoria")["precio"].sum().sort_values(ascending=False)
 
-# Resultado
-print(df_ventas_categoria)
+print(resultado)
 
 """output
-    categoria  ventas
-0  accesorios    60.0
-1     oficina     3.0
-2  tecnologia    51.0
+categoria
+Electrónica    8100.00
+Muebles        1350.00
+Accesorios      437.48
+Name: precio, dtype: float64
 """

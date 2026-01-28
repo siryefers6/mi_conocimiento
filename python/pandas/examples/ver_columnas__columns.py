@@ -1,5 +1,5 @@
 """
-Objetivo: listar los nombres de las columnas del DataFrame
+Objetivo: ver los nombres de todas las columnas
 Referencia: columns
 Tipo: atributo
 Nivel: basico
@@ -8,17 +8,16 @@ Dataset: ventas.csv
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# transformación: obtener columnas
 columnas = df.columns
 
-# resultado
-print(columnas)
+print(list(columnas))
+print()
+print(f"Total de columnas: {len(columnas)}")
 
 """output
-Index(['fecha', 'producto_id', 'producto', 'categoria', 'precio', 'stock',
-       'ventas', 'canal', 'descuento', 'cliente_id'],
-      dtype='object')
+['fecha', 'producto_id', 'producto', 'categoria', 'precio', 'stock', 'descuento', 'cliente_id']
+
+Total de columnas: 8
 """

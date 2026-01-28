@@ -1,5 +1,5 @@
 """
-Objetivo: detectar valores nulos en un DataFrame
+Objetivo: detectar valores nulos en el DataFrame
 Referencia: isna
 Tipo: metodo
 Nivel: basico
@@ -8,25 +8,21 @@ Dataset: ventas.csv
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# detección de valores nulos
-nulos = df.isna()
+# Detectar nulos por columna
+resultado = df.isna().sum()
 
-# resultado
-print(nulos)
+print(resultado)
 
 """output
-   fecha  producto_id  producto  categoria  precio  stock  ventas  canal  descuento  cliente_id
-0  False        False     False      False   False  False   False  False      False       False
-1  False        False     False      False   False  False   False  False       True       False
-2  False        False     False      False   False   True   False  False      False       False
-3  False        False     False      False   False  False   False  False      False        True
-4  False        False     False      False   False  False   False  False      False       False
-5  False        False     False      False   False  False   False  False      False       False
-6  False        False     False      False   False  False   False  False      False       False
-7  False        False     False      False   False  False   False  False       True       False
-8  False        False     False      False   False  False    True  False      False       False
-9  False        False     False      False   False  False   False  False      False       False
+fecha         0
+producto_id   0
+producto      0
+categoria     0
+precio        0
+stock         0
+descuento     0
+cliente_id    0
+dtype: int64
 """

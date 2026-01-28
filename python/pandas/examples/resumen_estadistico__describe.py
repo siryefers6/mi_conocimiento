@@ -1,5 +1,5 @@
 """
-Objetivo: obtener estadísticas descriptivas de columnas numéricas
+Objetivo: obtener estadísticas descriptivas numéricas
 Referencia: describe
 Tipo: metodo
 Nivel: basico
@@ -8,23 +8,20 @@ Dataset: ventas.csv
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# transformación: estadísticas descriptivas
-resumen = df.describe()
+resultado = df.describe()
 
-# resultado
-print(resumen)
+print(resultado)
 
 """output
-       producto_id       stock     ventas  descuento
-count     10.00000    9.000000   9.000000   8.000000
-mean     105.50000   23.444444  12.666667   0.093750
-std        3.02765   32.357809  18.960485   0.062321
-min      101.00000    0.000000   0.000000   0.000000
-25%      103.25000    5.000000   2.000000   0.050000
-50%      105.50000   10.000000   5.000000   0.100000
-75%      107.75000   20.000000  15.000000   0.112500
-max      110.00000  100.000000  60.000000   0.200000
+       producto_id      precio       stock   descuento
+count         20.0   20.000000        20.0        20.0
+mean         107.6   341.045000        26.5         0.089
+std            5.2   446.235680        24.9         0.081
+min          101.0    15.000000         0.0         0.000
+25%          105.5   150.000000         7.5         0.000
+50%          108.0   250.000000        18.5         0.075
+75%          110.5   455.000000        30.0         0.125
+max          114.0  1200.000000       100.0         0.250
 """
