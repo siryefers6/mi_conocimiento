@@ -3,7 +3,3 @@
 
 SELECT COUNT(*) AS Total_Empleados FROM Empleados;
 
--- Output:
--- Total_Empleados
--- ----------------
--- 5

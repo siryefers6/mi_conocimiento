@@ -5,7 +5,3 @@ SELECT ID, Nombre, Departamento_ID, Salario
 FROM Empleados
 WHERE Departamento_ID = 1 AND Salario > 3600;
 
--- Output:
--- ID | Nombre           | Departamento_ID | Salario
--- ---|-----------------|-----------------|--------
--- 3  | Carlos Rodríguez | 1               | 3800

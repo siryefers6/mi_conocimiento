@@ -3,5 +3,3 @@
 
 DELETE FROM Proyectos WHERE Estado = 'Completado';
 
--- Output:
--- 1 registro eliminado (API REST con ID=3)

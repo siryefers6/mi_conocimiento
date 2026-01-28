@@ -3,7 +3,3 @@
 
 SELECT AVG(Salario) AS SalarioPromedio FROM Empleados;
 
--- Output:
--- SalarioPromedio
--- ----------------
--- 3980

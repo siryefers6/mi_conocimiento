@@ -3,7 +3,3 @@
 
 SELECT SUM(Presupuesto) AS Presupuesto_Total FROM Proyectos;
 
--- Output:
--- Presupuesto_Total
--- -----------------
--- 62000

@@ -3,7 +3,3 @@
 
 SELECT Date() AS Fecha_Actual;
 
--- Output:
--- Fecha_Actual
--- ---------------
--- 2026-01-28

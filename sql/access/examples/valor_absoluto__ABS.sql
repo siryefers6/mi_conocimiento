@@ -3,7 +3,3 @@
 
 SELECT ABS(-5) AS Absoluto;
 
--- Output:
--- Absoluto
--- --------
--- 5

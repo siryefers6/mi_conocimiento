@@ -6,9 +6,3 @@ FROM Empleados e
 JOIN Departamentos d ON e.Departamento_ID = d.ID
 GROUP BY d.Nombre;
 
--- Output:
--- Departamento      | Total_Empleados
--- -------------- | ----------------
--- Desarrollo        | 2
--- Ventas            | 2
--- Recursos Humanos  | 1

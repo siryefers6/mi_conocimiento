@@ -3,7 +3,3 @@
 
 SELECT MAX(Salario) AS SalarioMaximo FROM Empleados;
 
--- Output:
--- SalarioMaximo
--- ----------
--- 4500

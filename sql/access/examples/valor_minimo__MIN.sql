@@ -3,7 +3,3 @@
 
 SELECT MIN(Salario) AS SalarioMinimo FROM Empleados;
 
--- Output:
--- SalarioMinimo
--- ----
--- 3500
