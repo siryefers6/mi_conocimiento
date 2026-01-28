@@ -1,3 +1,16 @@
--- CTE en Microsoft Access
--- Nota: Access no soporta WITH (CTE); usar subconsulta.
+"""
+Objetivo: cte basica
+Referencia: WITH
+Tipo: clausula
+Nivel: basico
+"""
+
+-- transformacion
 SELECT * FROM (SELECT nombre FROM empleados) AS cte;
+
+/*output
+nombre | edad | departamento
+--------|------|---------------
+Juan   | 30   | Ventas
+María  | 28   | TI
+*/

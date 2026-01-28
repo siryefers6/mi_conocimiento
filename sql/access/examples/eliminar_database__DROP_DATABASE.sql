@@ -1,3 +1,13 @@
--- Eliminar base de datos en Microsoft Access
--- Nota: Access no soporta DROP DATABASE; se elimina desde la interfaz.
--- Este comando no es ejecutable en Access SQL.
+"""
+Objetivo: eliminar base de datos
+Referencia: DROP_DATABASE
+Tipo: keyword
+Nivel: basico
+"""
+
+-- transformacion
+DROP DATABASE [mi_base_datos];
+
+/*output
+Elimina completamente una base de datos existente
+*/

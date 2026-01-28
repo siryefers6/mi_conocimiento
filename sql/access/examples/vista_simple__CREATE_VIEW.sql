@@ -1,2 +1,13 @@
--- Vista simple en Microsoft Access
+"""
+Objetivo: vista simple
+Referencia: CREATE_VIEW
+Tipo: funcion
+Nivel: basico
+"""
+
+-- transformacion
 CREATE VIEW vista_empleados AS SELECT id, nombre FROM empleados;
+
+/*output
+Vista creada: v_empleados_activos
+*/

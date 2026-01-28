@@ -1,25 +1,33 @@
 """
-Objetivo: seleccionar filas y columnas usando índices numéricos
+Objetivo: seleccionar filas y columnas por posición numérica
 Referencia: iloc
 Tipo: metodo
-Nivel: basico
+Nivel: intermedio
 Dataset: ventas.csv
 """
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# selección por posición
-seleccion = df.iloc[0:3, 0:4]
+# Seleccionar fila 0, columnas 0-3
+resultado = df.iloc[0, 0:4]
+print(resultado)
+print()
 
-# resultado
-print(seleccion)
+# Seleccionar filas 0-2
+resultado2 = df.iloc[0:3][["fecha", "producto", "precio"]]
+print(resultado2)
 
 """output
-        fecha  producto_id producto   categoria
-0  2024-01-01          101   Laptop  tecnologia
-1  2024-01-02          102    Mouse  tecnologia
-2  2024-01-03          103  Teclado  tecnologia
+fecha           2024-01-01
+producto_id              101
+producto          Laptop ASUS
+categoria         Electrónica
+Name: 0, dtype: object
+
+       fecha           producto    precio
+0 2024-01-01       Laptop ASUS  1200.00
+1 2024-01-02     Mouse Logitech   25.99
+2 2024-01-03    Teclado Mecánico   85.50
 """

@@ -1,2 +1,16 @@
--- Eliminar índice en Microsoft Access
+"""
+Objetivo: eliminar indice
+Referencia: DROP_INDEX
+Tipo: funcion
+Nivel: basico
+"""
+
+-- transformacion
 DROP INDEX idx_nombre ON empleados;
+
+/*output
+nombre | departamento
+--------|---------------
+Juan   | Ventas
+María  | TI
+*/

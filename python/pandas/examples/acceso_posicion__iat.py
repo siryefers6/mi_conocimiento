@@ -8,15 +8,16 @@ Dataset: ventas.csv
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# acceso por posición (fila, columna)
+# Acceso por posición (fila, columna)
 valor = df.iat[0, 2]
+print(f"Valor en [0, 2]: {valor}")
 
-# resultado
-print(valor)
+valor2 = df.iat[4, 4]
+print(f"Valor en [4, 4]: {valor2}")
 
 """output
-Laptop
+Valor en [0, 2]: Laptop ASUS
+Valor en [4, 4]: 450.0
 """

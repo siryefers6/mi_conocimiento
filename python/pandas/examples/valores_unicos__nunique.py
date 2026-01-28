@@ -1,5 +1,5 @@
 """
-Objetivo: contar valores únicos por columna
+Objetivo: contar valores únicos en cada columna
 Referencia: nunique
 Tipo: metodo
 Nivel: basico
@@ -8,25 +8,20 @@ Dataset: ventas.csv
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# transformación: cantidad de valores únicos
-unicos = df.nunique()
+resultado = df.nunique()
 
-# resultado
-print(unicos)
+print(resultado)
 
 """output
-fecha          10
-producto_id    10
-producto       10
-categoria       3
-precio         10
-stock           8
-ventas          8
-canal           2
-descuento       5
-cliente_id      9
+fecha          20
+producto_id    14
+producto       14
+categoria       4
+precio         14
+stock          12
+descuento       6
+cliente_id     15
 dtype: int64
 """

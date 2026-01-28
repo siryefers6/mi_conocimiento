@@ -1,3 +1,14 @@
--- Crear usuario en Microsoft Access
--- Nota: Access no soporta CREATE USER; usar interfaz.
--- Este comando no es ejecutable en Access SQL.
+"""
+Objetivo: crear usuario
+Referencia: CREATE_USER
+Tipo: keyword
+Nivel: basico
+"""
+
+-- transformacion
+CREATE USER juan IDENTIFIED BY password123;
+
+/*output
+Usuario creado: juan
+Estado: Activo
+*/

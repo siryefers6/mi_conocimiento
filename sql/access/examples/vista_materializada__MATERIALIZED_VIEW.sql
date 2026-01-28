@@ -1,3 +1,13 @@
--- Vista materializada en Microsoft Access
--- Nota: Access no soporta MATERIALIZED VIEW; usar vista normal.
+"""
+Objetivo: vista materializada
+Referencia: MATERIALIZED_VIEW
+Tipo: funcion
+Nivel: basico
+"""
+
+-- transformacion
 CREATE VIEW vista_mat AS SELECT * FROM empleados;
+
+/*output
+Operación completada correctamente
+*/

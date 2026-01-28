@@ -1,29 +1,25 @@
 """
-Objetivo: Filtrar filas según un rango de fechas usando loc
+Objetivo: filtrar filas por fecha
 Referencia: loc
 Tipo: metodo
 Nivel: intermedio
+Dataset: ventas.csv
 """
 
 import pandas as pd
 
-# Carga de datos
-df = pd.read_csv("datasets/ventas.csv")
+df = pd.read_csv("datasets/ventas.csv", parse_dates=["fecha"])
 
-# Transformación: convertir fecha a datetime
-df['fecha'] = pd.to_datetime(df['fecha'], format='%Y-%m-%d', errors='coerce')
+# Filtrar registros después de 2024-01-10
+resultado = df.loc[df["fecha"] >= "2024-01-10"]
 
-# Filtrar filas entre el 2024-01-03 y 2024-01-07
-df_filtrado = df.loc[(df['fecha'] >= '2024-01-03') & (df['fecha'] <= '2024-01-07')]
-
-# Resultado
-print(df_filtrado[['fecha', 'producto', 'ventas']])
+print(resultado[["fecha", "producto", "precio"]].head())
 
 """output
-       fecha    producto  ventas
-2 2024-01-03     Teclado    15.0
-3 2024-01-04       Silla     2.0
-4 2024-01-05  Escritorio     1.0
-5 2024-01-06     Monitor     4.0
-6 2024-01-07   Impresora     0.0
+        fecha           producto    precio
+10 2024-01-11      Laptop ASUS  1200.00
+11 2024-01-12  Mouse Logitech    25.99
+12 2024-01-13 Micrófono USB    60.00
+13 2024-01-14 Escritorio Gamer   450.00
+14 2024-01-15  Monitor Dell 27   500.00
 """

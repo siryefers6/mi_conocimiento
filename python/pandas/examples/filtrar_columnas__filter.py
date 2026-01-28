@@ -1,32 +1,25 @@
 """
-Objetivo: filtrar columnas por nombre
+Objetivo: filtrar columnas por patrón de nombre
 Referencia: filter
 Tipo: metodo
-Nivel: basico
+Nivel: intermedio
 Dataset: ventas.csv
 """
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# filtrar columnas que contienen la palabra 'prod'
-columnas = df.filter(like="prod")
+# Filtrar columnas que contengan "o"
+resultado = df.filter(like="o")
 
-# resultado
-print(columnas)
+print(resultado.head())
 
 """output
-   producto_id    producto
-0          101      Laptop
-1          102       Mouse
-2          103     Teclado
-3          104       Silla
-4          105  Escritorio
-5          106     Monitor
-6          107   Impresora
-7          108  Cable HDMI
-8          109      Webcam
-9          110      Router
+  producto categoria  stock descuento
+0 Laptop ASUS   Electrónica     10      0.10
+1 Mouse Logitech    Accesorios     50      0.00
+2 Teclado Mecánico   Accesorios     30      0.05
+3 Monitor LG 24   Electrónica      5      0.15
+4 Escritorio Gamer      Muebles      3      0.20
 """

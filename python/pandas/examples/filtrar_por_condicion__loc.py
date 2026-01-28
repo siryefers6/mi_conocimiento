@@ -1,5 +1,5 @@
 """
-Objetivo: filtrar filas usando una condición lógica
+Objetivo: filtrar filas según una condición
 Referencia: loc
 Tipo: metodo
 Nivel: basico
@@ -8,18 +8,18 @@ Dataset: ventas.csv
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# filtro condicional
-filtro = df.loc[df["ventas"] > 10, ["producto", "ventas", "canal"]]
+# Filtrar productos con precio > 300
+resultado = df.loc[df["precio"] > 300]
 
-# resultado
-print(filtro)
+print(resultado[["producto", "precio", "categoria"]].head())
 
 """output
-     producto  ventas   canal
-1       Mouse    20.0  tienda
-2     Teclado    15.0  online
-7  Cable HDMI    60.0  online
+             producto    precio      categoria
+0        Laptop ASUS  1200.00   Electrónica
+4  Escritorio Gamer   450.00      Muebles
+5   Monitor Dell 27   500.00   Electrónica
+10      Laptop ASUS  1200.00   Electrónica
+11      Laptop ASUS  1200.00   Electrónica
 """

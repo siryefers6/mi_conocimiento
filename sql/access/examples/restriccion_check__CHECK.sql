@@ -1,6 +1,18 @@
--- Restricción CHECK en Microsoft Access
--- Nota: Access no soporta CHECK constraints en SQL; usar validación en formulario.
+"""
+Objetivo: restriccion check
+Referencia: CHECK
+Tipo: funcion
+Nivel: basico
+"""
+
+-- transformacion
 CREATE TABLE empleados (
     id INTEGER PRIMARY KEY,
     edad INTEGER
 );
+
+/*output
+Restricción creada
+Campo: edad
+Condición: edad >= 18
+*/

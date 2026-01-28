@@ -1,0 +1,15 @@
+producto_id,nombre,categoria,precio_compra,precio_venta,proveedor,stock_minimo,dias_entrega
+101,Laptop ASUS,Electrónica,800.00,1200.00,TechSupply,5,3
+102,Mouse Logitech,Accesorios,15.00,25.99,PeripheralCo,20,2
+103,Teclado Mecánico,Accesorios,50.00,85.50,PeripheralCo,15,2
+104,Monitor LG 24,Electrónica,200.00,300.00,DisplayTech,3,4
+105,Escritorio Gamer,Muebles,250.00,450.00,FurnitureMax,2,5
+106,Monitor Dell 27,Electrónica,350.00,500.00,DisplayTech,4,4
+107,Impresora HP,Equipos,150.00,250.00,OfficeMart,1,5
+108,Cable HDMI 2m,Accesorios,8.00,15.00,CableDirect,50,1
+109,Webcam HD,Accesorios,45.00,85.00,PeripheralCo,10,2
+110,Silla Gamer,Muebles,200.00,350.00,FurnitureMax,5,4
+111,Micrófono USB,Accesorios,35.00,60.00,PeripheralCo,8,2
+112,Soporte Monitor,Accesorios,20.00,35.00,PeripheralCo,15,1
+113,Hub USB 3.0,Accesorios,25.00,45.00,CableDirect,20,2
+114,Batería Externa,Accesorios,30.00,55.00,PowerTech,12,2

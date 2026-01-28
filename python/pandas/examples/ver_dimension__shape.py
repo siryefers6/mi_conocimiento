@@ -1,5 +1,5 @@
 """
-Objetivo: conocer la cantidad de filas y columnas de un DataFrame
+Objetivo: obtener dimensiones del DataFrame
 Referencia: shape
 Tipo: atributo
 Nivel: basico
@@ -8,15 +8,14 @@ Dataset: ventas.csv
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# transformación: obtener dimensiones
-dimensiones = df.shape
+filas, columnas = df.shape
 
-# resultado
-print(dimensiones)
+print(f"Filas: {filas}")
+print(f"Columnas: {columnas}")
 
 """output
-(10, 10)
+Filas: 20
+Columnas: 8
 """

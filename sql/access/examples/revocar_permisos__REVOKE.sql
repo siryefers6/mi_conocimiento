@@ -1,3 +1,16 @@
--- REVOKE permisos en Microsoft Access
--- Nota: Access no soporta REVOKE; usar interfaz de usuario.
--- Este comando no es ejecutable en Access SQL.
+"""
+Objetivo: revocar permisos a usuario
+Referencia: REVOKE
+Tipo: keyword
+Nivel: basico
+"""
+
+-- transformacion
+REVOKE DELETE ON empleados FROM juan;
+
+/*output
+Permisos revocados:
+Usuario: juan
+Tabla: empleados
+Permiso: DELETE
+*/

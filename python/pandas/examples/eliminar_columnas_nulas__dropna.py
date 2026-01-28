@@ -1,22 +1,22 @@
 """
-Objetivo: eliminar columnas que contienen valores nulos
-Referencia: dropna(axis=1)
+Objetivo: eliminar columnas que son todas nulas
+Referencia: dropna
 Tipo: metodo
-Nivel: basico
+Nivel: intermedio
 Dataset: ventas.csv
 """
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# eliminación de columnas con al menos un valor nulo
-df_limpio = df.dropna(axis=1)
+# Eliminar columnas vacías
+df_limpio = df.dropna(axis=1, how="all")
 
-# resultado
-print(df_limpio.columns)
+print(f"Columnas originales: {len(df.columns)}")
+print(f"Columnas después: {len(df_limpio.columns)}")
 
 """output
-Index(['fecha', 'producto_id', 'producto', 'categoria', 'precio', 'canal'], dtype='object')
+Columnas originales: 8
+Columnas después: 8
 """

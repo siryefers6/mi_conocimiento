@@ -1,2 +1,13 @@
--- Eliminar tabla en Microsoft Access
+"""
+Objetivo: eliminar tabla
+Referencia: DROP_TABLE
+Tipo: funcion
+Nivel: basico
+"""
+
+-- transformacion
 DROP TABLE empleados;
+
+/*output
+Tabla eliminada: empleados
+*/

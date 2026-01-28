@@ -1,0 +1,18 @@
+cliente_id,nombre,email,ciudad,pais,estado_civil,ingreso_anual
+C001,Juan García,juan@email.com,Madrid,España,Casado,45000
+C002,María López,maria@email.com,Barcelona,España,Soltera,38000
+C003,Carlos Rodríguez,carlos@email.com,Valencia,España,Divorciado,42000
+C005,Ana Martínez,ana@email.com,Sevilla,España,Casada,50000
+C006,Pedro Sánchez,pedro@email.com,Bilbao,España,Soltero,35000
+C007,Laura Fernández,laura@email.com,Madrid,España,Soltera,40000
+C008,José Díaz,jose@email.com,Barcelona,España,Casado,55000
+C009,Isabel Ruiz,isabel@email.com,Valencia,España,Casada,48000
+C010,Francisco Gómez,francisco@email.com,Sevilla,España,Soltero,32000
+C011,Patricia Jiménez,patricia@email.com,Madrid,España,Soltera,41000
+C012,Antonio Moreno,antonio@email.com,Bilbao,España,Casado,52000
+C013,Rosa Domínguez,rosa@email.com,Barcelona,España,Viuda,37000
+C014,Miguel Ángel,miguel@email.com,Valencia,España,Soltero,39000
+C015,Beatriz Álvarez,beatriz@email.com,Sevilla,España,Casada,46000
+C016,Ángel Vargas,angel@email.com,Madrid,España,Soltero,34000
+C017,Catalina Herrera,catalina@email.com,Barcelona,España,Soltera,43000
+C018,Javier Morales,javier@email.com,Valencia,España,Casado,49000

@@ -1,36 +1,31 @@
 """
-Objetivo: Mapear o reemplazar valores de una columna usando un diccionario
+Objetivo: mapear valores de una columna usando diccionario
 Referencia: map
 Tipo: metodo
 Nivel: intermedio
+Dataset: ventas.csv
 """
 
 import pandas as pd
 
-# Carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# Transformación: abreviar nombres de categoría
-map_categoria = {
-    'tecnologia': 'tec',
-    'oficina': 'ofi',
-    'accesorios': 'acc'
+# Mapear categorías a etiquetas
+categoria_map = {
+    "Electrónica": "HIGH-PRICE",
+    "Accesorios": "MEDIUM-PRICE",
+    "Muebles": "FURNITURE"
 }
-df['categoria_abrev'] = df['categoria'].map(map_categoria)
 
-# Resultado
-print(df[['producto', 'categoria', 'categoria_abrev']])
+df["categoria_etiqueta"] = df["categoria"].map(categoria_map)
+
+print(df[["producto", "categoria", "categoria_etiqueta"]].head())
 
 """output
-     producto   categoria categoria_abrev
-0      Laptop  tecnologia             tec
-1       Mouse  tecnologia             tec
-2     Teclado  tecnologia             tec
-3       Silla     oficina             ofi
-4  Escritorio     oficina             ofi
-5     Monitor  tecnologia             tec
-6   Impresora     oficina             ofi
-7  Cable HDMI  accesorios             acc
-8      Webcam  accesorios             acc
-9      Router  tecnologia             tec
+            producto      categoria categoria_etiqueta
+0       Laptop ASUS   Electrónica      HIGH-PRICE
+1     Mouse Logitech    Accesorios    MEDIUM-PRICE
+2    Teclado Mecánico   Accesorios    MEDIUM-PRICE
+3       Monitor LG 24   Electrónica      HIGH-PRICE
+4    Escritorio Gamer      Muebles        FURNITURE
 """

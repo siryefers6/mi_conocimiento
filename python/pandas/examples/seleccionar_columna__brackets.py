@@ -1,5 +1,5 @@
 """
-Objetivo: seleccionar una columna de un DataFrame
+Objetivo: seleccionar una columna del DataFrame
 Referencia: []
 Tipo: sintaxis
 Nivel: basico
@@ -8,25 +8,17 @@ Dataset: ventas.csv
 
 import pandas as pd
 
-# carga de datos
 df = pd.read_csv("datasets/ventas.csv")
 
-# selección de una columna
-columna = df["producto"]
+producto = df["producto"]
 
-# resultado
-print(columna)
+print(producto.head())
 
 """output
-0        Laptop
-1         Mouse
-2       Teclado
-3         Silla
-4    Escritorio
-5       Monitor
-6     Impresora
-7    Cable HDMI
-8        Webcam
-9        Router
+0         Laptop ASUS
+1      Mouse Logitech
+2    Teclado Mecánico
+3       Monitor LG 24
+4    Escritorio Gamer
 Name: producto, dtype: object
 """

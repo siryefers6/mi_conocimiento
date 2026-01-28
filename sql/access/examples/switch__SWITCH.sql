@@ -1,8 +1,11 @@
--- SWITCH() - Función Condicional Múltiple
--- Evalúa múltiples condiciones y devuelve el valor correspondiente
--- Sintaxis: SWITCH(expr1, valor1, expr2, valor2, ..., [valor_predeterminado])
+"""
+Objetivo: switch
+Referencia: SWITCH
+Tipo: funcion
+Nivel: basico
+"""
 
--- Ejemplo 1: SWITCH simple
+-- transformacion
 SELECT 
     EstadoID,
     Nombre,
@@ -13,8 +16,6 @@ SELECT
         'Desconocido'
     ) AS EstadoDescripción
 FROM Usuarios;
-
--- Ejemplo 2: SWITCH con estados numéricos
 SELECT 
     PedidoID,
     FechaPedido,
@@ -27,8 +28,6 @@ SELECT
         'Error'
     ) AS EstadoPedido
 FROM Pedidos;
-
--- Ejemplo 3: SWITCH con clasificación de edad
 SELECT 
     PersonaID,
     Nombre,
@@ -40,8 +39,6 @@ SELECT
         'Jubilado'
     ) AS Categoría
 FROM Personas;
-
--- Ejemplo 4: SWITCH con calificaciones
 SELECT 
     EstudianteID,
     Nombre,
@@ -54,8 +51,6 @@ SELECT
         'F'
     ) AS Grado
 FROM Estudiantes;
-
--- Ejemplo 5: SWITCH con categorías de productos
 SELECT 
     ProductoID,
     Nombre,
@@ -68,3 +63,11 @@ SELECT
         'Otros'
     ) AS DescripciónCategoría
 FROM Productos;
+
+/*output
+nombre | edad | grupo_edad
+--------|------|----------
+Juan   | 30   | 25-35
+María  | 28   | 25-35
+Carlos | 35   | 25-35
+*/

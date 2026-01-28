@@ -1,27 +1,31 @@
 """
-Objetivo: eliminar registros duplicados
+Objetivo: eliminar filas duplicadas del DataFrame
 Referencia: drop_duplicates
 Tipo: metodo
-Nivel: basico-intermedio
+Nivel: intermedio
 Dataset: ventas.csv
 """
 
 import pandas as pd
 
-# cargar dataset
 df = pd.read_csv("datasets/ventas.csv")
 
-# simular duplicados (caso didáctico)
-df_duplicado = pd.concat([df, df.iloc[[1]]], ignore_index=True)
+# Eliminar duplicados por producto_id
+df_unico = df.drop_duplicates(subset=["producto_id"], keep="first")
 
-print("Filas antes:", len(df_duplicado))
-
-# eliminar duplicados completos
-df_limpio = df_duplicado.drop_duplicates()
-
-print("Filas después:", len(df_limpio))
+print(f"Filas originales: {len(df)}")
+print(f"Filas únicas: {len(df_unico)}")
+print()
+print(df_unico[["producto_id", "producto"]].head())
 
 """output
-Filas antes: 11
-Filas después: 10
+Filas originales: 20
+Filas únicas: 14
+
+    producto_id         producto
+0           101      Laptop ASUS
+1           102  Mouse Logitech
+2           103 Teclado Mecánico
+3           104    Monitor LG 24
+4           105 Escritorio Gamer
 """
