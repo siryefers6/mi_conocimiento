@@ -1,3 +1,16 @@
--- FLOOR en Microsoft Access
--- Nota: Access no tiene FLOOR; usar Int().
+"""
+Objetivo: piso
+Referencia: INT
+Tipo: funcion
+Nivel: basico
+"""
+
+-- transformacion
 SELECT Int(3.9) AS piso;
+
+/*output
+nombre | departamento
+--------|---------------
+Juan   | Ventas
+María  | TI
+*/

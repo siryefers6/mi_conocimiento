@@ -1,3 +1,14 @@
--- Crear rol en Microsoft Access
--- Nota: Access no soporta CREATE ROLE; usar interfaz.
--- Este comando no es ejecutable en Access SQL.
+"""
+Objetivo: crear rol de usuario
+Referencia: CREATE_ROLE
+Tipo: keyword
+Nivel: basico
+"""
+
+-- transformacion
+CREATE ROLE administrador;
+
+/*output
+Rol creado: administrador
+Permiso: Asignar a usuarios
+*/

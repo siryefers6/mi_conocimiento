@@ -1,3 +1,16 @@
--- LIMIT en Microsoft Access
--- Nota: Access usa TOP en lugar de LIMIT.
+"""
+Objetivo: limitar resultados
+Referencia: TOP
+Tipo: funcion
+Nivel: basico
+"""
+
+-- transformacion
 SELECT TOP 10 * FROM empleados;
+
+/*output
+nombre | edad
+--------|------
+Juan   | 30
+María  | 28
+*/

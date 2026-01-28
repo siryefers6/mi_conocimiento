@@ -1,3 +1,13 @@
--- TRUNCATE tabla en Microsoft Access
--- Nota: Access no soporta TRUNCATE; usar DELETE FROM sin WHERE.
+"""
+Objetivo: truncate tabla
+Referencia: TRUNCATE
+Tipo: keyword
+Nivel: basico
+"""
+
+-- transformacion
 DELETE FROM empleados;
+
+/*output
+Operación completada correctamente
+*/
