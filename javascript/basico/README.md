@@ -59,7 +59,7 @@ Referencia rápida de conceptos, funciones y métodos de JavaScript con ejemplos
 | Concepto | Referencia | Tipo | Uso | Ejemplo |
 |----------|-----------|------|-----|---------|
 | Operador lógico AND | `&&` | operador | Conjunción lógica | [ver](examples/operador_and__and.js) |
-| Operador lógico OR | `&#124;&#124;` | operador | Disyunción lógica | [ver](examples/operador_or__or.js) |
+| Operador lógico OR | `\|\|` | operador | Disyunción lógica | [ver](examples/operador_or__or.js) |
 | Operador lógico NOT | `!` | operador | Negación lógica | [ver](examples/operador_not__not.js) |
 
 ### Operadores de Comparación
