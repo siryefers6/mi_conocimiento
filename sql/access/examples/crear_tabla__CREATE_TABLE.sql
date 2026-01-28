@@ -11,6 +11,3 @@ CREATE TABLE Empleados (
     FOREIGN KEY (Departamento_ID) REFERENCES Departamentos(ID)
 );
 
--- Output (confirmación de creación):
--- Tabla 'Empleados' creada correctamente
--- Campos: ID, Nombre, Departamento_ID, Salario, Fecha_Contratacion
