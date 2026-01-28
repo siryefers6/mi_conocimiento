@@ -8,9 +8,3 @@ Nivel: basico
 -- transformacion
 SELECT Int(3.9) AS piso;
 
-/*output
-nombre | departamento
---------|---------------
-Juan   | Ventas
-María  | TI
-*/

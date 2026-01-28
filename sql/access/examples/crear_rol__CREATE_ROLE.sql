@@ -8,7 +8,3 @@ Nivel: basico
 -- transformacion
 CREATE ROLE administrador;
 
-/*output
-Rol creado: administrador
-Permiso: Asignar a usuarios
-*/

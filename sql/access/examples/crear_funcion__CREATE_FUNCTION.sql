@@ -11,8 +11,3 @@ BEGIN
     RETURN YEAR(NOW()) - YEAR(fecha_nac);
 END;
 
-/*output
-Función creada: ObtenerEdad
-Parámetros: fecha_nac (DATE)
-Retorno: INT
-*/

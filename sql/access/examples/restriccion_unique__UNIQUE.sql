@@ -11,8 +11,3 @@ CREATE TABLE empleados (
     email TEXT(50) UNIQUE
 );
 
-/*output
-Restricción creada
-Campo: email
-Tipo: UNIQUE
-*/

@@ -8,11 +8,3 @@ Nivel: basico
 -- transformacion
 SELECT nombre FROM empleados UNION ALL SELECT nombre FROM ex_empleados;
 
-/*output
-nombre
---------
-Juan
-María
-Carlos
-Pedro
-*/

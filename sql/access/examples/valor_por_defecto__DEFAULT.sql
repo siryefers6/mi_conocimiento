@@ -12,8 +12,3 @@ CREATE TABLE empleados (
     activo YESNO DEFAULT YES
 );
 
-/*output
-Valor por defecto establecido
-Campo: estado
-Valor: Activo
-*/

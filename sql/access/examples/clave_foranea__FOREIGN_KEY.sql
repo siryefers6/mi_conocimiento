@@ -13,9 +13,3 @@ CREATE TABLE empleados (
     FOREIGN KEY (dept_id) REFERENCES departamentos(id)
 );
 
-/*output
-nombre | edad | departamento
---------|------|---------------
-Juan   | 30   | Ventas
-Carlos | 35   | RH
-*/

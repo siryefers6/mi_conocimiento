@@ -8,9 +8,3 @@ Nivel: basico
 -- transformacion
 INSERT INTO empleados (id, nombre, edad) VALUES (1, 'Juan', 30), (2, 'Ana', 25);
 
-/*output
-nombre | departamento
---------|---------------
-Juan   | Ventas
-María  | TI
-*/

@@ -9,6 +9,3 @@ Nivel: basico
 CREATE VIEW vista_empleados AS
 SELECT id, nombre FROM empleados;
 
-/*output
-Vista creada: v_empleados_activos
-*/

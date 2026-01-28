@@ -8,7 +8,3 @@ Nivel: basico
 -- transformacion
 CREATE USER juan IDENTIFIED BY password123;
 
-/*output
-Usuario creado: juan
-Estado: Activo
-*/

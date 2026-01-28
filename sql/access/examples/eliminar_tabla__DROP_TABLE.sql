@@ -8,6 +8,3 @@ Nivel: basico
 -- transformacion
 DROP TABLE empleados;
 
-/*output
-Tabla eliminada: empleados
-*/

@@ -10,7 +10,3 @@ CREATE PROCEDURE ActualizarEdad
 AS
 UPDATE empleados SET edad = YEAR(NOW()) - YEAR(fecha_nac);
 
-/*output
-Procedimiento creado: ActualizarEdad
-Estado: Listo para ejecutar
-*/

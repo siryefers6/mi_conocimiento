@@ -11,8 +11,3 @@ CREATE TABLE empleados (
     nombre TEXT(50)
 );
 
-/*output
-Restricción creada
-Campo: id
-Tipo: PRIMARY KEY
-*/

@@ -12,8 +12,3 @@ BEGIN
     RETURN edad1 + edad2;
 END;
 
-/*output
-Función: SumarEdades
-Parámetros: edad1 (INT), edad2 (INT)
-Retorno: INT
-*/

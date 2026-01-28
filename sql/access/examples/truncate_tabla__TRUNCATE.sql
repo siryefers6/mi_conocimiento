@@ -8,6 +8,3 @@ Nivel: basico
 -- transformacion
 DELETE FROM empleados;
 
-/*output
-Operación completada correctamente
-*/

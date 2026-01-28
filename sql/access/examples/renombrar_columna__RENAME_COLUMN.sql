@@ -9,6 +9,3 @@ Nivel: basico
 ALTER TABLE empleados ADD COLUMN nombre_completo TEXT(50);
 ALTER TABLE empleados DROP COLUMN nombre;
 
-/*output
-Columna renombrada: edad_empleado -> edad
-*/

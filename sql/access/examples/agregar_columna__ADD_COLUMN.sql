@@ -8,7 +8,3 @@ Nivel: basico
 -- transformacion
 ALTER TABLE empleados ADD COLUMN departamento TEXT(30);
 
-/*output
-Columna añadida: telefono
-Tipo: TEXT
-*/

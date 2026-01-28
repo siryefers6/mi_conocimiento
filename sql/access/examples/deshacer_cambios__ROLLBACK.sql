@@ -8,7 +8,3 @@ Nivel: basico
 -- transformacion
 ROLLBACK;
 
-/*output
-Transacción revertida
-Cambios descartados
-*/

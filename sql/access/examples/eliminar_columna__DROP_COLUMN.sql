@@ -8,6 +8,3 @@ Nivel: basico
 -- transformacion
 ALTER TABLE empleados DROP COLUMN departamento;
 
-/*output
-Columna eliminada: telefono
-*/

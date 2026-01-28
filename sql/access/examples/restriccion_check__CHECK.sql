@@ -11,8 +11,3 @@ CREATE TABLE empleados (
     edad INTEGER
 );
 
-/*output
-Restricción creada
-Campo: edad
-Condición: edad >= 18
-*/

@@ -8,10 +8,3 @@ Nivel: basico
 -- transformacion
 SELECT UCase(nombre) FROM empleados;
 
-/*output
-nombre_mayusculas
-------------------
-JUAN
-MARÍA
-CARLOS
-*/

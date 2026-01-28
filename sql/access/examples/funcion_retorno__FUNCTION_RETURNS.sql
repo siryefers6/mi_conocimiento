@@ -12,8 +12,3 @@ BEGIN
     RETURN (SELECT nombre FROM empleados WHERE id = id);
 END;
 
-/*output
-Función: ObtenerNombre
-Retorna: VARCHAR(50)
-Estado: Creada correctamente
-*/

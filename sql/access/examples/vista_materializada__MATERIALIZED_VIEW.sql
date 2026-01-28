@@ -8,6 +8,3 @@ Nivel: basico
 -- transformacion
 CREATE VIEW vista_mat AS SELECT * FROM empleados;
 
-/*output
-Operación completada correctamente
-*/

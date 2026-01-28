@@ -8,9 +8,3 @@ Nivel: basico
 -- transformacion
 CREATE INDEX idx_comp ON empleados (nombre, apellido);
 
-/*output
-nombre | departamento
---------|---------------
-Juan   | Ventas
-María  | TI
-*/

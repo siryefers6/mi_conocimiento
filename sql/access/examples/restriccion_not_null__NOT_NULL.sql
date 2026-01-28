@@ -11,8 +11,3 @@ CREATE TABLE empleados (
     nombre TEXT(50) NOT NULL
 );
 
-/*output
-Restricción creada
-Campo: nombre
-Tipo: NOT NULL
-*/

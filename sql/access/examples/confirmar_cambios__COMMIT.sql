@@ -8,7 +8,3 @@ Nivel: basico
 -- transformacion
 COMMIT;
 
-/*output
-Transacción confirmada
-Cambios guardados exitosamente
-*/

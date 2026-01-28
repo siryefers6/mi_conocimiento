@@ -8,9 +8,3 @@ Nivel: basico
 -- transformacion
 SELECT e.nombre, d.nombre_dept FROM empleados e, departamentos d;
 
-/*output
-nombre | departamento
---------|---------------
-Juan   | Ventas
-María  | TI
-*/

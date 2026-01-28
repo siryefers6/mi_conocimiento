@@ -8,6 +8,3 @@ Nivel: basico
 -- transformacion
 ALTER TABLE empleados ADD COLUMN salario INTEGER;
 
-/*output
-Tabla modificada exitosamente
-*/

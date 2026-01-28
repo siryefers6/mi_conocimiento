@@ -8,9 +8,3 @@ Nivel: basico
 -- transformacion
 ALTER TABLE empleados MODIFY COLUMN edad TEXT;
 
-/*output
-Cambio de tipo completado
-Tabla: empleados
-Columna: edad
-Nuevo tipo: TEXT
-*/

@@ -64,10 +64,3 @@ SELECT
     ) AS DescripciónCategoría
 FROM Productos;
 
-/*output
-nombre | edad | grupo_edad
---------|------|----------
-Juan   | 30   | 25-35
-María  | 28   | 25-35
-Carlos | 35   | 25-35
-*/

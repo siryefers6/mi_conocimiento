@@ -37,10 +37,3 @@ SELECT
     IIF(Cantidad > 10, Cantidad * Precio * 0.9, Cantidad * Precio) AS MontoFinal
 FROM Ventas;
 
-/*output
-nombre | edad | categoria
---------|------|----------
-Juan   | 30   | Mayor
-María  | 28   | Menor
-Carlos | 35   | Mayor
-*/

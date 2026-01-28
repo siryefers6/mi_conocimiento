@@ -12,10 +12,3 @@ SELECT
     DAY(fecha_nac) AS dia
 FROM empleados;
 
-/*output
-anio | mes | dia
-------|-----|----
-1990 | 5   | 15
-1985 | 12  | 3
-1992 | 8   | 22
-*/
