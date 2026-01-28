@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Submit y Reset</title>
+</head>
+<body>
+    <h1>Input type="submit" y "reset"</h1>
+    
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        
+        <input type="submit" value="Enviar Formulario">
+        <input type="reset" value="Limpiar campos">
+    </form>
+    
+    <!--
+    Objetivo: botones para enviar y limpiar
+    Referencia: <input type="submit">, <input type="reset">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="submit" envía formulario
+    - type="reset" limpia todos los campos
+    - Atributos:
+      * value = texto del botón
+      * name = identificador
+      * formaction = URL alternativa envío
+      * formmethod = GET/POST alternativo
+    - <button> es alternativa más flexible
+    - submit dispara validación HTML5
+    - reset descarta cambios (sin confirmar)
+    - Casos válidos:
+      * Envío de datos
+      * Limpiar entrada
+    - Considerar UX antes de reset
+    -->
+</body>
+</html>

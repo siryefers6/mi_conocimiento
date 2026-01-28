@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo Role (ARIA)</title>
+</head>
+<body>
+    <h1>Atributo ROLE (ARIA)</h1>
+    
+    <!-- Botón con role explícito -->
+    <div role="button" tabindex="0">
+        Botón accesible
+    </div>
+    <br><br>
+    
+    <!-- Alerta para lectores pantalla -->
+    <div role="alert">
+        ¡Advertencia importante para usuarios!
+    </div>
+    <br><br>
+    
+    <!-- Tablist para pestañas -->
+    <div role="tablist">
+        <button role="tab" aria-selected="true">Pestaña 1</button>
+        <button role="tab">Pestaña 2</button>
+    </div>
+    <br><br>
+    
+    <!-- Progressbar (barra progreso) -->
+    <div role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+        70% completado
+    </div>
+    
+    <!--
+    Objetivo: definir rol semántico para accesibilidad
+    Referencia: role
+    Tipo: atributo ARIA
+    Nivel: basico
+    
+    Explicación:
+    - role = rol semántico para lectores pantalla
+    - ARIA = Accessible Rich Internet Applications
+    - Casos de uso:
+      * <div> con comportamiento botón
+      * Avisos/alertas
+      * Widgets customizados
+      * Indicadores progreso
+    - Roles comunes:
+      * button = botón
+      * alert = alerta
+      * navigation = navegación
+      * tab = pestaña
+      * tablist = contenedor pestañas
+      * progressbar = barra progreso
+      * dialog = diálogo/modal
+      * menu = menú
+      * search = búsqueda
+    - PREFERIR elementos HTML nativos
+    - Solo si HTML nativo no es posible
+    - Requiere aria-* para información
+    -->
+</body>
+</html>

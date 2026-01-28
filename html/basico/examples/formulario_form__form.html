@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Básico</title>
+</head>
+<body>
+    <h1>Elemento FORM</h1>
+    
+    <form action="/procesar" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <!--
+    Objetivo: contenedor para recolectar datos del usuario
+    Referencia: <form>
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - <form> envuelve todos los campos
+    - action = URL a procesar datos
+    - method = GET (URL) o POST (cuerpo)
+    - POST más seguro para datos sensibles
+    - Atributos comunes:
+      * name = identificador del formulario
+      * novalidate = deshabilita validación HTML5
+      * enctype = encoding de datos
+    - Todos los <input> deben tener:
+      * name = clave en servidor
+      * id = vinculación con <label>
+    -->
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Email</title>
+</head>
+<body>
+    <h1>Input type="email"</h1>
+    
+    <form>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" 
+               placeholder="ejemplo@dominio.com" 
+               required>
+        <br><br>
+        
+        <label for="emails">Múltiples emails:</label>
+        <input type="email" id="emails" name="emails" 
+               multiple 
+               placeholder="email1@dominio.com, email2@dominio.com">
+    </form>
+    
+    <!--
+    Objetivo: validación de dirección de email
+    Referencia: <input type="email">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="email" valida formato básico
+    - Validación patrón: usuario@dominio.com
+    - Atributos:
+      * required = campo obligatorio
+      * multiple = permite múltiples (separados por comas)
+      * autocomplete="email"
+      * maxlength/minlength
+    - Mobile muestra teclado @
+    - HTML5 valida, pero JavaScript es más seguro
+    - Siempre validar en servidor también
+    -->
+</body>
+</html>

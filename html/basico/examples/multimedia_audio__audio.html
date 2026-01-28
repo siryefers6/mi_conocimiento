@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia - Audio</title>
+</head>
+<body>
+    <h1>Elemento AUDIO</h1>
+    
+    <h2>Audio básico:</h2>
+    <audio controls>
+        <source src="cancion.mp3" type="audio/mpeg">
+        <source src="cancion.ogg" type="audio/ogg">
+        Tu navegador no soporta audio HTML5
+    </audio>
+    <br><br>
+    
+    <h2>Audio con atributos:</h2>
+    <audio controls autoplay muted loop>
+        <source src="fondo.mp3" type="audio/mpeg">
+        Audio de fondo no disponible
+    </audio>
+    <br><br>
+    
+    <h2>Audio simple (sin controles):</h2>
+    <audio preload="metadata">
+        <source src="notification.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!--
+    Objetivo: incrustar audio en página
+    Referencia: <audio>, <source>
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - <audio> contenedor de audio
+    - <source> múltiples formatos (fallback)
+    - Atributos:
+      * controls = muestra controles
+      * autoplay = reproduce automáticamente
+      * muted = silenciado (para autoplay)
+      * loop = repite
+      * preload = none/metadata/auto
+      * volume = nivel volumen (JS)
+    - Formatos: MP3, OGG, WAV
+    - Tipos MIME:
+      * audio/mpeg (MP3)
+      * audio/ogg (OGG)
+      * audio/wav (WAV)
+    - <source> para compatibilidad
+    - Casos válidos:
+      * Música, podcasts
+      * Notificaciones sonoras
+      * Fondos de música
+    -->
+</body>
+</html>

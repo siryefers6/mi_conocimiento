@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope en Tabla</title>
+</head>
+<body>
+    <h1>Atributo SCOPE</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Ciudad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Juan</th>
+                <td>28</td>
+                <td>Madrid</td>
+            </tr>
+            <tr>
+                <th scope="row">María</th>
+                <td>32</td>
+                <td>Barcelona</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!--
+    Objetivo: indicar alcance de encabezados
+    Referencia: scope="col" | scope="row"
+    Tipo: atributo
+    Nivel: basico
+    
+    Explicación:
+    - scope define si el encabezado es de columna o fila
+    - scope="col" encabezado de columna
+    - scope="row" encabezado de fila
+    - CRÍTICO para accesibilidad
+    - Lectores de pantalla lo usan para contexto
+    - Casos válidos:
+      * Toda tabla con encabezados
+      * Tablas de datos importantes
+    - Mejora UX para personas con discapacidad visual
+    - Recomendado por estándares WCAG
+    -->
+</body>
+</html>

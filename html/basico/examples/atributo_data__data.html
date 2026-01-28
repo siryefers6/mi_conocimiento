@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo Data</title>
+</head>
+<body>
+    <h1>Atributo DATA-*</h1>
+    
+    <div data-usuario-id="123" data-rol="admin">
+        Usuario Administrador
+    </div>
+    <br><br>
+    
+    <button data-accion="guardar" data-id="456">Guardar</button>
+    <br><br>
+    
+    <article data-fecha="2024-01-15" data-autor="Juan" data-categoria="tutorial">
+        <h2>Mi Tutorial</h2>
+        <p>Contenido...</p>
+    </article>
+    
+    <script>
+        // Acceso a atributos data con JavaScript
+        const usuario = document.querySelector('[data-usuario-id]');
+        console.log(usuario.dataset.usuarioId); // "123"
+        console.log(usuario.dataset.rol); // "admin"
+        
+        const articulo = document.querySelector('article');
+        console.log(articulo.dataset.fecha); // "2024-01-15"
+    </script>
+    
+    <!--
+    Objetivo: almacenar datos personalizados en HTML
+    Referencia: data-*
+    Tipo: atributo
+    Nivel: basico
+    
+    Explicación:
+    - data-* = atributos personalizados
+    - * = nombre personalizado
+    - Sintaxis: data-nombre="valor"
+    - Casos de uso:
+      * Almacenar IDs, datos
+      * Pasar info a JavaScript
+      * Configuración elemento
+      * Filtrado, sorting
+    - Acceso JavaScript: element.dataset
+    - Guiones convertidos a camelCase
+      * data-usuario-id → dataset.usuarioId
+    - No afecta SEO directamente
+    - Útil para progressive enhancement
+    -->
+</body>
+</html>

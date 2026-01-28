@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación - Pattern</title>
+</head>
+<body>
+    <h1>Atributo PATTERN</h1>
+    
+    <form>
+        <label for="cedula">Cédula (formato: XXX-XXXXXX):</label>
+        <input type="text" id="cedula" name="cedula" 
+               pattern="[0-9]{3}-[0-9]{6}" 
+               placeholder="123-456789" 
+               required>
+        <br><br>
+        
+        <label for="codigo">Código postal (5 dígitos):</label>
+        <input type="text" id="codigo" name="codigo" 
+               pattern="[0-9]{5}" 
+               placeholder="28001" 
+               required>
+        <br><br>
+        
+        <label for="usuario">Usuario (letras y números, 3-20):</label>
+        <input type="text" id="usuario" name="usuario" 
+               pattern="[a-zA-Z0-9]{3,20}" 
+               placeholder="usuario123" 
+               required>
+        <br><br>
+        
+        <label for="telefono">Teléfono (formato: +34 XXX XXX XXX):</label>
+        <input type="tel" id="telefono" name="telefono" 
+               pattern="\+34 [0-9]{3} [0-9]{3} [0-9]{3}" 
+               placeholder="+34 912 345 678" 
+               required>
+        <br><br>
+        
+        <button type="submit">Validar</button>
+    </form>
+    
+    <!--
+    Objetivo: validar formato con expresión regular
+    Referencia: pattern
+    Tipo: atributo
+    Nivel: basico
+    
+    Explicación:
+    - pattern = expresión regular (regex)
+    - Solo submit si coincide patrón
+    - Funciona en:
+      * <input type="text">
+      * <input type="email">
+      * <input type="password">
+      * <input type="tel">
+      * <input type="url">
+    - Patrones comunes:
+      * [0-9]{5} = 5 dígitos
+      * [a-zA-Z]+ = letras
+      * [a-zA-Z0-9]* = alfanumérico
+      * \+[0-9]+ = + seguido números
+    - Combinar con title para mensaje
+    - Casos válidos:
+      * Documentos de identidad
+      * Códigos postales
+      * Formatos específicos
+    - Validación cliente
+    - SIEMPRE servidor también
+    -->
+</body>
+</html>

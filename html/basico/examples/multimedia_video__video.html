@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia - Video</title>
+</head>
+<body>
+    <h1>Elemento VIDEO</h1>
+    
+    <h2>Video básico:</h2>
+    <video width="400" controls>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        Tu navegador no soporta video HTML5
+    </video>
+    <br><br>
+    
+    <h2>Video con poster:</h2>
+    <video width="640" height="360" controls poster="imagen-inicial.jpg">
+        <source src="tutorial.mp4" type="video/mp4">
+    </video>
+    <br><br>
+    
+    <h2>Video con atributos:</h2>
+    <video controls autoplay muted loop>
+        <source src="fondo.mp4" type="video/mp4">
+    </video>
+    
+    <!--
+    Objetivo: incrustar video en página
+    Referencia: <video>, <source>
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - <video> contenedor de video
+    - <source> múltiples formatos
+    - Atributos:
+      * controls = muestra controles
+      * width/height = dimensiones
+      * autoplay = reproduce automáticamente
+      * muted = silenciado (para autoplay)
+      * loop = repite
+      * preload = none/metadata/auto
+      * poster = imagen inicial
+    - Formatos: MP4, WebM, Ogg
+    - Tipos MIME:
+      * video/mp4 (MP4/H.264)
+      * video/webm (WebM/VP8)
+      * video/ogg (Ogg/Theora)
+    - Casos válidos:
+      * Tutoriales, demos
+      * Testimonios
+      * Marketing video
+    -->
+</body>
+</html>

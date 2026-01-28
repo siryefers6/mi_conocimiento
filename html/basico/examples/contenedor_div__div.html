@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenedor - Div</title>
+</head>
+<body>
+    <h1>Elemento DIV</h1>
+    
+    <!-- Div para agrupar contenido -->
+    <div class="tarjeta">
+        <h2>Tarjeta 1</h2>
+        <p>Contenido de la tarjeta...</p>
+        <button>Leer más</button>
+    </div>
+    
+    <div class="tarjeta">
+        <h2>Tarjeta 2</h2>
+        <p>Contenido de la tarjeta...</p>
+        <button>Leer más</button>
+    </div>
+    
+    <!-- Div para layout -->
+    <div id="contenedor-principal">
+        <div class="barra-lateral">
+            <h3>Filtros</h3>
+            <ul>
+                <li>Opción 1</li>
+                <li>Opción 2</li>
+            </ul>
+        </div>
+        <div class="contenido-principal">
+            <p>Contenido principal aquí</p>
+        </div>
+    </div>
+    
+    <!--
+    Objetivo: contenedor genérico sin semántica
+    Referencia: <div>
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - <div> contenedor genérico
+    - SIN significado semántico
+    - Para agrupar con CSS/JS
+    - Atributos comunes:
+      * id = identificador único
+      * class = clases CSS
+      * style = estilos inline
+    - Casos de uso:
+      * Layout y diseño
+      * Agrupar para JS
+      * Wrapper para flexbox/grid
+    - NO usar si hay elemento más específico
+    - Preferir <section>, <article>, <header>
+    - Bloque (ocupa ancho completo)
+    - Neutral para SEO
+    -->
+</body>
+</html>

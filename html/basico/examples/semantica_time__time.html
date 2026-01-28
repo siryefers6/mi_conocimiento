@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semántica - Time</title>
+</head>
+<body>
+    <article>
+        <h1>Mi primer artículo</h1>
+        <p>Publicado el <time datetime="2024-01-15">15 de enero de 2024</time></p>
+        <p>Contenido...</p>
+    </article>
+    
+    <article>
+        <h1>Evento próximo</h1>
+        <p>Se realizará el <time datetime="2024-03-20T14:30">20 de marzo a las 14:30</time></p>
+    </article>
+    
+    <article>
+        <h1>Duración de la tarea</h1>
+        <p>Tardó <time datetime="PT2H30M">2 horas y 30 minutos</time></p>
+    </article>
+    
+    <!--
+    Objetivo: marcar fecha/hora de forma semántica
+    Referencia: <time>
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - <time> para fechas/horas
+    - Atributo datetime requerido
+    - Formatos datetime:
+      * YYYY-MM-DD = 2024-01-15
+      * YYYY-MM-DDTHH:MM = 2024-01-15T14:30
+      * HH:MM = 14:30
+      * PTnHnMnS = PT2H30M (duración)
+    - Contenido visible puede ser diferente
+    - SEO: entiende fechas
+    - Casos válidos:
+      * Fecha publicación
+      * Fecha evento
+      * Cumpleaños
+      * Duración
+    - Útil para agregadores
+    - Mejora accesibilidad
+    -->
+</body>
+</html>

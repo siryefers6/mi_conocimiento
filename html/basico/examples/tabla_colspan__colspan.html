@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colspan - Fusión Horizontal</title>
+</head>
+<body>
+    <h1>Atributo COLSPAN</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Recurso</th>
+                <th colspan="3">Disponibilidad Mensual</th>
+            </tr>
+            <tr>
+                <th>Tipo</th>
+                <th>Enero</th>
+                <th>Febrero</th>
+                <th>Marzo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Laptops</td>
+                <td>20</td>
+                <td>20</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!--
+    Objetivo: fusionar celdas horizontalmente
+    Referencia: colspan
+    Tipo: atributo
+    Nivel: basico
+    
+    Explicación:
+    - colspan combina múltiples columnas
+    - colspan="3" ocupa 3 columnas
+    - Reduce el número de <td>/<th> en esa fila
+    - Casos válidos:
+      * Encabezados sobre múltiples columnas
+      * Agrupación de datos
+      * Diseño de tablas complejas
+    - Debe tener sentido semánticamente
+    - Impacta en accesibilidad
+    -->
+</body>
+</html>

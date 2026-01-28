@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<body>
+    <h1>Elemento SELECT</h1>
+    
+    <form>
+        <label for="pais">País:</label>
+        <select id="pais" name="pais" required>
+            <option value="">-- Selecciona un país --</option>
+            <option value="es">España</option>
+            <option value="mx">México</option>
+            <option value="ar">Argentina</option>
+            <option value="co">Colombia</option>
+        </select>
+        <br><br>
+        
+        <label for="lenguaje">Lenguaje de programación:</label>
+        <select id="lenguaje" name="lenguaje" multiple size="3">
+            <optgroup label="Frontend">
+                <option selected>JavaScript</option>
+                <option>TypeScript</option>
+                <option>CSS</option>
+            </optgroup>
+            <optgroup label="Backend">
+                <option>Python</option>
+                <option>Java</option>
+                <option>PHP</option>
+            </optgroup>
+        </select>
+    </form>
+    
+    <!--
+    Objetivo: lista desplegable de opciones
+    Referencia: <select>, <option>, <optgroup>
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - <select> contenedor de opciones
+    - <option> cada opción individual
+    - <optgroup> agrupa opciones
+    - Atributos <select>:
+      * name = identificador
+      * required = obligatorio
+      * multiple = múltiples selecciones
+      * size = número opciones visibles
+      * disabled = deshabilitado
+    - Atributos <option>:
+      * value = valor enviado
+      * selected = preseleccionado
+      * disabled = opción deshabilitada
+    - Mobile muestra picker nativo
+    - Casos válidos:
+      * País, idioma, región
+      * Categoría, tipo
+      * Opciones limitadas
+    -->
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textarea</title>
+</head>
+<body>
+    <h1>Elemento TEXTAREA</h1>
+    
+    <form>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" 
+                  rows="5" 
+                  cols="40" 
+                  placeholder="Escribe tu mensaje aquí..."
+                  minlength="10"
+                  maxlength="500"
+                  required></textarea>
+        <br><br>
+        
+        <label for="notas">Notas adicionales:</label>
+        <textarea id="notas" name="notas" rows="3" cols="40"></textarea>
+        <br><br>
+        
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <!--
+    Objetivo: entrada de texto multilínea
+    Referencia: <textarea>
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - <textarea> para textos largos
+    - NO es <input type="text">
+    - Atributos:
+      * rows = altura (líneas visibles)
+      * cols = ancho (caracteres)
+      * placeholder = texto de ayuda
+      * minlength = mínimo caracteres
+      * maxlength = máximo caracteres
+      * required = obligatorio
+      * readonly = solo lectura
+      * disabled = deshabilitado
+      * wrap = comportamiento saltos línea
+    - Contenido entre tags: <textarea>texto</textarea>
+    - Casos válidos:
+      * Comentarios, mensajes
+      * Descripciones largas
+      * Feedback usuario
+    -->
+</body>
+</html>

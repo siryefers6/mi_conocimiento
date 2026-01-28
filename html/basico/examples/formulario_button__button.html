@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento Button</title>
+</head>
+<body>
+    <h1>Elemento BUTTON</h1>
+    
+    <form>
+        <button type="submit">Enviar datos</button>
+        <button type="reset">Limpiar</button>
+        <button type="button" onclick="alert('Acción personalizada')">Acción</button>
+        <br><br>
+        
+        <!-- Button con contenido HTML -->
+        <button type="button" style="padding: 10px 20px;">
+            <strong>Descargar</strong> archivo
+        </button>
+        <br><br>
+        
+        <!-- Disabled button -->
+        <button type="submit" disabled>Enviar (deshabilitado)</button>
+    </form>
+    
+    <!--
+    Objetivo: botón más flexible que <input type="button">
+    Referencia: <button>
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - <button> elemento semántico
+    - Puede contener HTML dentro
+    - Atributos:
+      * type = submit (default) / reset / button
+      * name = identificador
+      * value = valor enviado
+      * disabled = deshabilitado
+      * autofocus = foco al cargar
+      * formaction = URL alternativa
+      * formmethod = GET/POST alternativo
+    - Mejor que <input> para flexibilidad
+    - Casos válidos:
+      * Botones envío
+      * Botones acción
+      * Menús, modales
+    - Puede estilizarse fácilmente
+    - Preferir sobre <input type="button">
+    -->
+</body>
+</html>

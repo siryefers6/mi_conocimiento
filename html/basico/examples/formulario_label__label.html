@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas de Formulario</title>
+</head>
+<body>
+    <h1>Elemento LABEL</h1>
+    
+    <form>
+        <!-- Método 1: <label for> -->
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario">
+        <br><br>
+        
+        <!-- Método 2: <label> envuelve el input -->
+        <label>
+            Email:
+            <input type="email" name="email">
+        </label>
+        <br><br>
+        
+        <!-- Método 3: Asociación explícita -->
+        <input type="checkbox" id="terminos" name="terminos">
+        <label for="terminos">Acepto los términos y condiciones</label>
+    </form>
+    
+    <!--
+    Objetivo: vincular texto descriptivo con campos
+    Referencia: <label>
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - <label for="id"> asocia con input cuyo id coincida
+    - Sin for, se anidan <input> dentro de <label>
+    - CRÍTICO para accesibilidad
+    - Mejora usabilidad (área clickeable más grande)
+    - Para checkboxes/radios: esencial
+    - Casos válidos:
+      * Todo campo debe tener label
+      * Mejora experiencia mobile
+      * Lectores de pantalla la leen automáticamente
+    -->
+</body>
+</html>

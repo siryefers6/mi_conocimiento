@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlace de Correo</title>
+</head>
+<body>
+    <h1>Enlace Mailto</h1>
+    
+    <h2>Correo básico</h2>
+    <a href="mailto:info@ejemplo.com">Enviar email</a>
+    
+    <h2>Correo con asunto</h2>
+    <a href="mailto:soporte@ejemplo.com?subject=Problema%20técnico">Reportar problema</a>
+    
+    <h2>Correo con cuerpo del mensaje</h2>
+    <a href="mailto:ventas@ejemplo.com?subject=Consulta&body=Quisiera%20información%20sobre...">Contactar ventas</a>
+    
+    <h2>Múltiples destinatarios</h2>
+    <a href="mailto:juan@ejemplo.com,maria@ejemplo.com">Enviar a Juan y María</a>
+    
+    <!--
+    Objetivo: crear enlaces de correo electrónico
+    Referencia: href="mailto:"
+    Tipo: atributo
+    Nivel: basico
+    
+    Explicación:
+    - mailto: abre el cliente de correo del usuario
+    - Formato: mailto:email@ejemplo.com
+    - Parámetros opcionais:
+      * subject: asunto
+      * body: cuerpo del mensaje
+      * cc: copia a
+      * bcc: copia oculta
+    - Los espacios deben codificarse: %20
+    - Abre el correo del usuario (Outlook, Gmail, etc)
+    - Privacidad: los bots recolectan emails
+    - Mejor: formulario web en lugar de mailto
+    -->
+</body>
+</html>

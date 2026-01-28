@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo ID</title>
+</head>
+<body>
+    <h1>Atributo ID</h1>
+    
+    <nav>
+        <ul>
+            <li><a href="#seccion1">Sección 1</a></li>
+            <li><a href="#seccion2">Sección 2</a></li>
+            <li><a href="#seccion3">Sección 3</a></li>
+        </ul>
+    </nav>
+    
+    <section id="seccion1">
+        <h2>Sección 1</h2>
+        <p>Este es el contenido de la sección 1...</p>
+    </section>
+    
+    <section id="seccion2">
+        <h2>Sección 2</h2>
+        <p>Este es el contenido de la sección 2...</p>
+    </section>
+    
+    <section id="seccion3">
+        <h2>Sección 3</h2>
+        <p>Este es el contenido de la sección 3...</p>
+    </section>
+    
+    <script>
+        // Acceso con JavaScript
+        const seccion1 = document.getElementById('seccion1');
+        console.log(seccion1);
+    </script>
+    
+    <!--
+    Objetivo: identificador único del elemento
+    Referencia: id
+    Tipo: atributo
+    Nivel: basico
+    
+    Explicación:
+    - id = identificador único por página
+    - Debe ser ÚNICO en la página
+    - Casos de uso:
+      * Enlaces internos (#id)
+      * Identificar en CSS
+      * Acceso JavaScript (getElementById)
+    - Sintaxis: id="nombre-id"
+    - Convención: minúsculas, guiones
+    - CSS: #id { }
+    - JS: document.getElementById('id')
+    - NO usar múltiples veces
+    - Más específico que class
+    - Para elementos únicos
+    -->
+</body>
+</html>

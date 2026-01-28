@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Búsqueda</title>
+</head>
+<body>
+    <h1>Input type="search"</h1>
+    
+    <form>
+        <label for="buscar">Buscar:</label>
+        <input type="search" id="buscar" name="q" 
+               placeholder="Ej: Python básico" 
+               autocomplete="off">
+        <button type="submit">Buscar</button>
+        <br><br>
+        
+        <label for="filtro">Filtrar productos:</label>
+        <input type="search" id="filtro" name="filtro">
+    </form>
+    
+    <!--
+    Objetivo: entrada especializada para búsqueda
+    Referencia: <input type="search">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="search" semánticamente para búsqueda
+    - Similar a type="text" pero con:
+      * Botón X para limpiar campo
+      * Optimizado para búsqueda
+      * Mobile muestra magnifying glass
+    - Atributos:
+      * autocomplete = historial búsquedas
+      * placeholder = término ejemplo
+      * list = sugerencias (datalist)
+      * required = obligatorio
+    - Casos válidos:
+      * Barra de búsqueda sitio
+      * Filtrado de datos
+      * Búsqueda de productos
+    -->
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Color</title>
+</head>
+<body>
+    <h1>Input type="color"</h1>
+    
+    <form>
+        <label for="tema">Color de tema:</label>
+        <input type="color" id="tema" name="tema" value="#3498db">
+        <br><br>
+        
+        <label for="fondo">Color de fondo:</label>
+        <input type="color" id="fondo" name="fondo" value="#ffffff">
+    </form>
+    
+    <!--
+    Objetivo: selector de color
+    Referencia: <input type="color">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="color" widget selector de color
+    - Abre color picker nativo
+    - Formato: #RRGGBB (hexadecimal)
+    - Retorna valor en formato #123456
+    - Atributos:
+      * value = color inicial (#RRGGBB)
+      * required = obligatorio
+    - Mobile muestra color picker nativo
+    - Casos válidos:
+      * Temas personalizables
+      * Editor de colores
+      * Configuración de interfaz
+    - No soporta alpha (transparencia)
+    - Solo RGB hex, no RGB(a) o HSL
+    -->
+</body>
+</html>

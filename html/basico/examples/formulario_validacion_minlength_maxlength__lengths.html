@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación - Minlength/Maxlength</title>
+</head>
+<body>
+    <h1>Atributos MINLENGTH y MAXLENGTH</h1>
+    
+    <form>
+        <label for="usuario">Usuario (3-20 caracteres):</label>
+        <input type="text" id="usuario" name="usuario" 
+               minlength="3" 
+               maxlength="20" 
+               required>
+        <br><br>
+        
+        <label for="contrasena">Contraseña (8-50 caracteres):</label>
+        <input type="password" id="contrasena" name="contrasena" 
+               minlength="8" 
+               maxlength="50" 
+               required>
+        <br><br>
+        
+        <label for="biografia">Biografía (10-500 caracteres):</label>
+        <textarea id="biografia" name="biografia" 
+                  minlength="10" 
+                  maxlength="500" 
+                  rows="4"
+                  required></textarea>
+        <br><br>
+        
+        <button type="submit">Guardar</button>
+    </form>
+    
+    <!--
+    Objetivo: limitar longitud de texto
+    Referencia: minlength, maxlength
+    Tipo: atributos
+    Nivel: basico
+    
+    Explicación:
+    - minlength = número mínimo caracteres
+    - maxlength = número máximo caracteres
+    - Funciona en:
+      * <input type="text">
+      * <input type="email">
+      * <input type="password">
+      * <input type="url">
+      * <input type="search">
+      * <input type="tel">
+      * <textarea>
+    - maxlength previene más caracteres
+    - minlength valida al enviar
+    - Casos válidos:
+      * Usuario 3-20 caracteres
+      * Contraseña mínimo 8
+      * Comentarios máximo 500
+    - Indicar límite en placeholder
+    -->
+</body>
+</html>

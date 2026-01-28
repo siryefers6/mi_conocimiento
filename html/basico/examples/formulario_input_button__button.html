@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Button</title>
+</head>
+<body>
+    <h1>Input type="button"</h1>
+    
+    <form>
+        <input type="button" value="Click me!" onclick="alert('¡Hiciste click!')">
+        <br><br>
+        
+        <input type="button" value="Mostrar hora" onclick="document.getElementById('hora').innerText = new Date().toLocaleString()">
+        <p id="hora"></p>
+    </form>
+    
+    <!--
+    Objetivo: botón sin acción por defecto
+    Referencia: <input type="button">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="button" botón genérico
+    - NO envía formulario (a diferencia de submit)
+    - Requiere onclick o JavaScript
+    - Atributos:
+      * value = texto del botón
+      * onclick = función JavaScript
+      * name = identificador
+    - Alternativa: <button type="button">
+    - Casos válidos:
+      * Acciones JavaScript
+      * Modales, toggles
+      * Cambios de página sin envío
+    - Más control que submit
+    - Preferir <button> sobre <input>
+    -->
+</body>
+</html>

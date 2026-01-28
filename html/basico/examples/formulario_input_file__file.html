@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input File</title>
+</head>
+<body>
+    <h1>Input type="file"</h1>
+    
+    <form enctype="multipart/form-data">
+        <label for="imagen">Selecciona una imagen:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*" required>
+        <br><br>
+        
+        <label for="documentos">Documentos (múltiples):</label>
+        <input type="file" id="documentos" name="documentos" 
+               accept=".pdf,.doc,.docx" 
+               multiple>
+        <br><br>
+        
+        <button type="submit">Subir archivo</button>
+    </form>
+    
+    <!--
+    Objetivo: seleccionar y cargar archivos
+    Referencia: <input type="file">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="file" selector de archivo
+    - Abre diálogo de búsqueda de archivos
+    - REQUIERE enctype="multipart/form-data"
+    - Atributos:
+      * accept = tipos de archivo permitidos
+        - "image/*" todas las imágenes
+        - ".pdf,.doc" formatos específicos
+      * multiple = múltiples archivos
+      * required = obligatorio
+    - Casos válidos:
+      * Subir foto de perfil
+      * Documentos, currículum
+      * Importar datos
+    - Validación servidor CRÍTICA
+    - Límite tamaño en servidor
+    -->
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo Class</title>
+    <style>
+        .tarjeta { 
+            border: 1px solid #ccc; 
+            padding: 10px; 
+            margin: 10px 0;
+        }
+        .destacado { 
+            background-color: yellow; 
+        }
+        .error { 
+            color: red; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Atributo CLASS</h1>
+    
+    <div class="tarjeta">
+        <h2>Tarjeta Normal</h2>
+        <p>Contenido...</p>
+    </div>
+    
+    <div class="tarjeta destacado">
+        <h2>Tarjeta Destacada</h2>
+        <p>Esta tarjeta tiene clase adicional</p>
+    </div>
+    
+    <p class="error">Este párrafo tiene error</p>
+    <p class="error">Este otro también</p>
+    
+    <p class="tarjeta error">Múltiples clases</p>
+    
+    <!--
+    Objetivo: aplicar estilos/lógica a múltiples elementos
+    Referencia: class
+    Tipo: atributo
+    Nivel: basico
+    
+    Explicación:
+    - class = grupos de elementos
+    - Puede repetirse
+    - Múltiples clases: class="clase1 clase2"
+    - Casos de uso:
+      * Estilos CSS
+      * Identificar en JavaScript
+      * Patrones de diseño
+    - CSS: .clase { }
+    - JS: document.querySelectorAll('.clase')
+    - Convención: minúsculas, guiones
+    - Reutilizable (DRY principle)
+    - Menor especificidad que ID
+    - Para agrupación lógica
+    -->
+</body>
+</html>

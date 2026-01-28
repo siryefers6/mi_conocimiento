@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldset y Legend</title>
+</head>
+<body>
+    <h1>Elementos FIELDSET y LEGEND</h1>
+    
+    <form>
+        <fieldset>
+            <legend>Información Personal</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+        <br>
+        
+        <fieldset>
+            <legend>Dirección</legend>
+            <label for="calle">Calle:</label>
+            <input type="text" id="calle" name="calle" required>
+            <br><br>
+            
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+        </fieldset>
+        <br>
+        
+        <fieldset disabled>
+            <legend>Opciones Avanzadas (deshabilitadas)</legend>
+            <input type="checkbox" id="premium" name="premium">
+            <label for="premium">Activar suscripción premium</label>
+        </fieldset>
+    </form>
+    
+    <!--
+    Objetivo: agrupar campos relacionados
+    Referencia: <fieldset>, <legend>
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - <fieldset> agrupa campos temáticamente
+    - <legend> título del grupo
+    - Atributos <fieldset>:
+      * disabled = deshabilita todos dentro
+      * name = identificador
+    - Semánticamente correcto
+    - Accesibilidad: agrupa lógicamente
+    - Mejora lectura de código
+    - Casos válidos:
+      * Secciones de formulario
+      * Información personal vs. envío
+      * Opciones de pago
+    - Mejora estructura y UX
+    -->
+</body>
+</html>

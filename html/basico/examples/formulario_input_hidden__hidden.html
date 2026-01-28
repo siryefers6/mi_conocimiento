@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Hidden</title>
+</head>
+<body>
+    <h1>Input type="hidden"</h1>
+    
+    <form action="/procesar" method="POST">
+        <input type="hidden" name="csrf_token" value="abc123def456">
+        <input type="hidden" name="usuario_id" value="12345">
+        
+        <label for="comentario">Tu comentario:</label>
+        <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea>
+        <br><br>
+        
+        <button type="submit">Enviar comentario</button>
+    </form>
+    
+    <!--
+    Objetivo: enviar datos invisibles al usuario
+    Referencia: <input type="hidden">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="hidden" no visible en pantalla
+    - Envía valor al servidor
+    - NO oculta datos (inspectable)
+    - Atributos:
+      * name = clave enviada
+      * value = valor a enviar
+    - Casos válidos:
+      * Tokens de seguridad (CSRF)
+      * IDs referencia
+      * Tracking
+      * Contexto de formulario
+    - Siempre usar HTTPS
+    - No es seguridad, es conveniencia
+    - Datos ocultos, no privados
+    -->
+</body>
+</html>

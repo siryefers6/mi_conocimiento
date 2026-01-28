@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación - Required</title>
+</head>
+<body>
+    <h1>Atributo REQUIRED</h1>
+    
+    <form>
+        <label for="nombre">Nombre (obligatorio):</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br><br>
+        
+        <label for="email">Email (obligatorio):</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        
+        <label for="comentario">Comentario (obligatorio):</label>
+        <textarea id="comentario" name="comentario" required></textarea>
+        <br><br>
+        
+        <label for="acepto">
+            <input type="checkbox" id="acepto" name="acepto" required>
+            Acepto los términos
+        </label>
+        <br><br>
+        
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <!--
+    Objetivo: hacer campo obligatorio
+    Referencia: required
+    Tipo: atributo
+    Nivel: basico
+    
+    Explicación:
+    - required hace campo obligatorio
+    - Validación HTML5 automática
+    - No se envía si está vacío
+    - Muestra mensaje de error
+    - Funciona en:
+      * <input> (todos los tipos)
+      * <textarea>
+      * <select>
+    - Validación cliente (no servidor)
+    - SIEMPRE validar en servidor
+    - Casos válidos:
+      * Campos críticos
+      * Información personal
+      * Consentimientos
+    -->
+</body>
+</html>

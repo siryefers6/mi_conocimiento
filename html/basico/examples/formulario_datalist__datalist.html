@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datalist</title>
+</head>
+<body>
+    <h1>Elemento DATALIST</h1>
+    
+    <form>
+        <label for="lenguaje">Lenguaje de programación:</label>
+        <input list="lenguajes" id="lenguaje" name="lenguaje" 
+               placeholder="Escribe para filtrar...">
+        <datalist id="lenguajes">
+            <option value="Python">
+            <option value="JavaScript">
+            <option value="Java">
+            <option value="C++">
+            <option value="C#">
+            <option value="Ruby">
+            <option value="Go">
+            <option value="Rust">
+        </datalist>
+        <br><br>
+        
+        <label for="ciudad">Ciudad:</label>
+        <input list="ciudades" id="ciudad" name="ciudad">
+        <datalist id="ciudades">
+            <option value="Madrid">
+            <option value="Barcelona">
+            <option value="Valencia">
+            <option value="Sevilla">
+            <option value="Bilbao">
+        </datalist>
+    </form>
+    
+    <!--
+    Objetivo: proporcionar sugerencias autocomplete
+    Referencia: <datalist>, <option>
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - <datalist> lista de sugerencias
+    - <input list="id"> vincula con datalist
+    - User puede escribir valor diferente
+    - Atributos:
+      * id = identificador único
+      * <option value> = cada sugerencia
+    - Similar a <select> pero:
+      * Permite texto libre
+      * No obligatorio elegir sugerencia
+    - Casos válidos:
+      * Búsqueda con sugerencias
+      * Países, ciudades
+      * Etiquetas, categorías
+    - Mejora UX y velocidad entrada
+    - Mobile puede no soportar bien
+    -->
+</body>
+</html>

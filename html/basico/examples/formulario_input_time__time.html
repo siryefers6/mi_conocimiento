@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Hora</title>
+</head>
+<body>
+    <h1>Input type="time"</h1>
+    
+    <form>
+        <label for="llegada">Hora de llegada:</label>
+        <input type="time" id="llegada" name="llegada" 
+               min="09:00" 
+               max="17:00" 
+               required>
+        <br><br>
+        
+        <label for="salida">Hora de salida:</label>
+        <input type="time" id="salida" name="salida" 
+               value="17:30">
+    </form>
+    
+    <!--
+    Objetivo: selector de hora
+    Referencia: <input type="time">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="time" widget selector de hora
+    - Formato: HH:MM (24 horas)
+    - Mobile muestra time picker nativo
+    - Atributos:
+      * min = hora mínima (HH:MM)
+      * max = hora máxima (HH:MM)
+      * value = hora inicial
+      * step = incremento (segundos)
+      * required = obligatorio
+    - Validación automática HTML5
+    - Formato 24 horas (no 12 horas)
+    - Casos válidos:
+      * Reserva de hora
+      * Horario de atención
+      * Alarmas
+    -->
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowspan - Fusión Vertical</title>
+</head>
+<body>
+    <h1>Atributo ROWSPAN</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Especificación</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Laptop Dell</td>
+                <td>16GB RAM</td>
+                <td>$800</td>
+            </tr>
+            <tr>
+                <td>32GB RAM</td>
+                <td>$1200</td>
+            </tr>
+            <tr>
+                <td>Monitor Samsung</td>
+                <td>4K, 27"</td>
+                <td>$400</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!--
+    Objetivo: fusionar celdas verticalmente
+    Referencia: rowspan
+    Tipo: atributo
+    Nivel: basico
+    
+    Explicación:
+    - rowspan combina múltiples filas
+    - rowspan="2" ocupa 2 filas
+    - La celda aparece en la primera fila
+    - Reduce el número de <td> en filas subsecuentes
+    - Casos válidos:
+      * Agrupar filas relacionadas
+      * Categorías que abarcan varias opciones
+      * Matrices de datos
+    - Impacta layout vertical
+    - Puede complicar accesibilidad
+    -->
+</body>
+</html>

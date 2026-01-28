@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de Tabla</title>
+</head>
+<body>
+    <h1>Estructura: THEAD, TBODY, TFOOT</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Trimestre</th>
+                <th>Ingresos</th>
+                <th>Gastos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Q1</td>
+                <td>$100,000</td>
+                <td>$60,000</td>
+            </tr>
+            <tr>
+                <td>Q2</td>
+                <td>$120,000</td>
+                <td>$70,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>$220,000</strong></td>
+                <td><strong>$130,000</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <!--
+    Objetivo: organizar tabla con estructura semántica
+    Referencia: <thead>, <tbody>, <tfoot>
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - <thead> agrupa encabezados (primera fila)
+    - <tbody> agrupa datos
+    - <tfoot> agrupa totales/resumen (opcional)
+    - Orden recomendado:
+      1. <thead>
+      2. <tbody>
+      3. <tfoot>
+    - Semánticamente clara
+    - CSS puede estilizar cada sección
+    - Útil para tablas grandes (scroll tbody)
+    - Mejora accesibilidad y SEO
+    -->
+</body>
+</html>

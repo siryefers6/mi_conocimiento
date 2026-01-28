@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input URL</title>
+</head>
+<body>
+    <h1>Input type="url"</h1>
+    
+    <form>
+        <label for="website">Sitio web:</label>
+        <input type="url" id="website" name="website" 
+               placeholder="https://ejemplo.com" 
+               required>
+        <br><br>
+        
+        <label for="blog">Blog:</label>
+        <input type="url" id="blog" name="blog" 
+               value="https://blog.ejemplo.com">
+    </form>
+    
+    <!--
+    Objetivo: validación de URLs
+    Referencia: <input type="url">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="url" valida formato de URL
+    - Validación básica: protocolo + dominio
+    - Patrón: http(s)://dominio
+    - Atributos:
+      * required = obligatorio
+      * placeholder = ejemplo de URL
+      * pattern = validación personalizada
+      * list = datalist de URLs sugeridas
+    - Mobile muestra teclado especial
+    - Ej válidos:
+      * https://ejemplo.com
+      * http://sub.ejemplo.com/ruta
+    - Ej inválidos:
+      * ejemplo.com (sin protocolo)
+      * ftp://ejemplo.com (si no soporta)
+    -->
+</body>
+</html>

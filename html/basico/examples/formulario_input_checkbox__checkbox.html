@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Checkbox</title>
+</head>
+<body>
+    <h1>Input type="checkbox"</h1>
+    
+    <form>
+        <fieldset>
+            <legend>Acepta términos:</legend>
+            <input type="checkbox" id="terminos" name="terminos" value="si">
+            <label for="terminos">Acepto los términos y condiciones</label>
+            <br><br>
+            
+            <legend>Intereses:</legend>
+            <input type="checkbox" id="deportes" name="interes" value="deportes">
+            <label for="deportes">Deportes</label>
+            <br>
+            
+            <input type="checkbox" id="tech" name="interes" value="tecnologia" checked>
+            <label for="tech">Tecnología</label>
+            <br>
+            
+            <input type="checkbox" id="musica" name="interes" value="musica">
+            <label for="musica">Música</label>
+        </fieldset>
+    </form>
+    
+    <!--
+    Objetivo: selecciones múltiples (sí/no)
+    Referencia: <input type="checkbox">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="checkbox" permite múltiples selecciones
+    - Cada checkbox independiente
+    - Atributos:
+      * checked = seleccionado por defecto
+      * value = valor enviado al servidor
+      * name = agrupa checkboxes relacionados
+      * required = debe estar seleccionado
+    - name mismo para agrupar (ej: interes)
+    - SIEMPRE usar <label for>
+    - Casos válidos:
+      * Consentimientos
+      * Opciones múltiples
+      * Filtrados
+    - Múltiples valores mismo name
+    -->
+</body>
+</html>

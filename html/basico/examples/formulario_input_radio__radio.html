@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Radio</title>
+</head>
+<body>
+    <h1>Input type="radio"</h1>
+    
+    <form>
+        <fieldset>
+            <legend>Género:</legend>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label>
+            <br>
+            
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino">Femenino</label>
+            <br>
+            
+            <input type="radio" id="otro" name="genero" value="otro" checked>
+            <label for="otro">Otro</label>
+        </fieldset>
+        <br>
+        
+        <fieldset>
+            <legend>Tamaño:</legend>
+            <input type="radio" id="pequeño" name="tamaño" value="S">
+            <label for="pequeño">Pequeño (S)</label>
+            <br>
+            
+            <input type="radio" id="medio" name="tamaño" value="M" checked>
+            <label for="medio">Medio (M)</label>
+            <br>
+            
+            <input type="radio" id="grande" name="tamaño" value="L">
+            <label for="grande">Grande (L)</label>
+        </fieldset>
+    </form>
+    
+    <!--
+    Objetivo: seleccionar UNA opción de varias
+    Referencia: <input type="radio">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="radio" una opción por grupo
+    - name MISMO agrupa radiobotones
+    - Solo un valor enviado por grupo
+    - Atributos:
+      * name = identifica el grupo
+      * value = valor de opción
+      * checked = seleccionado por defecto
+      * required = debe seleccionar
+    - SIEMPRE usar <label for>
+    - Casos válidos:
+      * Género, estado civil
+      * Tamaño, color (una opción)
+      * Suscripción (básico/pro)
+    - Diferencia checkbox: UNO vs VARIOS
+    -->
+</body>
+</html>

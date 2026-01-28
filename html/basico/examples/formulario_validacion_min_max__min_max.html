@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación - Min/Max</title>
+</head>
+<body>
+    <h1>Atributos MIN y MAX</h1>
+    
+    <form>
+        <label for="edad">Edad (18-99):</label>
+        <input type="number" id="edad" name="edad" min="18" max="99" required>
+        <br><br>
+        
+        <label for="cantidad">Cantidad (1-100):</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="100" required>
+        <br><br>
+        
+        <label for="inicio">Fecha de inicio:</label>
+        <input type="date" id="inicio" name="inicio" 
+               min="2024-01-01" 
+               max="2024-12-31"
+               required>
+        <br><br>
+        
+        <label for="horario">Horario (09:00 - 17:00):</label>
+        <input type="time" id="horario" name="horario" 
+               min="09:00" 
+               max="17:00"
+               required>
+    </form>
+    
+    <!--
+    Objetivo: validar valores dentro rango
+    Referencia: min, max
+    Tipo: atributos
+    Nivel: basico
+    
+    Explicación:
+    - min = valor mínimo permitido
+    - max = valor máximo permitido
+    - Funciona en:
+      * <input type="number">
+      * <input type="range">
+      * <input type="date">
+      * <input type="time">
+    - Validación automática HTML5
+    - Casos válidos:
+      * Edad 18+ (18 a 120)
+      * Cantidad (1 a 100 artículos)
+      * Fechas válidas (rango)
+      * Horas de atención
+    - Valida en cliente
+    - SIEMPRE validar servidor también
+    -->
+</body>
+</html>

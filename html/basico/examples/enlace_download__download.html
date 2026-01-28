@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlace de Descarga</title>
+</head>
+<body>
+    <h1>Atributo Download</h1>
+    
+    <h2>Descargar archivo</h2>
+    <a href="documento.pdf" download>Descargar PDF</a>
+    
+    <h2>Descargar con nombre personalizado</h2>
+    <a href="imagen-grande.jpg" download="mi-foto.jpg">Descargar Imagen</a>
+    
+    <h2>Descargar documento</h2>
+    <a href="contrato.docx" download="Contrato-2024.docx">Descargar Contrato</a>
+    
+    <!--
+    Objetivo: forzar descarga de archivos
+    Referencia: download
+    Tipo: atributo
+    Nivel: basico
+    
+    Explicación:
+    - download indica que el archivo debe descargarse
+    - Sin download: algunos archivos se abrirían en el navegador
+    - Con download: siempre descarga
+    - Valor opcional: nombre de archivo personalizado
+    - Casos válidos:
+      * PDFs
+      * Documentos
+      * Imágenes grandes
+      * Archivos ejecutables
+    - El navegador pregunta dónde guardar
+    - Mejora la UX para descargas
+    - Algunos navegadores viejos no lo soportan
+    -->
+</body>
+</html>

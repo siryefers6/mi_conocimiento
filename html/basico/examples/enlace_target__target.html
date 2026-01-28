@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlace Target</title>
+</head>
+<body>
+    <h1>Atributo Target</h1>
+    
+    <h2>Abrir en la misma pestaña</h2>
+    <a href="https://www.google.com">Google (misma pestaña)</a>
+    
+    <h2>Abrir en nueva pestaña</h2>
+    <a href="https://www.google.com" target="_blank">Google (nueva pestaña)</a>
+    
+    <h2>Abrir en nueva ventana</h2>
+    <a href="https://www.ejemplo.com" target="_blank">Ejemplo (nueva ventana)</a>
+    
+    <!--
+    Objetivo: controlar dónde se abre el enlace
+    Referencia: target="_blank"
+    Tipo: atributo
+    Nivel: basico
+    
+    Explicación:
+    - target="_blank" abre el enlace en nueva pestaña
+    - Por defecto (sin target) abre en la misma pestaña
+    - Valores de target:
+      * _blank: nueva pestaña
+      * _self: misma pestaña (default)
+      * _parent: ventana padre (en framesets)
+      * _top: ventana superior (en framesets)
+    - Uso común: enlaces externos
+    - Recomendación: informar al usuario (icono de nueva pestaña)
+    - NO abrir todo en nueva pestaña (deja control al usuario)
+    -->
+</body>
+</html>

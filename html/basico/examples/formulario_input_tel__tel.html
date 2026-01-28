@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Teléfono</title>
+</head>
+<body>
+    <h1>Input type="tel"</h1>
+    
+    <form>
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" 
+               placeholder="+34 123 456 789" 
+               pattern="[0-9]{2,3}[0-9 ]{6,9}">
+        <br><br>
+        
+        <label for="mobile">Celular:</label>
+        <input type="tel" id="mobile" name="mobile">
+    </form>
+    
+    <!--
+    Objetivo: entrada de número telefónico
+    Referencia: <input type="tel">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="tel" especializado para teléfono
+    - NO valida formato automáticamente
+    - Mobile muestra teclado numérico (+, -)
+    - Atributos útiles:
+      * pattern = expresión regular
+      * placeholder = formato ejemplo
+      * autocomplete="tel"
+      * maxlength = límite de dígitos
+    - pattern común: [0-9 +\-]{10,}
+    - Validación en servidor RECOMENDADA
+    - Considerar librerías como libphonenumber
+    -->
+</body>
+</html>

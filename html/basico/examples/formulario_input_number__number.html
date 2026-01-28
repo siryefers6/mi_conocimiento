@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Número</title>
+</head>
+<body>
+    <h1>Input type="number"</h1>
+    
+    <form>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="0" max="120" value="18">
+        <br><br>
+        
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="100" step="5">
+        <br><br>
+        
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" min="0" step="0.01">
+    </form>
+    
+    <!--
+    Objetivo: entrada de valores numéricos
+    Referencia: <input type="number">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="number" solo números
+    - Botones +/- para incrementar/decrementar
+    - Atributos:
+      * min = valor mínimo permitido
+      * max = valor máximo permitido
+      * step = incremento (pasos)
+      * value = valor inicial
+    - Útil para: edades, cantidades, precios
+    - step="0.01" para decimales (dinero)
+    - step="any" permite cualquier decimal
+    - Mobile muestra teclado numérico
+    -->
+</body>
+</html>

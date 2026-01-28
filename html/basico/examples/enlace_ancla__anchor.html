@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlace a Ancla</title>
+</head>
+<body>
+    <h1>Navegación con Anclas</h1>
+    
+    <h2>Tabla de Contenidos</h2>
+    <ul>
+        <li><a href="#seccion1">Ir a Sección 1</a></li>
+        <li><a href="#seccion2">Ir a Sección 2</a></li>
+        <li><a href="#seccion3">Ir a Sección 3</a></li>
+    </ul>
+    
+    <h2 id="seccion1">Sección 1</h2>
+    <p>Contenido de la sección 1...</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    
+    <h2 id="seccion2">Sección 2</h2>
+    <p>Contenido de la sección 2...</p>
+    
+    <h2 id="seccion3">Sección 3</h2>
+    <p>Contenido de la sección 3...</p>
+    
+    <a href="#top">↑ Volver al inicio</a>
+    
+    <!--
+    Objetivo: crear enlaces internos a anclas
+    Referencia: href="#id"
+    Tipo: atributo
+    Nivel: basico
+    
+    Explicación:
+    - href="#id" salta a un elemento con ese id
+    - El # indica que es una ancla interna
+    - El id del destino debe existir en la página
+    - Casos válidos:
+      * Tabla de contenidos
+      * "Volver al inicio"
+      * Navegación dentro de página larga
+    - Los lectores de pantalla lo entienden
+    - Útil para UX en páginas largas
+    - Puede combinarse con nombre de archivo: /pagina.html#seccion
+    -->
+</body>
+</html>

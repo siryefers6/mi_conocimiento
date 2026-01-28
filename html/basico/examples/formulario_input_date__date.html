@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Fecha</title>
+</head>
+<body>
+    <h1>Input type="date"</h1>
+    
+    <form>
+        <label for="nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="nacimiento" name="nacimiento" 
+               min="1950-01-01" 
+               max="2010-12-31" 
+               required>
+        <br><br>
+        
+        <label for="evento">Fecha del evento:</label>
+        <input type="date" id="evento" name="evento" 
+               value="2024-12-31">
+    </form>
+    
+    <!--
+    Objetivo: selector de fecha
+    Referencia: <input type="date">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="date" widget calendario
+    - Formato: YYYY-MM-DD (ISO 8601)
+    - Mobile muestra date picker nativo
+    - Atributos:
+      * min = fecha mínima
+      * max = fecha máxima
+      * value = fecha inicial (YYYY-MM-DD)
+      * required = obligatorio
+    - Validación automática HTML5
+    - Casos válidos:
+      * Fecha de nacimiento
+      * Reservas
+      * Fechas de evento
+    - Browser validation diferencia por dispositivo
+    - Fallback para navegadores antiguos
+    -->
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Rango</title>
+</head>
+<body>
+    <h1>Input type="range"</h1>
+    
+    <form>
+        <label for="volumen">Volumen:</label>
+        <input type="range" id="volumen" name="volumen" 
+               min="0" 
+               max="100" 
+               value="50" 
+               step="5">
+        <span id="valor">50</span>
+        <br><br>
+        
+        <label for="brillo">Brillo:</label>
+        <input type="range" id="brillo" name="brillo" 
+               min="0" 
+               max="100" 
+               step="1">
+    </form>
+    
+    <script>
+        document.getElementById('volumen').addEventListener('input', function(e) {
+            document.getElementById('valor').textContent = e.target.value;
+        });
+    </script>
+    
+    <!--
+    Objetivo: selector de rango (slider)
+    Referencia: <input type="range">
+    Tipo: elemento
+    Nivel: basico
+    
+    Explicación:
+    - type="range" widget slider
+    - Permite seleccionar valor en rango
+    - Atributos:
+      * min = valor mínimo
+      * max = valor máximo
+      * value = valor inicial
+      * step = incremento
+    - No muestra valor, usar JavaScript
+    - Casos válidos:
+      * Volumen, brillo
+      * Filtrado de rango (precio 0-1000)
+      * Edad, cantidad
+    - Típicamente requiere evento "input"
+    - onChange o addEventListener
+    -->
+</body>
+</html>
