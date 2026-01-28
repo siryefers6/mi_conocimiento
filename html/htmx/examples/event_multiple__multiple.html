@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX multiple events</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Multiple Events</h1>
+    <button hx-get="/api/1" hx-on="htmx:beforeRequest: log1() htmx:afterRequest: log2()">Multiple</button>
+</body>
+</html>

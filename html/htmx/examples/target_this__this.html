@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX hx-target this</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Destino "this" - Actualizar Elemento Actual</h1>
+    
+    <!-- Este botón se reemplaza a sí mismo -->
+    <button hx-get="/api/button-next" hx-target="this" hx-swap="outerHTML">
+        Botón 1
+    </button>
+    
+    <br><br>
+    
+    <!-- Un div que se reemplaza a sí mismo -->
+    <div id="card" 
+         hx-get="/api/next-card" 
+         hx-target="this" 
+         hx-swap="outerHTML"
+         hx-trigger="click"
+         style="padding: 20px; border: 1px solid #ccc; cursor: pointer;">
+        Haz clic para cargar siguiente
+    </div>
+    
+    <br><br>
+    
+    <!-- Elemento que se reemplaza a sí mismo con contenido -->
+    <section hx-get="/api/section"
+             hx-target="this"
+             hx-swap="outerHTML"
+             hx-trigger="load">
+        Sección cargándose...
+    </section>
+    
+    <!--
+    Objetivo: Actualizar el elemento que dispara la solicitud
+    Referencia: hx-target="this"
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    - hx-target="this" apunta al elemento que triggered la solicitud
+    - Muy común: el botón/link que se clickea dispara y actualiza algo
+    - "this" es implícito si no especificas hx-target
+    
+    Diferencia:
+    * hx-target="this" con hx-swap="innerHTML"
+      → Reemplaza contenido interno del elemento
+    
+    * hx-target="this" con hx-swap="outerHTML"
+      → Reemplaza el elemento completo
+    
+    Casos de uso:
+    * Botones que cambian de estado
+    * Cards que se actualizan
+    * Elementos que se recargan a sí mismos
+    
+    "this" es el atajo más usado en HTMX
+    -->
+</body>
+</html>

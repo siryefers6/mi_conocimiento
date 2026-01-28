@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX class settling</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <style>
+        .htmx-request { opacity: 0.5; }
+        .htmx-settling { background: yellow; }
+    </style>
+</head>
+<body>
+    <h1>.htmx-request y .htmx-settling</h1>
+    <button hx-get="/api/1">Request se opaca (opacity: 0.5)</button>
+    <button hx-get="/api/2" style="padding: 20px;">Settling se amarilla</button>
+</body>
+</html>

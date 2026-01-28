@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX outerHTML</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Estrategia outerHTML - Reemplazar Elemento Completo</h1>
+    
+    <button id="btn1" 
+            hx-get="/api/new-button" 
+            hx-target="#btn1" 
+            hx-swap="outerHTML">
+        Haz clic para reemplazarme
+    </button>
+    
+    <br><br>
+    
+    <!-- Ejemplo con tarjeta -->
+    <div id="card" style="border: 2px solid blue; padding: 20px; margin: 20px 0; background: #f0f0ff;">
+        <h3>Tarjeta Original</h3>
+        <p>Esta tarjeta será reemplazada completamente</p>
+        <button hx-get="/api/new-card" hx-target="#card" hx-swap="outerHTML">
+            Reemplazar Tarjeta
+        </button>
+    </div>
+    
+    <!--
+    Objetivo: Reemplazar elemento completo
+    Referencia: hx-swap="outerHTML"
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    - outerHTML reemplaza el elemento COMPLETO
+    - Se reemplaza el tag contenedor incluyendo sus atributos
+    - Útil cuando quieres cambiar elemento radicalmente
+    
+    Antes:
+    <button id="btn1">Haz clic...</button>
+    
+    Después (del servidor):
+    <button id="btn1" class="updated">Nuevo botón</button>
+    
+    El elemento <button> es completamente reemplazado
+    
+    Casos de uso:
+    * Botón que cambia a completamente diferente
+    * Elemento que se reemplaza a sí mismo
+    * Cambiar tipo de elemento (div -> section)
+    * Cambiar clase o atributos del contenedor
+    
+    Diferencia clave con innerHTML:
+    - innerHTML: contenido dentro se actualiza
+    - outerHTML: el contenedor se reemplaza
+    -->
+</body>
+</html>

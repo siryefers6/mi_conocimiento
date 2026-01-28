@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Triggers varios</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Trigger modifier: debounce, changed, once, mutation, from</h1>
+    
+    <input type="text" hx-get="/api/s" hx-trigger="keyup debounce:500ms" placeholder="debounce">
+    <input type="text" hx-get="/api/f" hx-trigger="change changed" placeholder="changed">
+    <button hx-get="/api/d" hx-trigger="click once">once</button>
+    <div hx-get="/api/m" hx-trigger="mutation"></div>
+    <button hx-get="/api/c" hx-trigger="click from:body">from body</button>
+</body>
+</html>

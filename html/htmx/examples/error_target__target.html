@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX error-target strategy</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>error-target, strategy, 404, 500</h1>
+    
+    <button hx-get="/api/fail" hx-target="#err" hx-error-target="#err">
+        Mostrar error en #err
+    </button>
+    <div id="err"></div>
+</body>
+</html>

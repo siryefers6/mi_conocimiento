@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Trigger delay</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Trigger con delay - Esperar antes de disparar</h1>
+    
+    <input type="text" 
+           placeholder="Escribe para buscar..." 
+           hx-get="/api/search" 
+           hx-trigger="keyup delay:500ms"
+           hx-target="#results">
+    
+    <div id="results"></div>
+    
+    <!--delay: Espera 500ms después del keyup antes de ejecutar-->
+</body>
+</html>

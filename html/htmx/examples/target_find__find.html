@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX hx-target find</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Destino "find" - Buscar Dentro del Elemento</h1>
+    
+    <div style="border: 1px solid blue; padding: 20px; margin: 10px 0;">
+        <h3>Contenedor</h3>
+        <button hx-get="/api/content" 
+                hx-target="find #result"
+                hx-swap="innerHTML">
+            Cargar en #result dentro de este contenedor
+        </button>
+        <div id="result" style="background: #f0f0f0; padding: 10px; margin-top: 10px;">
+            Contenido aparecerá aquí
+        </div>
+    </div>
+    
+    <!-- Otro ejemplo -->
+    <form style="border: 1px solid green; padding: 20px; margin: 10px 0;">
+        <h3>Formulario</h3>
+        <input type="text" name="email" placeholder="Email">
+        <button hx-post="/api/verify" 
+                hx-target="find .errors"
+                hx-swap="innerHTML">
+            Verificar
+        </button>
+        <div class="errors" style="color: red; margin-top: 10px;"></div>
+    </form>
+    
+    <!--
+    Objetivo: Buscar elemento dentro del elemento que dispara
+    Referencia: hx-target="find SELECTOR"
+    Tipo: atributo
+    Nivel: intermedio
+    
+    Explicación:
+    - hx-target="find SELECTOR" busca dentro del elemento que triggered
+    - Es útil en formularios que contienen sus propios targets
+    - No busca en hermanos o ancestros, solo dentro
+    
+    Diferencia:
+    * "find #id" busca #id dentro del elemento actual
+    * "#id" busca #id en toda la página
+    * "closest .clase" busca ancestro
+    
+    Casos de uso:
+    * Botón de form que actualiza el error div del form
+    * Contenedor que actualiza su propio resultado
+    * Campos que validan dentro de su contexto
+    
+    Si no encuentra, usa "this"
+    -->
+</body>
+</html>

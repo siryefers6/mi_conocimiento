@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX afterbegin</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>afterbegin - Prepend (Agregar al Principio)</h1>
+    
+    <div id="messages" style="border: 1px solid blue; padding: 10px; margin: 10px 0;">
+        <p>Mensaje 1 (antiguo)</p>
+        <p>Mensaje 2 (antiguo)</p>
+    </div>
+    
+    <button hx-get="/api/message" hx-target="#messages" hx-swap="afterbegin">
+        Agregar mensaje al principio (prepend)
+    </button>
+    
+    <!--
+    Objetivo: Insertar dentro, después del opening tag
+    Referencia: hx-swap="afterbegin"
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    - afterbegin inserta contenido dentro del elemento
+    - Pero AL PRINCIPIO (después del <div>, antes del contenido)
+    - Útil para prependar (agregar al inicio)
+    
+    Resultado:
+    <div id="messages">
+        <p>NUEVO MENSAJE</p>
+        <p>Mensaje 1 (antiguo)</p>
+        <p>Mensaje 2 (antiguo)</p>
+    </div>
+    
+    Casos de uso:
+    * Chat: mensajes nuevos aparecen arriba
+    * Feeds: items nuevos al principio
+    * Notificaciones: las recientes arriba
+    * Stack: LIFO (Last In, First Out)
+    
+    Nota: para agregar al FINAL usa beforeend (append)
+    -->
+</body>
+</html>

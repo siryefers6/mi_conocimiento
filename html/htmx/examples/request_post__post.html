@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX POST Request</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Solicitud POST con HTMX</h1>
+    
+    <form hx-post="/api/submit" hx-target="#response" hx-swap="innerHTML">
+        <input type="text" name="username" placeholder="Usuario" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <div id="response" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; display:none;">
+        La respuesta aparecerá aquí...
+    </div>
+    
+    <!--
+    Objetivo: Enviar datos con POST
+    Referencia: hx-post=""
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    - hx-post="/ruta" envía datos con método POST
+    - Se ejecuta al enviar el formulario (hx-trigger="submit")
+    - Los datos del formulario se envían automáticamente
+    - Similar a fetch con method: 'POST'
+    
+    Datos enviados:
+    * Todos los inputs del formulario
+    * Format: application/x-www-form-urlencoded
+    * O multipart/form-data si hay archivo
+    
+    El servidor procesa los datos y devuelve respuesta HTML
+    -->
+</body>
+</html>

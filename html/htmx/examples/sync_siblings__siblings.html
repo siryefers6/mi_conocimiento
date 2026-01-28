@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX sync</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>hx-sync - Sincronización de solicitudes</h1>
+    
+    <button hx-get="/api/1" hx-sync="closest div:queue">Queue 1</button>
+    <button hx-get="/api/2" hx-sync="closest div:abort">Abort 2</button>
+    <button hx-get="/api/3" hx-sync="closest div:replace">Replace 3</button>
+</body>
+</html>

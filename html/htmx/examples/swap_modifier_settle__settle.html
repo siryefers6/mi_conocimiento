@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX settle</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Modificador settle - Esperar antes de cambiar</h1>
+    
+    <div id="content" style="border: 1px solid blue; padding: 20px; margin: 20px 0; background: #f0f0ff;">
+        <p>Este contenido esperará 2 segundos antes de cambiar</p>
+        <small>(permite animar la salida del contenido actual)</small>
+    </div>
+    
+    <button hx-get="/api/new-content" 
+            hx-target="#content" 
+            hx-swap="innerHTML settle:2s">
+        Cambiar tras 2 segundos
+    </button>
+    
+    <!--
+    Objetivo: Esperar antes de actualizar (settle time)
+    Referencia: hx-swap="estrategia settle:tiempo"
+    Tipo: modificador
+    Nivel: avanzado
+    
+    Explicación:
+    - settle espera el tiempo especificado antes de hacer el swap
+    - Permite animar la salida del contenido antiguo
+    - Cuando llega la respuesta, espera antes de insertar
+    
+    Timeline:
+    1. Se hace la solicitud
+    2. Respuesta llega del servidor
+    3. Espera settle:2s (2 segundos)
+    4. Realiza el swap
+    
+    Casos de uso:
+    * Dar tiempo para animación de salida
+    * Suavizar transición entre contenidos
+    * Operaciones con feedback lento
+    
+    Formato:
+    - settle:500ms (milisegundos)
+    - settle:1s (segundos)
+    - settle:2000ms (milisegundos largos)
+    
+    Combinable con swap y scroll:
+    hx-swap="innerHTML swap:1s settle:500ms scroll:top"
+    -->
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX boost</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>hx-boost - Mejorar enlaces y formularios</h1>
+    
+    <a href="/page1" hx-boost="true">Link con AJAX</a>
+    <a href="/page2" hx-boost="true">Otro link</a>
+    
+    <form hx-boost="true" method="post" action="/submit">
+        <input name="data">
+        <button>Submit con AJAX</button>
+    </form>
+</body>
+</html>

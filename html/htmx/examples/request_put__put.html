@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX PUT Request</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Solicitud PUT con HTMX</h1>
+    
+    <div id="item">
+        <h3>Item 1</h3>
+        <input type="text" value="Nuevo título">
+        <button hx-put="/api/items/1" hx-target="#item" hx-swap="outerHTML">
+            Actualizar
+        </button>
+    </div>
+    
+    <!--
+    Objetivo: Actualizar recurso completo con PUT
+    Referencia: hx-put=""
+    Tipo: atributo
+    Nivel: intermedio
+    
+    Explicación:
+    - hx-put="/ruta" envía datos con método PUT
+    - Se usa para actualizar un recurso completo
+    - Envía todos los datos del formulario
+    
+    Diferencia PUT vs PATCH:
+    * PUT: actualiza recurso completo
+    * PATCH: actualiza parcialmente
+    
+    El servidor actualiza el recurso y devuelve la versión actualizada
+    -->
+</body>
+</html>

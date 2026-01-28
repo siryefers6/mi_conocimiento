@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX swap none</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>swap="none" - Sin Actualizar DOM</h1>
+    
+    <form hx-post="/api/subscribe" 
+          hx-swap="none"
+          hx-on="htmx:afterRequest: alert('¡Suscrito exitosamente!')">
+        <input type="email" name="email" placeholder="tu@email.com" required>
+        <button type="submit">Suscribirse</button>
+    </form>
+    
+    <br><br>
+    
+    <!-- Guardar preferencias -->
+    <h2>Guardar Preferencias</h2>
+    <label>
+        <input type="checkbox" name="notifications" 
+               hx-post="/api/prefs" 
+               hx-swap="none"
+               hx-vals='{"pref": "notifications"}'>
+        Activar notificaciones
+    </label>
+    
+    <!--
+    Objetivo: No actualizar el DOM
+    Referencia: hx-swap="none"
+    Tipo: atributo
+    Nivel: intermedio
+    
+    Explicación:
+    - none: NO reemplaza/actualiza nada en el DOM
+    - La solicitud se ejecuta normalmente
+    - Los eventos se disparan normalmente
+    - Perfecto para operaciones de background
+    
+    Ventajas:
+    * Enviar datos sin cambiar la UI
+    * Guardar en background
+    * Tracking sin feedback visual
+    * Usar eventos para control personalizado
+    
+    Patrón común:
+    hx-post="/api/save"
+    hx-swap="none"
+    hx-on="htmx:afterRequest: showCustomMessage()"
+    
+    Casos de uso:
+    * Guardar preferencias sin reload
+    * Analytics/tracking
+    * Auto-save sin mostrar cambios
+    * API calls que no necesitan respuesta visual
+    
+    Los eventos HTMX sigue funcionan:
+    - htmx:beforeRequest
+    - htmx:afterRequest
+    - htmx:afterSwap (aunque no hay swap)
+    - htmx:afterSettle
+    
+    Usar .htmx-request para mostrar loading
+    -->
+</body>
+</html>

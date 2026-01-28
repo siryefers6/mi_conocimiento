@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Triggers Modificadores</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Modificadores throttle, debounce, changed, once, mutation</h1>
+    
+    <input type="text" hx-get="/api/search" hx-trigger="keyup throttle:2s" placeholder="throttle">
+    <input type="text" hx-get="/api/search" hx-trigger="keyup debounce:500ms" placeholder="debounce">
+    <input type="text" hx-get="/api/search" hx-trigger="change changed" placeholder="changed">
+    <button hx-get="/api/data" hx-trigger="click once">once</button>
+    <div hx-get="/api/data" hx-trigger="mutation">mutation</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX OPTIONS Request</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Solicitud OPTIONS con HTMX</h1>
+    
+    <button hx-options="/api/resource" hx-target="#result">
+        Ver Opciones
+    </button>
+    
+    <div id="result"></div>
+    
+    <!--
+    Objetivo: Solicitud OPTIONS (CORS preflight)
+    Referencia: hx-options=""
+    Tipo: atributo
+    Nivel: avanzado
+    
+    Explicación:
+    - hx-options="/ruta" envía solicitud OPTIONS
+    - Usado para CORS preflight automáticamente
+    - Descubre métodos permitidos en el servidor
+    
+    Headers CORS:
+    * Access-Control-Allow-Methods
+    * Access-Control-Allow-Headers
+    * Access-Control-Allow-Origin
+    
+    Normalmente HTMX maneja OPTIONS automáticamente
+    Rara vez se necesita usar directamente
+    -->
+</body>
+</html>

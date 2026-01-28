@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX refresh</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>hx-refresh - Auto-refresh cuando visible</h1>
+    <div hx-get="/api/data" hx-refresh="true" hx-trigger="load, every 5s">
+        Se actualiza cada 5 segundos
+    </div>
+</body>
+</html>

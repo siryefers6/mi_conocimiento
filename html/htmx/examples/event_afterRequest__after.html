@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Eventos varios</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>afterRequest, afterSwap, afterSettle, responseError, beforeSend</h1>
+    <button hx-get="/api/1">Load</button>
+    <script>
+        document.addEventListener('htmx:afterRequest', (e) => console.log('after'));
+        document.addEventListener('htmx:afterSwap', (e) => console.log('swap'));
+        document.addEventListener('htmx:afterSettle', (e) => console.log('settle'));
+        document.addEventListener('htmx:responseError', (e) => console.log('error'));
+        document.addEventListener('htmx:beforeSend', (e) => console.log('send'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX beforeSend trigger custom</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>beforeSend, trigger, custom</h1>
+    <button hx-post="/api/form" hx-on="htmx:beforeSend: console.log('enviando')">Send</button>
+    <button onclick="htmx.trigger('#t', 'myEvent')">Trigger</button>
+    <div id="t" hx-get="/a" hx-trigger="myEvent">Custom</div>
+</body>
+</html>

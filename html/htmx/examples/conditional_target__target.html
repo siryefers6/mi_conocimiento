@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX eventos</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Eventos HTMX</h1>
+    
+    <button hx-get="/api/data" 
+            hx-on="htmx:afterRequest: console.log('después')"
+            hx-on="htmx:beforeRequest: console.log('antes')">
+        Con eventos
+    </button>
+    
+    <button hx-get="/api/data"
+            hx-on="htmx:afterSwap: alert('Contenido actualizado')"
+            hx-on="htmx:responseError: alert('Error!')">
+        Eventos de respuesta
+    </button>
+</body>
+</html>

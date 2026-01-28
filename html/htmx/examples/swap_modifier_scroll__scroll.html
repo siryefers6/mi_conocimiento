@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX scroll</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Modificador scroll - Desplazar página</h1>
+    
+    <p>Ejemplo de contenido arriba (tienes que scrollear para ver los botones)</p>
+    <div style="height: 800px; background: #f0f0f0; padding: 20px;">
+        <h2>Mucho contenido aquí...</h2>
+        <p>Scrollea hacia abajo para ver los botones</p>
+    </div>
+    
+    <h2>Botones para scroll</h2>
+    
+    <button hx-get="/api/content" 
+            hx-target="#result" 
+            hx-swap="innerHTML scroll:top">
+        Cargar y scroll al TOP
+    </button>
+    
+    <button hx-get="/api/content" 
+            hx-target="#result" 
+            hx-swap="innerHTML scroll:bottom">
+        Cargar y scroll al BOTTOM
+    </button>
+    
+    <div id="result" style="border: 1px solid green; padding: 20px; margin: 20px 0; background: #f0f0ff;">
+        <p>El contenido aparecerá aquí y la página scrolleará</p>
+    </div>
+    
+    <div style="height: 500px; background: #f0f0f0; padding: 20px;">
+        <p>Más contenido abajo...</p>
+    </div>
+    
+    <!--
+    Objetivo: Desplazar la página después del swap
+    Referencia: hx-swap="estrategia scroll:posición"
+    Tipo: modificador
+    Nivel: intermedio
+    
+    Explicación:
+    - scroll desplaza la página a una posición después del swap
+    - Útil para llevar la atención del usuario
+    - Mejora UX cuando contenido se carga fuera de vista
+    
+    Posiciones:
+    * scroll:top → desplaza al top de la página
+    * scroll:bottom → desplaza al bottom
+    
+    Uso alternativo:
+    - scroll:#elemento → desplaza a elemento específico
+    - scroll:window:top → al top de ventana
+    
+    Casos de uso:
+    * Cargar contenido y mostrar resultado
+    * Agregar item a lista (scroll al final)
+    * Formulario con error (scroll al error)
+    * Modal o diálogo (scroll al contenido)
+    
+    Combinable:
+    hx-swap="innerHTML swap:1s scroll:top"
+    hx-swap="beforeend scroll:#new-item"
+    
+    UX Tip: Scroll justo antes o después de agregar contenido
+    mueve la atención del usuario de manera natural
+    -->
+</body>
+</html>

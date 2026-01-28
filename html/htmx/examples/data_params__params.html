@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX hx-params</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Control de Parámetros con hx-params</h1>
+    
+    <form hx-get="/search">
+        <input type="text" name="query" placeholder="Búsqueda">
+        <input type="hidden" name="filter" value="active">
+        
+        <!-- Solo envía query, no filter -->
+        <button hx-get="/search" hx-params="query">
+            Buscar (solo query)
+        </button>
+        
+        <!-- Envía todos excepto filter -->
+        <button hx-get="/search" hx-params="not filter">
+            Buscar (sin filter)
+        </button>
+    </form>
+    
+    <div id="results"></div>
+    
+    <!--
+    Objetivo: Controlar qué parámetros se envían
+    Referencia: hx-params=""
+    Tipo: atributo
+    Nivel: intermedio
+    
+    Explicación:
+    - hx-params controla qué campos del formulario se envían
+    - Sintaxis: "nombre1, nombre2" (incluir específicos)
+    - Sintaxis: "not nombre1, nombre2" (excluir específicos)
+    - Sintaxis: "all" o vacío (enviar todos, por defecto)
+    
+    Casos de uso:
+    * Enviar solo ciertos campos
+    * Excluir campos confidenciales
+    * Controlar qué se envía al servidor
+    
+    hx-params="query": solo envía input name="query"
+    hx-params="not filter": envía todo excepto filter
+    -->
+</body>
+</html>

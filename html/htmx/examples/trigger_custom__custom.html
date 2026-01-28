@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Trigger custom</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Trigger personalizado</h1>
+    
+    <div id="section">
+        <button onclick="htmx.trigger('#data-loader', 'myCustomEvent')">
+            Disparar evento personalizado
+        </button>
+    </div>
+    
+    <div id="data-loader" hx-get="/api/data" hx-trigger="myCustomEvent">
+        Esperando evento personalizado...
+    </div>
+    
+    <!--trigger: Evento personalizado-->
+</body>
+</html>

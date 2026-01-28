@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX inherit boost timeout headers</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>inherit, boost, timeout, headers, refresh</h1>
+    
+    <div hx-get="/api/1">
+        <button hx-get="/api/1a" hx-inherit="hx-get">Hereda</button>
+    </div>
+    
+    <a href="/page" hx-boost="true">Boost link</a>
+    
+    <button hx-post="/api/2" hx-request='{"timeout": 3000}'>3s timeout</button>
+    
+    <button hx-get="/api/3" hx-request='{"headers": {"Authorization": "Bearer token"}}'>Headers</button>
+    
+    <div hx-get="/api/4" hx-refresh="true">Auto-refresh</div>
+</body>
+</html>

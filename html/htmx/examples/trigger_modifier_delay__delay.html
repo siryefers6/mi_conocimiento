@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Trigger Modificadores</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Modificadores de Trigger</h1>
+    
+    <h2>delay - Retraso</h2>
+    <input type="text" 
+           hx-get="/api/search" 
+           hx-trigger="keyup delay:1s">
+    <p><small>Espera 1 segundo después de cada keyup</small></p>
+    
+    <h2>throttle - Máximo una vez por intervalo</h2>
+    <input type="text" 
+           hx-get="/api/autocomplete" 
+           hx-trigger="keyup throttle:2s">
+    <p><small>Máximo una solicitud cada 2 segundos</small></p>
+    
+    <h2>debounce - Espera a que pare de escribir</h2>
+    <input type="text" 
+           placeholder="Para de escribir para buscar"
+           hx-get="/api/search" 
+           hx-trigger="keyup debounce:500ms">
+    <p><small>Se ejecuta 500ms después de último keyup</small></p>
+    
+    <h2>changed - Solo si cambia</h2>
+    <select hx-get="/api/filter" hx-trigger="change changed">
+        <option value="a">Opción A</option>
+        <option value="b">Opción B</option>
+    </select>
+    
+    <h2>once - Una sola vez</h2>
+    <button hx-get="/api/data" hx-trigger="click once">
+        Click (solo funciona una vez)
+    </button>
+    
+    <!--
+    delay: Espera antes de ejecutar
+    throttle: Máximo una vez por intervalo
+    debounce: Espera a pausa
+    changed: Solo si cambia valor
+    once: Se ejecuta una sola vez
+    -->
+</body>
+</html>

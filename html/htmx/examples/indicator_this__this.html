@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Indicadores</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <style>
+        .hidden { display: none; }
+        .htmx-request .spinner { display: inline; }
+        .htmx-request .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Indicadores: this, closest, class, settling</h1>
+    
+    <button hx-get="/api/1" hx-indicator="this">
+        ⏳ Muestra spinner en this
+    </button>
+    
+    <button hx-get="/api/2" hx-indicator="closest .box">
+        En closest
+    </button>
+    
+    <div style="border: 1px solid blue; padding: 10px; margin: 10px 0;" class="box">
+        <button hx-get="/api/3" hx-indicator="this">Click</button>
+        <span class="spinner hidden">⏳</span>
+    </div>
+    
+    <style>.htmx-request { opacity: 0.6; }</style>
+    <button hx-get="/api/4" style="padding: 10px;">
+        Con clase .htmx-request
+    </button>
+</body>
+</html>

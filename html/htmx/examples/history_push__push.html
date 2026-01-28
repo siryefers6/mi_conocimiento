@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX history</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>history_push history_url history_replace history_false</h1>
+    
+    <button hx-get="/page1" hx-push-url="/page1">Push URL</button>
+    <button hx-get="/page2" hx-replace-url="/page2">Replace URL</button>
+    <button hx-get="/page3" hx-push-url="false">Sin historial</button>
+</body>
+</html>

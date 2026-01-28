@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Trigger mutation</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Trigger: mutation</h1>
+    
+    <div id="source">
+        <p>Cambien este texto</p>
+        <button hx-post="/api/update" 
+                onclick="document.getElementById('source').innerHTML='<p>Actualizado!</p>'">
+            Modificar contenido
+        </button>
+    </div>
+    
+    <div hx-get="/api/listener" 
+         hx-trigger="mutation">
+        Escucha cambios en #source
+    </div>
+    
+    <!--
+    mutation: Dispara cuando el DOM cambia (MutationObserver)
+    Detecta inserciones, eliminaciones o modificaciones
+    -->
+</body>
+</html>

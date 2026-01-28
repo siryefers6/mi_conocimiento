@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Trigger load</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Trigger load - Al cargar página</h1>
+    
+    <div hx-get="/api/initial-content" 
+         hx-trigger="load"
+         hx-target="#result">
+        Cargando contenido inicial...
+    </div>
+    
+    <div id="result"></div>
+    
+    <!--load: Se dispara automáticamente al cargar la página-->
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX afterend</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>afterend - Insertar Después del Elemento</h1>
+    
+    <div id="panel-1" style="border: 2px solid blue; padding: 20px; margin: 20px 0; background: #f0f0ff;">
+        <h3>Panel 1</h3>
+        <p>Contenido del panel</p>
+        <button hx-get="/api/panel" hx-target="#panel-1" hx-swap="afterend">
+            Agregar panel después
+        </button>
+    </div>
+    
+    <!--
+    Objetivo: Insertar después del elemento (como hermano)
+    Referencia: hx-swap="afterend"
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    - afterend inserta contenido DESPUÉS del elemento
+    - El nuevo contenido es hermano, no hijo
+    - Opuesto de beforebegin
+    
+    Resultado:
+    <div id="panel-1">Contenido</div>
+    <div class="nuevo-panel">Nuevo contenido</div>
+    
+    Casos de uso:
+    * Agregar paneles/secciones después
+    * Dividir contenido en múltiples elementos
+    * Crear layouts responsivos
+    * Agregar elementos hermanos dinámicamente
+    
+    Compara:
+    - beforeend: dentro, al final (append como hijo)
+    - afterend: fuera, después (insert como hermano)
+    -->
+</body>
+</html>

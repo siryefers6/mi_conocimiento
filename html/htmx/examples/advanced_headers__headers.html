@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX headers</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Headers personalizados</h1>
+    
+    <form hx-post="/api/form" 
+          hx-request='{"headers": {"X-CSRF-Token": "abc123", "Authorization": "Bearer mytoken"}}'>
+        <input name="data">
+        <button>Enviar con headers</button>
+    </form>
+</body>
+</html>

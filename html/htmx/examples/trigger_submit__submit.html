@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Trigger submit</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Trigger submit - Al enviar formulario</h1>
+    
+    <form hx-post="/api/register" hx-target="#result">
+        <input type="text" name="username" placeholder="Usuario" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Registrarse</button>
+    </form>
+    
+    <div id="result"></div>
+    
+    <!--
+    Objetivo: Disparar al enviar formulario
+    Referencia: hx-trigger="submit"
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    - submit se dispara al hacer clic en botón type="submit"
+    - Es el comportamiento por defecto en form
+    - Reemplaza envío HTML tradicional
+    
+    Automático: En <form> se asume submit
+    <form hx-post="/url"> equivale a <form hx-post="/url" hx-trigger="submit">
+    -->
+</body>
+</html>

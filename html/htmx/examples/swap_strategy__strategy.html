@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX hx-swap Estrategias</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Estrategias de Intercambio con hx-swap</h1>
+    
+    <h2>innerHTML (por defecto)</h2>
+    <div id="content-1" style="border: 1px solid blue; padding: 10px;">
+        <p>Contenido original</p>
+    </div>
+    <button hx-get="/api/content" hx-target="#content-1" hx-swap="innerHTML">
+        innerHTML: Reemplaza contenido
+    </button>
+    
+    <h2>outerHTML</h2>
+    <div id="content-2" style="border: 1px solid green; padding: 10px;">
+        <p>Elemento completo será reemplazado</p>
+    </div>
+    <button hx-get="/api/content" hx-target="#content-2" hx-swap="outerHTML">
+        outerHTML: Reemplaza elemento
+    </button>
+    
+    <h2>beforebegin</h2>
+    <div id="content-3" style="border: 1px solid orange; padding: 10px;">
+        <p>Contenido</p>
+    </div>
+    <button hx-get="/api/content" hx-target="#content-3" hx-swap="beforebegin">
+        beforebegin: Antes del elemento
+    </button>
+    
+    <h2>afterbegin</h2>
+    <div id="content-4" style="border: 1px solid red; padding: 10px;">
+        <p>Contenido existente</p>
+    </div>
+    <button hx-get="/api/content" hx-target="#content-4" hx-swap="afterbegin">
+        afterbegin: Dentro, al principio
+    </button>
+    
+    <h2>beforeend</h2>
+    <div id="content-5" style="border: 1px solid purple; padding: 10px;">
+        <p>Contenido existente</p>
+    </div>
+    <button hx-get="/api/content" hx-target="#content-5" hx-swap="beforeend">
+        beforeend: Dentro, al final
+    </button>
+    
+    <h2>afterend</h2>
+    <div id="content-6" style="border: 1px solid brown; padding: 10px;">
+        <p>Contenido</p>
+    </div>
+    <button hx-get="/api/content" hx-target="#content-6" hx-swap="afterend">
+        afterend: Después del elemento
+    </button>
+    
+    <!--
+    Objetivo: Controlar cómo se inserta el contenido
+    Referencia: hx-swap=""
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    Estrategias de intercambio:
+    
+    1. innerHTML (DEFAULT)
+       Reemplaza contenido interno del elemento
+       <div>CONTENIDO VIEJO</div> -> <div>CONTENIDO NUEVO</div>
+    
+    2. outerHTML
+       Reemplaza el elemento completo
+       <div>VIEJO</div> -> <div>NUEVO</div>
+    
+    3. beforebegin
+       Inserta antes del elemento (como hermano anterior)
+       NUEVO<div>CONTENIDO</div>
+    
+    4. afterbegin
+       Inserta dentro, antes del contenido
+       <div>NUEVO CONTENIDO VIEJO</div>
+    
+    5. beforeend (append)
+       Inserta dentro, después del contenido
+       <div>CONTENIDO VIEJO NUEVO</div>
+    
+    6. afterend
+       Inserta después del elemento (como hermano siguiente)
+       <div>CONTENIDO</div>NUEVO
+    
+    7. delete
+       Elimina el elemento objetivo
+    
+    8. none
+       No modifica el DOM, solo ejecuta eventos
+    
+    Uso común:
+    - innerHTML: actualizar datos dentro del elemento
+    - outerHTML: reemplazar elemento completamente
+    - beforeend: agregar a lista (append)
+    -->
+</body>
+</html>

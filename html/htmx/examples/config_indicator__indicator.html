@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX config indicator refresh</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <script>
+        htmx.config.defaultIndicatorStyle = 'class';
+    </script>
+</head>
+<body>
+    <h1>Configuración indicator y refresh</h1>
+    <button hx-get="/api/1">Indicador global</button>
+    <div hx-get="/api/2" hx-refresh="true">Auto-refresh</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX confirm delete</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Patrón: Eliminar con confirmación</h1>
+    <button hx-delete="/api/item/1" hx-confirm="¿Eliminar?">Eliminar</button>
+</body>
+</html>

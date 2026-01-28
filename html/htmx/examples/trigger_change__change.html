@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Triggers</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Disparadores (Triggers) - hx-trigger</h1>
+    
+    <h2>click (por defecto en botones)</h2>
+    <button hx-get="/api/data" hx-trigger="click">
+        Click para cargar
+    </button>
+    
+    <h2>change (formularios)</h2>
+    <select hx-get="/api/filter" hx-trigger="change">
+        <option value="">Selecciona...</option>
+        <option value="active">Activos</option>
+        <option value="inactive">Inactivos</option>
+    </select>
+    
+    <h2>submit (formulario)</h2>
+    <form hx-post="/api/save" hx-trigger="submit">
+        <input type="text" name="nombre" placeholder="Nombre">
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <h2>keyup (escritura)</h2>
+    <input type="text" 
+           placeholder="Escribe para buscar..." 
+           hx-get="/api/search" 
+           hx-trigger="keyup">
+    
+    <h2>load (al cargar página)</h2>
+    <div hx-get="/api/initial-data" hx-trigger="load">
+        Cargando datos iniciales...
+    </div>
+    
+    <h2>revealed (cuando se ve en pantalla)</h2>
+    <div style="height: 1000px; background: #f0f0f0;">
+        Scrollea hacia abajo...
+    </div>
+    <div hx-get="/api/lazy-content" hx-trigger="revealed">
+        Este contenido se carga cuando es visible
+    </div>
+    
+    <!--
+    Objetivo: Especificar cuándo se dispara la solicitud
+    Referencia: hx-trigger=""
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    Eventos comunes:
+    
+    1. click
+       Se dispara al hacer clic
+       Por defecto en botones, links
+    
+    2. change
+       Se dispara al cambiar valor
+       Input, select, textarea, checkbox
+    
+    3. submit
+       Se dispara al enviar formulario
+       Reemplaza envío HTML tradicional
+    
+    4. keyup
+       Se dispara cada vez que suelta tecla
+       Usado en búsquedas, autocompletado
+    
+    5. load
+       Se dispara al cargar la página
+       Útil para data inicial
+    
+    6. revealed
+       Se dispara cuando elemento visible en viewport
+       Lazy loading perfecto
+    
+    7. Evento personalizado
+       Puedes usar cualquier evento
+       hx-trigger="myCustomEvent"
+    
+    Múltiples triggers:
+    hx-trigger="click, change, keyup"
+    Se dispara con cualquiera de esos eventos
+    -->
+</body>
+</html>

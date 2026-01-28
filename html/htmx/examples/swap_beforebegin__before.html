@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX beforebegin/afterbegin/beforeend/afterend</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Estrategias de Inserción: beforebegin, afterbegin, beforeend, afterend</h1>
+    
+    <h2>beforebegin - Antes del elemento</h2>
+    <div id="target-1" style="border: 1px solid blue; padding: 10px; margin: 10px;">
+        <p>Elemento original</p>
+    </div>
+    <button hx-get="/api/item" hx-target="#target-1" hx-swap="beforebegin">
+        Insertar antes
+    </button>
+    
+    <h2>afterbegin - Dentro, principio</h2>
+    <div id="target-2" style="border: 1px solid green; padding: 10px; margin: 10px;">
+        <p>Contenido existente (viene nuevo al principio)</p>
+    </div>
+    <button hx-get="/api/item" hx-target="#target-2" hx-swap="afterbegin">
+        Insertar al principio
+    </button>
+    
+    <h2>beforeend - Dentro, final</h2>
+    <ul id="target-3" style="border: 1px solid orange; padding: 10px; margin: 10px;">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button hx-get="/api/item" hx-target="#target-3" hx-swap="beforeend">
+        Agregar item al final
+    </button>
+    
+    <h2>afterend - Después del elemento</h2>
+    <div id="target-4" style="border: 1px solid purple; padding: 10px; margin: 10px;">
+        <p>Elemento original</p>
+    </div>
+    <button hx-get="/api/item" hx-target="#target-4" hx-swap="afterend">
+        Insertar después
+    </button>
+    
+    <!--
+    Objetivo: Controlar posición de inserción
+    Referencia: hx-swap="beforebegin|afterbegin|beforeend|afterend"
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    Posiciones de inserción:
+    
+    beforebegin
+    └─ nuevo contenido
+    <div>Elemento</div>
+    
+    <div>
+    └─ afterbegin: nuevo contenido
+    └─ contenido original
+    └─ beforeend: nuevo contenido
+    </div>
+    
+    <div>Elemento</div>
+    └─ afterend: nuevo contenido
+    
+    Comparación visual:
+    
+    ┌─────────────────────────────┐
+    │  beforebegin                │
+    │  <div>                      │
+    │    afterbegin               │
+    │    Contenido original       │
+    │    beforeend                │
+    │  </div>                     │
+    │  afterend                   │
+    └─────────────────────────────┘
+    
+    Casos de uso:
+    - beforebegin/afterend: insertar hermanos (listas paralelas)
+    - afterbegin: prepend (agregar al inicio)
+    - beforeend: append (agregar al final, más común)
+    
+    beforeend es muy usado para:
+    - Agregar items a listas
+    - Agregar filas a tablas
+    - Agregar elementos al final de un contenedor
+    -->
+</body>
+</html>

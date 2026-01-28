@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX beforeend</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>beforeend - Append (Agregar al Final)</h1>
+    
+    <ul id="list" style="border: 1px solid green; padding: 20px; margin: 10px 0;">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    
+    <button hx-get="/api/item" hx-target="#list" hx-swap="beforeend">
+        Agregar item al final (append)
+    </button>
+    
+    <br><br>
+    
+    <!-- Ejemplo en tabla -->
+    <table style="border-collapse: collapse; margin: 20px 0;">
+        <thead>
+            <tr style="background: #f0f0f0;">
+                <th style="border: 1px solid #ccc; padding: 10px;">Nombre</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Edad</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 10px;">Juan</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">30</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 10px;">María</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">28</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <button hx-get="/api/person" hx-target="#tbody" hx-swap="beforeend">
+        Agregar persona a la tabla
+    </button>
+    
+    <!--
+    Objetivo: Insertar dentro, antes del closing tag (append)
+    Referencia: hx-swap="beforeend"
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    - beforeend inserta contenido dentro del elemento
+    - AL FINAL (antes del </div>, después del contenido existente)
+    - Útil para append (agregar al final de lista/tabla)
+    
+    Resultado:
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>NUEVO ITEM</li>
+    </ul>
+    
+    Casos de uso (MUY COMÚN):
+    * Listas: agregar item al final
+    * Tablas: agregar fila al final
+    * Feeds: agregar post nuevo
+    * Chats: agregar mensaje del usuario
+    
+    Más común que afterbegin en HTMX
+    
+    Nota: para agregar AL PRINCIPIO usa afterbegin (prepend)
+    -->
+</body>
+</html>

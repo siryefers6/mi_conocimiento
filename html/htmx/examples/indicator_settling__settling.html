@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX settling</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <style>.htmx-settling { color: red; }</style>
+</head>
+<body>
+    <h1>.htmx-settling - Mientras se inserta contenido</h1>
+    <button hx-get="/api/1">Durante settle se vuelve rojo</button>
+</body>
+</html>

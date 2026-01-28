@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX hx-target parent</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Destino "parent" - Actualizar Padre Directo</h1>
+    
+    <div id="parent-1" style="border: 1px solid blue; padding: 20px; margin: 10px 0;">
+        <h3>Padre 1</h3>
+        <div style="background: #f0f0f0; padding: 10px;">
+            <button hx-get="/api/content" 
+                    hx-target="parent" 
+                    hx-swap="innerHTML">
+                Actualizar Padre Directo
+            </button>
+        </div>
+    </div>
+    
+    <div id="parent-2" style="border: 1px solid green; padding: 20px; margin: 10px 0;">
+        <h3>Padre 2</h3>
+        <ul>
+            <li>
+                <button hx-get="/api/item" 
+                        hx-target="parent" 
+                        hx-swap="outerHTML">
+                    Reemplazar Item
+                </button>
+            </li>
+        </ul>
+    </div>
+    
+    <!--
+    Objetivo: Actualizar padre directo del elemento
+    Referencia: hx-target="parent"
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    - hx-target="parent" apunta al elemento padre directo
+    - Equivalente a hx-target="closest :not(.no-parent)" pero más simple
+    - Útil en estructuras anidadas simples
+    
+    Diferencia con "closest":
+    * parent: apunta al padre directo (elemento padre)
+    * closest .clase: busca ancestro con esa clase (puede estar más arriba)
+    
+    Casos de uso:
+    * Botón dentro de div que quiere actualizar su div padre
+    * Lista de items donde cada botón actualiza su item
+    * Estructuras anidadas simples
+    
+    Si el elemento no tiene padre, se comporta como "this"
+    -->
+</body>
+</html>

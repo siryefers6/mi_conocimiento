@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX WebSockets</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>WebSocket connect send</h1>
+    <div hx-ws="connect /ws">WebSocket</div>
+    <button hx-ws="send">Enviar</button>
+</body>
+</html>

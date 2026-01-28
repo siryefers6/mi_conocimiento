@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Errores</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Manejo de Errores</h1>
+    
+    <button hx-get="/api/error-404" hx-target="#errors" hx-swap="innerHTML">
+        Trigger Error 404
+    </button>
+    
+    <div id="errors" style="color: red; margin-top: 20px;"></div>
+</body>
+</html>

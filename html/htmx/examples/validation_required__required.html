@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Validación</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>required, pattern, type</h1>
+    <form hx-post="/api/form">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="user" pattern="[a-z]+" placeholder="Minúsculas">
+        <input type="number" name="age" type="number">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

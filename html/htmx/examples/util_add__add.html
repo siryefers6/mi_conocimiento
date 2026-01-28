@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX util add swap</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>addClass, swap</h1>
+    <button onclick="htmx.addClass(this, 'active')">add clase</button>
+    <button onclick="htmx.swap('#res', '<p>contenido</p>')">swap</button>
+    <div id="res"></div>
+</body>
+</html>

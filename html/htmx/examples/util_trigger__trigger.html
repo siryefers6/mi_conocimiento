@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX util varios</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>trigger, find, toggle, remove, add, swap</h1>
+    <button onclick="htmx.trigger('#t', 'ev')">trigger</button>
+    <button onclick="let e = htmx.find('#id')">find</button>
+    <button onclick="htmx.toggleClass(this, 'x')">toggle</button>
+    <button onclick="htmx.removeClass(this, 'x')">remove</button>
+    <button onclick="htmx.addClass(this, 'x')">add</button>
+    <button onclick="htmx.swap('#e', 'c')">swap</button>
+    <div id="t"></div><div id="e"></div>
+</body>
+</html>

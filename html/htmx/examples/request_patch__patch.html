@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX PATCH Request</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Solicitud PATCH con HTMX</h1>
+    
+    <div id="item">
+        <h3>Item 1</h3>
+        <input type="text" name="title" value="Nuevo título">
+        <button hx-patch="/api/items/1" hx-target="#item" hx-swap="outerHTML">
+            Actualizar Parcialmente
+        </button>
+    </div>
+    
+    <!--
+    Objetivo: Actualizar recurso parcialmente con PATCH
+    Referencia: hx-patch=""
+    Tipo: atributo
+    Nivel: intermedio
+    
+    Explicación:
+    - hx-patch="/ruta" envía datos con método PATCH
+    - Se usa para actualizar parcialmente un recurso
+    - Solo se envían los campos modificados
+    - Más eficiente que PUT cuando cambios son menores
+    
+    Caso de uso:
+    * Cambiar solo un campo (ej: estado)
+    * No requiere todos los datos
+    * Servidor aplica cambios parciales
+    
+    El servidor actualiza solo lo enviado y devuelve resultado
+    -->
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX custom event</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Custom Event</h1>
+    <div id="d" hx-get="/a" hx-trigger="myCustomEvent">Custom Event</div>
+    <button onclick="htmx.trigger('#d', 'myCustomEvent')">Dispatch</button>
+</body>
+</html>

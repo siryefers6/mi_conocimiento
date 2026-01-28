@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX util process trigger find toggle</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Utilidades: process, trigger, find, toggle, remove, add, swap</h1>
+    
+    <button onclick="htmx.process('#container')">process()</button>
+    <button onclick="htmx.trigger('#el', 'event')">trigger()</button>
+    <button onclick="const e = htmx.find('#id')">find()</button>
+    <button onclick="htmx.toggleClass(this, 'cls')">toggleClass()</button>
+    <button onclick="htmx.removeClass(this, 'cls')">removeClass()</button>
+    <button onclick="htmx.addClass(this, 'cls')">addClass()</button>
+    <button onclick="htmx.swap('#el', 'content')">swap()</button>
+    
+    <div id="container"></div>
+    <div id="el"></div>
+</body>
+</html>

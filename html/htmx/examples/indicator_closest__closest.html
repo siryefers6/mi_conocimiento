@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX indicator closest class settling</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <style>
+        .htmx-request { opacity: 0.5; }
+        .htmx-settling { background: yellow; }
+    </style>
+</head>
+<body>
+    <h1>closest, class, settling</h1>
+    <div class="loader"><button hx-get="/api/1" hx-indicator="closest .loader">closest</button></div>
+    <button hx-get="/api/2" hx-indicator=".htmx-request">class</button>
+    <button hx-get="/api/3" hx-indicator=".htmx-settling">settling</button>
+</body>
+</html>

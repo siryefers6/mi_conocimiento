@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX hx-vals</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Valores Personalizados con hx-vals</h1>
+    
+    <!-- Método 1: JSON inline -->
+    <button hx-post="/api/action"
+            hx-vals='{"userId": 123, "action": "like"}'
+            hx-target="#result">
+        Me gusta
+    </button>
+    
+    <!-- Método 2: Actualizar valores dinámicamente -->
+    <button hx-post="/api/action"
+            hx-vals='{"priority": "high"}'
+            hx-target="#result"
+            onclick="this.setAttribute('hx-vals', JSON.stringify({userId: 123, priority: \"high\"}))">
+        Prioridad Alta
+    </button>
+    
+    <div id="result"></div>
+    
+    <!--
+    Objetivo: Añadir valores personalizados a la solicitud
+    Referencia: hx-vals=""
+    Tipo: atributo
+    Nivel: intermedio
+    
+    Explicación:
+    - hx-vals añade valores JSON adicionales a la solicitud
+    - Se envían además de los parámetros del formulario
+    - Formato: hx-vals='{"key": "value"}'
+    
+    Casos de uso:
+    * Enviar IDs o tokens
+    * Parámetros adicionales fijos
+    * Información de contexto
+    
+    Se combina con otros parámetros del formulario
+    Los valores de hx-vals sobrescriben valores del formulario
+    -->
+</body>
+</html>

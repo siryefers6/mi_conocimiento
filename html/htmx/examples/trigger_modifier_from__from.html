@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Trigger from</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Trigger modifier: from</h1>
+    
+    <button id="btn-trigger">Botón disparador</button>
+    
+    <input type="text" 
+           placeholder="Escucha clics del botón" 
+           hx-get="/api/process" 
+           hx-trigger="click from:#btn-trigger">
+    
+    <!--
+    from: Especifica el selector del elemento que dispara el evento
+    Útil para escuchar eventos de otros elementos
+    -->
+</body>
+</html>

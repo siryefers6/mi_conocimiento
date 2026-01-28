@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX swap modificadores</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Modificadores de Swap: transition, settle, scroll, show</h1>
+    
+    <h2>Transición (animación de cambio)</h2>
+    <div id="content-1" style="border: 1px solid blue; padding: 20px; margin: 10px 0;">
+        Contenido con transición
+    </div>
+    <button hx-get="/api/content" 
+            hx-target="#content-1" 
+            hx-swap="innerHTML swap:1s">
+        Cambiar con transición 1s
+    </button>
+    
+    <h2>Settle (esperar antes de cambiar)</h2>
+    <div id="content-2" style="border: 1px solid green; padding: 20px; margin: 10px 0;">
+        Contenido con settle
+    </div>
+    <button hx-get="/api/content" 
+            hx-target="#content-2" 
+            hx-swap="innerHTML settle:2s">
+        Cambiar tras esperar 2s
+    </button>
+    
+    <h2>Scroll (desplazar a elemento)</h2>
+    <div id="content-3" style="border: 1px solid orange; padding: 20px; margin: 10px 0;">
+        Contenido visible
+    </div>
+    <button hx-get="/api/content" 
+            hx-target="#content-3" 
+            hx-swap="innerHTML scroll:top">
+        Cambiar y scroll al top
+    </button>
+    
+    <h2>Show (mostrar área específica)</h2>
+    <div id="content-4" style="border: 1px solid red; padding: 20px; margin: 10px 0; height: 100px; overflow: auto;">
+        <div style="margin-bottom: 200px;">Scroll aquí...</div>
+        <div id="target" style="background: yellow; padding: 20px;">ESTE ELEMENTO</div>
+    </div>
+    <button hx-get="/api/content" 
+            hx-target="#target" 
+            hx-swap="innerHTML show:#target">
+        Actualizar y mostrar target
+    </button>
+    
+    <!--
+    Objetivo: Modificadores que controlan comportamiento del swap
+    Referencia: hx-swap="estrategia modificador:valor"
+    Tipo: atributo
+    Nivel: avanzado
+    
+    Explicación:
+    
+    1. swap:tiempo
+       Anima el cambio (fade/transition)
+       Requiere CSS animations/transitions
+       Ejemplo: hx-swap="innerHTML swap:1s"
+    
+    2. settle:tiempo
+       Espera antes de hacer el swap
+       Útil para animaciones de salida
+       Ejemplo: hx-swap="innerHTML settle:500ms"
+    
+    3. scroll:posición
+       Desplaza la página después del swap
+       Posiciones: top, bottom
+       Ejemplo: hx-swap="innerHTML scroll:top"
+    
+    4. show:selector
+       Scroll para mostrar elemento específico
+       Útil en contenedores con scroll
+       Ejemplo: hx-swap="innerHTML show:#id"
+    
+    Combinaciones:
+    - Múltiples modificadores se pueden combinar
+    - Ejemplo: swap:1s settle:500ms scroll:top
+    
+    Casos de uso:
+    - swap: animaciones suaves
+    - settle: esperar a animaciones de salida
+    - scroll: UX mejorada (llevar usuario a lo nuevo)
+    - show: viewports con scroll interno
+    -->
+</body>
+</html>

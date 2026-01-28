@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Eventos</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Events: responseError, beforeSend, trigger, custom</h1>
+    <button hx-get="/api/error">Error Event</button>
+    <button hx-post="/api/post" hx-on="htmx:beforeSend: console.log('send')">Send</button>
+    <button onclick="htmx.trigger('#target', 'customEvent')">Trigger</button>
+    <div id="target" hx-get="/api/1" hx-trigger="customEvent">Target</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX SSE trigger</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>SSE trigger</h1>
+    <div hx-trigger="sse:myevent" hx-get="/api/1">SSE Trigger</div>
+</body>
+</html>

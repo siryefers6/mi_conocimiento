@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX util remove add swap</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>removeClass, addClass, swap</h1>
+    <button onclick="htmx.removeClass(this, 'active')">remove</button>
+    <button onclick="htmx.addClass(this, 'active')">add</button>
+    <button onclick="htmx.swap('#result', '<p>HTML</p>')">swap</button>
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX sync abort queue replace</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>abort queue replace</h1>
+    <button hx-get="/a" hx-sync="div:abort">abort</button>
+    <button hx-get="/b" hx-sync="div:queue">queue</button>
+    <button hx-get="/c" hx-sync="div:replace">replace</button>
+</body>
+</html>

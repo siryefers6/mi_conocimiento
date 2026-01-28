@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Trigger click</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Trigger click - Al hacer clic</h1>
+    
+    <button hx-get="/api/data" hx-target="#result">
+        Hacer clic para cargar datos
+    </button>
+    
+    <div id="result"></div>
+    
+    <!--
+    Objetivo: Disparar al hacer clic
+    Referencia: hx-trigger="click"
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    - click es el comportamiento por defecto en botones
+    - Se dispara al hacer click en el elemento
+    
+    Automático: click es implícito en botones
+    <button hx-get="/url"> = <button hx-get="/url" hx-trigger="click">
+    -->
+</body>
+</html>

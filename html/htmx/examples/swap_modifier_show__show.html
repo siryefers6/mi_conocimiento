@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX show</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Modificador show - Mostrar Elemento Específico</h1>
+    
+    <div id="scrollable" style="border: 1px solid blue; padding: 20px; height: 300px; overflow-y: auto; background: #f0f0f0;">
+        <h3>Contenedor con scroll</h3>
+        <p>Contenido: Item 1</p>
+        <p>Contenido: Item 2</p>
+        <p>Contenido: Item 3</p>
+        <p>Contenido: Item 4</p>
+        <p>Contenido: Item 5</p>
+        
+        <div id="target-item" style="background: yellow; padding: 20px; margin-top: 100px; border: 2px solid red;">
+            <h4>ESTE ITEM DEBE MOSTRARSE</h4>
+            <p>Cuando hagas click, esta sección scrolleará hacia la vista</p>
+        </div>
+        
+        <p>Más contenido después...</p>
+        <p>Item 6</p>
+        <p>Item 7</p>
+    </div>
+    
+    <button hx-get="/api/item" 
+            hx-target="#target-item" 
+            hx-swap="innerHTML show:#target-item">
+        Actualizar y mostrar target-item
+    </button>
+    
+    <!--
+    Objetivo: Scroll para mostrar elemento en viewport
+    Referencia: hx-swap="estrategia show:selector"
+    Tipo: modificador
+    Nivel: avanzado
+    
+    Explicación:
+    - show desplaza para que un elemento sea visible
+    - Útil en contenedores con scroll interno
+    - Garantiza que el contenido actualizado sea visible
+    
+    Sintaxis:
+    * show:#elemento → scroll para mostrar ese elemento
+    * show:target → muestra el elemento objetivo del swap
+    * show:top → scroll al top
+    * show:bottom → scroll al bottom
+    
+    Diferencia con scroll:
+    - scroll: desplaza a posición fija (top/bottom)
+    - show: desplaza para mostrar elemento específico
+    
+    Casos de uso:
+    * Contenedores con overflow y scroll
+    * Cuando actualizas elemento fuera de vista
+    * Asegurarte que lo nuevo es visible
+    * Cargas infinitas que mantienen scroll
+    
+    Ejemplo real:
+    <div style="height: 400px; overflow: auto;">
+        <!-- muchos items -->
+        <div id="item-5">Item 5</div>
+    </div>
+    <button hx-get="/api/update"
+            hx-target="#item-5"
+            hx-swap="innerHTML show:#item-5">
+        Actualizar item-5 y mostrar
+    </button>
+    
+    El botón garantiza que item-5 será visible
+    aunque esté debajo del fold en el contenedor
+    -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Múltiples triggers</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Múltiples Triggers</h1>
+    
+    <input type="text" 
+           placeholder="Busca..." 
+           hx-get="/api/search" 
+           hx-trigger="keyup, change"
+           hx-target="#results">
+    
+    <div id="results"></div>
+    
+    <!--Se dispara con keyup O change-->
+</body>
+</html>

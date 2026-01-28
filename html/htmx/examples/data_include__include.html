@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX hx-include</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Incluir Campos con hx-include</h1>
+    
+    <form id="myForm">
+        <input type="text" name="username" placeholder="Usuario">
+        <input type="email" name="email" placeholder="Email">
+        <input type="hidden" name="csrf" value="token123">
+    </form>
+    
+    <!-- Botón fuera del formulario que incluye campos del form -->
+    <button hx-post="/api/submit"
+            hx-include="#myForm"
+            hx-target="#result">
+        Enviar Datos del Form
+    </button>
+    
+    <!-- Incluir un selector CSS específico -->
+    <div id="section">
+        <input type="text" name="data1" value="valor1">
+        <input type="text" name="data2" value="valor2">
+    </div>
+    
+    <button hx-get="/api/data"
+            hx-include="#section"
+            hx-target="#result">
+        Incluir Sección
+    </button>
+    
+    <div id="result"></div>
+    
+    <!--
+    Objetivo: Incluir campos de otros elementos en la solicitud
+    Referencia: hx-include=""
+    Tipo: atributo
+    Nivel: intermedio
+    
+    Explicación:
+    - hx-include especifica selector CSS de elementos a incluir
+    - Los valores se envían aunque el elemento esté fuera del formulario
+    - Muy útil para botones fuera del formulario principal
+    
+    Sintaxis:
+    * hx-include="#elementId" (por ID)
+    * hx-include=".className" (por clase)
+    * hx-include="input[name]" (selector complejo)
+    
+    Casos de uso:
+    * Botones de acción fuera del form
+    * Incluir campos de múltiples forms
+    * Compartir datos entre elementos
+    
+    Se combina con hx-params para control fino
+    -->
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX WebSocket send sse</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>send, sse, trigger sse</h1>
+    <button hx-ws="send" hx-on="click: sendMsg()">Send WS</button>
+    <div hx-trigger="sse:message" hx-get="/api/msg">SSE Trigger</div>
+</body>
+</html>

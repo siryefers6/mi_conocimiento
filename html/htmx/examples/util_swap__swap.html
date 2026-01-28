@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX util swap</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>htmx.swap() - Cambiar contenido del DOM</h1>
+    
+    <button onclick="htmx.swap('#target', '<p>Nuevo contenido</p>', {strategy: 'innerHTML'})">
+        swap innerHTML
+    </button>
+    
+    <button onclick="htmx.swap('#target', '<div>Completo</div>', {strategy: 'outerHTML'})">
+        swap outerHTML
+    </button>
+    
+    <div id="target" style="border: 1px solid blue; padding: 10px;">
+        Contenido original
+    </div>
+</body>
+</html>

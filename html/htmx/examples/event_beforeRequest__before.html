@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Eventos</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Eventos HTMX</h1>
+    
+    <button hx-get="/api/data">Evento</button>
+    
+    <script>
+        document.body.addEventListener('htmx:beforeRequest', function(evt) {
+            console.log('Antes de solicitud');
+        });
+        document.body.addEventListener('htmx:afterRequest', function(evt) {
+            console.log('Después de solicitud');
+        });
+        document.body.addEventListener('htmx:afterSwap', function(evt) {
+            console.log('Después de swap');
+        });
+    </script>
+</body>
+</html>

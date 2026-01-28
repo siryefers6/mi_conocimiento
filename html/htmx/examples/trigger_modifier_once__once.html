@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Trigger once</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Trigger modifier: once</h1>
+    
+    <button hx-get="/api/data" 
+            hx-trigger="click once">
+        Clic (se ejecuta una sola vez)
+    </button>
+    
+    <!--
+    once: El trigger se ejecuta solo una vez
+    Después, no responde más al evento
+    Útil para cargas iniciales
+    -->
+</body>
+</html>

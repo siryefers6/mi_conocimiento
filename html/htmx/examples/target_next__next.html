@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX hx-target next</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Destino "next" - Siguiente Hermano</h1>
+    
+    <button hx-get="/api/content" 
+            hx-target="next"
+            hx-swap="innerHTML">
+        Cargar en siguiente elemento
+    </button>
+    <div style="background: #f0f0f0; padding: 10px; border: 1px solid blue;">
+        Contenido aquí
+    </div>
+    
+    <br><br>
+    
+    <!-- Ejemplo en lista -->
+    <ul>
+        <li>Item 1 <button hx-get="/api/details" hx-target="next" hx-swap="outerHTML">Ver detalles</button></li>
+        <li style="display:none;"></li>
+        
+        <li>Item 2 <button hx-get="/api/details" hx-target="next" hx-swap="outerHTML">Ver detalles</button></li>
+        <li style="display:none;"></li>
+    </ul>
+    
+    <!--
+    Objetivo: Apuntar al siguiente elemento hermano
+    Referencia: hx-target="next"
+    Tipo: atributo
+    Nivel: intermedio
+    
+    Explicación:
+    - hx-target="next" apunta al siguiente elemento hermano (sibling)
+    - Busca solo hermanos directos, no descendientes
+    - Útil en listas o cuando estructura es simple
+    
+    Ejemplo:
+    <button hx-target="next">...</button>
+    <div>Este div se actualiza (next)</div>
+    
+    Variantes:
+    * next: siguiente hermano
+    * next .clase: siguiente hermano con esa clase
+    * next div: siguiente hermano que sea div
+    
+    Si no hay siguiente elemento, usa "this"
+    -->
+</body>
+</html>

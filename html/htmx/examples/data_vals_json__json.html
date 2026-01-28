@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX hx-vals JSON</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Valores JSON Dinámicos</h1>
+    
+    <select id="priority" name="priority">
+        <option value="low">Baja</option>
+        <option value="medium">Media</option>
+        <option value="high">Alta</option>
+    </select>
+    
+    <!-- Obtiene el valor del select dinámicamente -->
+    <button hx-post="/api/task"
+            hx-vals='from:select {"priority": document.querySelector("#priority").value}'
+            hx-target="#result">
+        Crear Tarea
+    </button>
+    
+    <!-- Forma alternativa con JavaScript -->
+    <button hx-post="/api/task"
+            hx-target="#result"
+            onclick="htmx.ajax('POST', '/api/task', {
+                target: '#result',
+                vals: {
+                    priority: document.getElementById('priority').value,
+                    timestamp: new Date().toISOString()
+                }
+            })">
+        Crear con Timestamp
+    </button>
+    
+    <div id="result"></div>
+    
+    <!--
+    Objetivo: Obtener valores dinámicamente para JSON
+    Referencia: hx-vals con JavaScript
+    Tipo: atributo
+    Nivel: avanzado
+    
+    Explicación:
+    - hx-vals puede contenar JavaScript ejecutado en cliente
+    - Se evalúa cada vez que se hace la solicitud
+    - Permite valores dinámicos basados en estado del DOM
+    
+    Casos de uso:
+    * Valores que cambian con selectores
+    * Timestamps o datos actuales
+    * Valores computados dinámicamente
+    
+    También se puede usar JavaScript directo en hx-vals
+    Los valores se envían como parámetros POST/GET
+    -->
+</body>
+</html>

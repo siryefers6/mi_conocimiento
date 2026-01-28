@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX DELETE Request</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Solicitud DELETE con HTMX</h1>
+    
+    <div id="item-1" style="padding: 10px; border: 1px solid red; margin: 10px 0;">
+        <h3>Item 1</h3>
+        <p>Este item se eliminará</p>
+        <button hx-delete="/api/items/1" 
+                hx-target="#item-1" 
+                hx-swap="outerHTML swap:1s"
+                hx-confirm="¿Seguro que deseas eliminar?">
+            Eliminar
+        </button>
+    </div>
+    
+    <!--
+    Objetivo: Eliminar recurso con DELETE
+    Referencia: hx-delete=""
+    Tipo: atributo
+    Nivel: intermedio
+    
+    Explicación:
+    - hx-delete="/ruta" envía solicitud DELETE
+    - Se usa para eliminar un recurso
+    - Generalmente devuelve 204 No Content o elemento vacío
+    
+    Seguridad:
+    * Usar hx-confirm para pedir confirmación
+    * Implementar CSRF token en servidor
+    * Validar permisos del usuario
+    
+    hx-swap="outerHTML": Reemplaza todo el elemento (lo borra)
+    hx-confirm: Muestra diálogo de confirmación
+    -->
+</body>
+</html>

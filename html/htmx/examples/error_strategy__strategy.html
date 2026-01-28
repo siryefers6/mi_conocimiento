@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX history navigation</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>history, confirm, sync, conditional</h1>
+    
+    <button hx-get="/page1" hx-push-url="/page1">Push URL</button>
+    <button hx-delete="/item/1" hx-confirm="¿Eliminar?">Con confirmación</button>
+    <div hx-get="/data" hx-sync="closest div:queue">sync</div>
+</body>
+</html>

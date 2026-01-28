@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX confirm</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Mensajes personalizados</h1>
+    <button hx-delete="/item" hx-confirm="¿Estás seguro de eliminar?">Eliminar</button>
+    <button hx-post="/action" hx-confirm="¿Continuar?">Acción</button>
+    <button hx-delete="/delete" hx-confirm="¿Eliminar permanentemente?">Delete</button>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX GET Request</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Solicitud GET con HTMX</h1>
+    
+    <button hx-get="/api/data" hx-target="#result" hx-swap="innerHTML">
+        Cargar Datos
+    </button>
+    
+    <div id="result" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc;">
+        Los datos aparecerán aquí...
+    </div>
+    
+    <!--
+    Objetivo: Realizar una solicitud GET
+    Referencia: hx-get=""
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    - hx-get="/ruta" realiza solicitud GET al servidor
+    - Se ejecuta por defecto al hacer clic en el elemento
+    - Los datos de la respuesta se insertan en el destino
+    - Versión HTMX de: fetch('/ruta').then(r => r.text())
+    
+    Parámetros:
+    * hx-target: dónde insertar la respuesta
+    * hx-swap: cómo insertar (innerHTML, outerHTML, etc)
+    * hx-trigger: cuándo ejecutar (por defecto: click)
+    
+    El servidor devuelve HTML que se inserta en #result
+    -->
+</body>
+</html>

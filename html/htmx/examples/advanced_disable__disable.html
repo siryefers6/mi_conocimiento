@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX advanced</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>disable, inherit, boost, timeout, headers</h1>
+    
+    <button hx-get="/api/1" hx-disable>Deshabilitado</button>
+    <button hx-get="/api/2" hx-boost="true">Boost</button>
+    
+    <div hx-get="/api/3" hx-request='{"timeout": 5000}'>Timeout 5s</div>
+    
+    <div hx-get="/api/4" hx-request='{"headers": {"X-Custom": "value"}}'>Headers</div>
+</body>
+</html>

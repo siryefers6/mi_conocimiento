@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Utilidades JS</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Métodos de Utilidad de HTMX</h1>
+    
+    <button onclick="htmx.ajax('GET', '/api/data', {target: '#result'})">
+        htmx.ajax()
+    </button>
+    
+    <button onclick="htmx.trigger('#target', 'myEvent')">
+        htmx.trigger()
+    </button>
+    
+    <button onclick="htmx.process(document.body)">
+        htmx.process()
+    </button>
+    
+    <button onclick="const el = htmx.find('#id'); console.log(el)">
+        htmx.find()
+    </button>
+    
+    <button onclick="htmx.toggleClass(this, 'active')">
+        htmx.toggleClass()
+    </button>
+    
+    <button onclick="htmx.addClass(this, 'active')">
+        htmx.addClass()
+    </button>
+    
+    <button onclick="htmx.removeClass(this, 'active')">
+        htmx.removeClass()
+    </button>
+    
+    <div id="result"></div>
+    <div id="target"></div>
+</body>
+</html>

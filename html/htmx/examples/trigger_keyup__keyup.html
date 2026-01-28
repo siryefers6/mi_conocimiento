@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Trigger keyup</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Trigger keyup - Al soltar tecla</h1>
+    
+    <input type="text" 
+           placeholder="Busca mientras escribes..." 
+           hx-get="/api/search" 
+           hx-target="#results"
+           hx-trigger="keyup">
+    
+    <div id="results"></div>
+    
+    <!--trigger: Se dispara cada vez que sueltas una tecla-->
+</body>
+</html>

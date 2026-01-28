@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Confirmación</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>hx-confirm - Diálogo de confirmación</h1>
+    
+    <button hx-delete="/api/item/1" hx-confirm="¿Estás seguro?">
+        Eliminar
+    </button>
+    
+    <button hx-post="/api/action" hx-confirm="¿Continuar con la acción?">
+        Acción
+    </button>
+</body>
+</html>

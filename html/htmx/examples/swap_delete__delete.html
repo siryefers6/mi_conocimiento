@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX delete y none swaps</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Estrategias delete y none</h1>
+    
+    <h2>delete - Eliminar elemento</h2>
+    <div id="item-1" style="border: 1px solid red; padding: 20px; margin: 10px 0; background: #ffe0e0;">
+        <h3>Item a eliminar</h3>
+        <p>Este item desaparecerá del DOM</p>
+        <button hx-delete="/api/delete/1" hx-target="#item-1" hx-swap="delete">
+            Eliminar este item
+        </button>
+    </div>
+    
+    <div id="item-2" style="border: 1px solid red; padding: 20px; margin: 10px 0; background: #ffe0e0;">
+        <h3>Otro item</h3>
+        <p>Este item seguirá aquí</p>
+        <button hx-delete="/api/delete/2" hx-target="#item-2" hx-swap="delete">
+            Eliminar este item
+        </button>
+    </div>
+    
+    <h2>none - Sin actualizar DOM</h2>
+    <form hx-post="/api/save" hx-swap="none">
+        <input type="text" name="data" placeholder="Datos">
+        <button type="submit">Guardar (sin actualizar pantalla)</button>
+    </form>
+    <p id="status"></p>
+    
+    <!--
+    Objetivo: Eliminar elemento o no actualizar
+    Referencia: hx-swap="delete|none"
+    Tipo: atributo
+    Nivel: intermedio
+    
+    Explicación:
+    
+    DELETE:
+    - Elimina el elemento objetivo del DOM
+    - Útil para: borrar items de lista, eliminar tarjetas
+    - El elemento desaparece tras la solicitud
+    - Similar a: element.remove()
+    
+    NONE:
+    - No actualiza el DOM en absoluto
+    - Útil para: guardar datos sin feedback visual
+    - Perfecta para guardar en background
+    - Los eventos aún se disparan
+    
+    Casos de uso DELETE:
+    * Botón eliminar en lista
+    * Cerrar notificación
+    * Remover item del carrito
+    
+    Casos de uso NONE:
+    * Guardar datos sin cambiar vista
+    * Tracking/logging sin feedback
+    * Operaciones background
+    * Usar eventos para feedback personalizado
+    
+    Con none + eventos:
+    hx-post="/api/save" 
+    hx-swap="none"
+    hx-on="htmx:afterRequest: showMessage('Guardado')"
+    -->
+</body>
+</html>

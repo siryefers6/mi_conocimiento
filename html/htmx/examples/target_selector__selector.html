@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX hx-target</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Destino de Inserción con hx-target</h1>
+    
+    <button hx-get="/api/content" hx-target="#output">
+        Cargar en #output
+    </button>
+    
+    <button hx-get="/api/content" hx-target="#sidebar">
+        Cargar en #sidebar
+    </button>
+    
+    <button hx-get="/api/content" hx-target=".panel">
+        Cargar en .panel (todos los elementos con clase)
+    </button>
+    
+    <div id="output" style="border: 1px solid blue; padding: 10px; margin: 10px 0;">
+        Contenido cargado aquí (#output)
+    </div>
+    
+    <div id="sidebar" style="border: 1px solid green; padding: 10px; margin: 10px 0;">
+        Contenido en sidebar (#sidebar)
+    </div>
+    
+    <div class="panel" style="border: 1px solid red; padding: 10px; margin: 10px 0;">
+        Panel 1
+    </div>
+    
+    <div class="panel" style="border: 1px solid red; padding: 10px; margin: 10px 0;">
+        Panel 2
+    </div>
+    
+    <!--
+    Objetivo: Especificar dónde insertar la respuesta
+    Referencia: hx-target=""
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    - hx-target especifica selector CSS del elemento a actualizar
+    - Por defecto es "this" (el elemento que triggered la solicitud)
+    - Puede apuntar a cualquier elemento en la página
+    
+    Selectores válidos:
+    * #id (por ID)
+    * .clase (por clase, actualiza todos)
+    * elemento (por tag)
+    * [atributo] (por atributo)
+    
+    Casos de uso:
+    * Actualizar elemento diferente
+    * Actualizar múltiples elementos
+    * Actualizar área específica de la página
+    
+    Si hay múltiples elementos que coinciden, actualiza el primero
+    (a menos que sea un selector de clase que actualiza todos)
+    -->
+</body>
+</html>

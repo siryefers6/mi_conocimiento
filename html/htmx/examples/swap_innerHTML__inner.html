@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX innerHTML</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Estrategia innerHTML - Reemplazar Contenido Interno</h1>
+    
+    <div id="card" style="border: 1px solid blue; padding: 20px; margin: 20px 0;">
+        <h2>Título Original</h2>
+        <p>Este contenido será reemplazado</p>
+    </div>
+    
+    <button hx-get="/api/new-content" 
+            hx-target="#card" 
+            hx-swap="innerHTML">
+        Actualizar Contenido (innerHTML)
+    </button>
+    
+    <!--
+    Objetivo: Reemplazar contenido interno del elemento
+    Referencia: hx-swap="innerHTML"
+    Tipo: atributo
+    Nivel: básico
+    
+    Explicación:
+    - innerHTML reemplaza TODO el contenido dentro del elemento
+    - El elemento contenedor NO es reemplazado
+    - Es la estrategia por defecto
+    
+    Antes:
+    <div id="card">
+        <h2>Título Original</h2>
+        <p>Párrafo Original</p>
+    </div>
+    
+    Después:
+    <div id="card">
+        <h2>Nuevo Título</h2>
+        <p>Nuevo Párrafo</p>
+    </div>
+    
+    El <div id="card"> sigue siendo el mismo
+    
+    Casos de uso:
+    * Actualizar datos dentro de un contenedor
+    * Refrescar el contenido de una tarjeta
+    * Cambiar contenido de un panel sin perder estilos del contenedor
+    -->
+</body>
+</html>
