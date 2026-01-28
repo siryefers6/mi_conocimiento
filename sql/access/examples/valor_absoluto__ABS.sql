@@ -1,2 +1,9 @@
 -- ABS en Microsoft Access
-SELECT Abs(-5) AS absoluto;
+-- Calcula el valor absoluto de un número
+
+SELECT ABS(-5) AS Absoluto;
+
+-- Output:
+-- Absoluto
+-- --------
+-- 5

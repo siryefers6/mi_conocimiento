@@ -1,2 +1,7 @@
 -- Eliminar con WHERE en Microsoft Access
-DELETE FROM empleados WHERE edad > 60;
+-- Elimina proyectos completados de la tabla Proyectos
+
+DELETE FROM Proyectos WHERE Estado = 'Completado';
+
+-- Output:
+-- 1 registro eliminado (API REST con ID=3)

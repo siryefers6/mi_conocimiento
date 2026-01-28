@@ -1,2 +1,19 @@
 -- UNION en Microsoft Access
-SELECT nombre FROM empleados UNION SELECT nombre FROM ex_empleados;
+-- Combina nombres de empleados y nombres de departamentos (sin duplicados)
+
+SELECT Nombre FROM Empleados
+UNION
+SELECT Nombre FROM Departamentos;
+
+-- Output:
+-- Nombre
+-- ----
+-- Ana Martínez
+-- Carlos Rodríguez
+-- Departamentos
+-- Desarrollo
+-- Juan García
+-- María López
+-- Pedro Sánchez
+-- Recursos Humanos
+-- Ventas

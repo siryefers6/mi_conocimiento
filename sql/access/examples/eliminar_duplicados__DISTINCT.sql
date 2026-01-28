@@ -1,2 +1,13 @@
 -- DISTINCT en Microsoft Access
-SELECT DISTINCT departamento FROM empleados;
+-- Obtiene los departamentos únicos sin repeticiones
+
+SELECT DISTINCT Departamento_ID
+FROM Empleados
+ORDER BY Departamento_ID;
+
+-- Output:
+-- Departamento_ID
+-- ---------------
+-- 1
+-- 2
+-- 3

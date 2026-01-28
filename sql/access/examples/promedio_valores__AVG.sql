@@ -1,2 +1,9 @@
 -- AVG en Microsoft Access
-SELECT AVG(edad) FROM empleados;
+-- Calcula el salario promedio de todos los empleados
+
+SELECT AVG(Salario) AS SalarioPromedio FROM Empleados;
+
+-- Output:
+-- SalarioPromedio
+-- ----------------
+-- 3980

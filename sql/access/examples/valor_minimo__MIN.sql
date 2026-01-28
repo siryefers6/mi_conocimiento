@@ -1,2 +1,9 @@
 -- MIN en Microsoft Access
-SELECT MIN(salario) FROM empleados;
+-- Obtiene el salario más bajo de todos los empleados
+
+SELECT MIN(Salario) AS SalarioMinimo FROM Empleados;
+
+-- Output:
+-- SalarioMinimo
+-- ----
+-- 3500

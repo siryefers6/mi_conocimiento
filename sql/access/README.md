@@ -1,6 +1,19 @@
 # Microsoft Access SQL - Referencia Completa
 
-Referencia rápida de sentencias, funciones y conceptos de SQL en Microsoft Access con ejemplos ejecutables.
+Referencia rápida de sentencias, funciones y conceptos de SQL en Microsoft Access con ejemplos ejecutables basados en un dataset real.
+
+**⚠️ IMPORTANTE:** Todos los ejemplos están basados en el dataset documentado en [DATASET.md](DATASET.md). Consulta ese archivo para entender la estructura de datos utilizada en los ejemplos.
+
+---
+
+## Dataset de Ejemplo
+
+Este repositorio utiliza un dataset realista con 3 tablas relacionadas:
+- **Empleados**: Información de empleados con salarios y fechas
+- **Departamentos**: Departamentos de la empresa con presupuestos
+- **Proyectos**: Proyectos activos y completados
+
+Ver [DATASET.md](DATASET.md) para la estructura completa y datos de ejemplo.
 
 ---
 
