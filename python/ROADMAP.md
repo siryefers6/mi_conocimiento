@@ -37,6 +37,22 @@ Programación Orientada a Objetos - el siguiente nivel después de dominat los c
 
 **Ejemplos:** 39 archivos ejecutables
 
+### 3. **Python Testing** (`/python/testing/`)
+Testing y Test-Driven Development con Pytest - fundamental para código de calidad.
+
+**Temas cubiertos:**
+- Conceptos fundamentales (test_, assert, pytest)
+- Asserts y validaciones (9 tipos: ==, in, None, bool, raises, approx, etc)
+- Fixtures (básica, scope, return, yield, parametrizada, request, autouse, factory)
+- Parametrización (@pytest.mark.parametrize)
+- Manejo de excepciones en tests (pytest.raises, match, excinfo)
+- Markers (@skip, @xfail, custom markers)
+- Mocking y patching (Mock, @patch, return_value)
+- Test-Driven Development (Red-Green-Refactor, ejemplos)
+- Organización de tests (conftest.py, estructura, naming)
+
+**Ejemplos:** 38 archivos ejecutables
+
 ---
 
 ## Flujo de Aprendizaje Recomendado
@@ -50,7 +66,7 @@ Programación Orientada a Objetos - el siguiente nivel después de dominat los c
    ├─ Funciones (reutilización)
    └─ Excepciones (robustez)
 
-2. Python POO
+2. Python POO (Después de Básico)
    ├─ Conceptos Fundamentales (class, __init__, self)
    ├─ Métodos (instancia, clase, estático)
    ├─ Propiedades (encapsulamiento)
@@ -59,6 +75,14 @@ Programación Orientada a Objetos - el siguiente nivel después de dominat los c
    ├─ Métodos Especiales (magia en Python)
    ├─ Composición (relaciones entre objetos)
    └─ Patrones (soluciones probadas)
+
+3. Python Testing (Paralelo a Desarrollo)
+   ├─ Asserts Básicos (verificaciones simples)
+   ├─ Fixtures (preparar datos reutilizables)
+   ├─ Parametrización (evitar repetición)
+   ├─ Manejo de Excepciones (testing errores)
+   ├─ Mocking (aislar componentes)
+   └─ TDD (Desarrollo guiado por tests - Red-Green-Refactor)
 ```
 
 ---
@@ -87,11 +111,11 @@ Programación Orientada a Objetos - el siguiente nivel después de dominat los c
 
 ## Próximas Expansiones Planificadas
 
-- [ ] Python Avanzado (decoradores, context managers, generators)
+- [ ] Python Avanzado (decoradores, context managers, generators, async/await)
 - [ ] Python Web (Flask/Django)
-- [ ] Python Data Science (NumPy, Matplotlib)
+- [ ] Python Data Science (NumPy, Pandas, Matplotlib)
 - [ ] Patrones de Diseño Avanzados
-- [ ] Testing y Debugging
+- [ ] CI/CD y Deployment
 
 ---
 
@@ -101,7 +125,8 @@ Programación Orientada a Objetos - el siguiente nivel después de dominat los c
 |---------|----------|-----------|--------|
 | Básico | 137 | 70+ | ✅ Completo |
 | POO | 39 | 40+ | ✅ Completo |
-| **Total** | **176** | **110+** | ✅ |
+| Testing | 38 | 40+ | ✅ Completo |
+| **Total** | **214** | **150+** | ✅ |
 
 ---
 
